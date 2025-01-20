@@ -1,0 +1,1746 @@
+﻿@Model List<PersonalInfo>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>PROJECT COMPLETION REPORT (PCR)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+    </head>
+    <body class="w3-theme-l5">
+
+        <!-- Top Bar -->
+        <div class="">
+            <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+                <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>PCR</a>
+
+                <div class="w3-dropdown-hover w3-bar-item w3-button w3-right w3-padding-large w3-hover-white" title="Notification">
+                    <i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="right:0;">
+                        <a href="#" class="w3-bar-item w3-button">Project A PCR Provided</a>
+                        <a href="#" class="w3-bar-item w3-button">Project B PCR Provided</a>
+                        <a href="#" class="w3-bar-item w3-button">Project C PCR Provided</a>
+                    </div>
+                </div>
+
+                <div class="w3-dropdown-hover w3-bar-item w3-button w3-right w3-padding-large w3-hover-white" title="Profile">
+                    <i class="fa fa-user"></i>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="right:0;">
+                        <a href="/profile" class="w3-bar-item w3-button">Profile</a>
+                        <a href="/changePassword" class="w3-bar-item w3-button">Password</a>
+                        <a href="/logout" class="w3-bar-item w3-button">Logout</a>
+                    </div>
+                </div>
+
+                <a href="design.zip" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Download Design"><i class="fa fa-download" aria-hidden="true"></i></a>
+
+            </div>
+        </div>
+
+
+        <div class="w3-container w3-margin-top">
+            <div class="w3-row">
+
+
+                <!-- Left Profile, Menu etc. -->
+                <div class="w3-col m3">
+
+                    <!-- User Info Card -->
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container">
+                            <h4 class="w3-center">Name</h4>
+                            <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                            <hr>
+                            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
+                            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
+                            <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
+                        </div>
+                    </div>
+                    <br />
+
+                    <!-- Menu -->
+                    <div class="w3-card w3-round w3-margin-bottom">
+                        <div class="w3-white">
+                            <a href="" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-home w3-margin-right"></i> Dashboard</a>
+                            <a href="" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-archive w3-margin-right"></i> Menu 1</a>
+                            <a href="" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-file-code-o w3-margin-right"></i> Menu 2</a>
+                            <a href="" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o w3-margin-right"></i> Menu 3</a>
+                            <a href="" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-bar-chart w3-margin-right"></i> Report</a>
+                        </div>
+                    </div>
+
+                    <!-- PCR Report Indexing -->
+                    <div class="w3-card w3-round">
+                        <div class="w3-white">
+
+                            <!-- A PROJECT DESCRIPTION -->
+                            <button onclick="pcrForm.unHideSubMenu('SecA_Menu')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">A</span> PROJECT DESCRIPTION</button>
+                            <div id="SecA_Menu" class="w3-hide w3-container">
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#SecA">PROJECT DESCRIPTION</a>
+                                <br />
+                                <i class="fa fa-check w3-text-green" aria-hidden="true"></i> <a href="#secA_ProjectName">01. Name of the Project</a>
+                                <br />
+                                <i class="fa fa-check w3-text-green" aria-hidden="true"></i> <a href="#secA_Ministry">02. Administrative Ministry/Division</a>
+                                <br />
+                                <i class="fa fa-check w3-text-green" aria-hidden="true"></i> <a href="#secA_Agency">03. Executing Agency </a>
+                                <br />
+                                <i class="fa fa-check w3-text-green" aria-hidden="true"></i> <a href="#secA_PlanningSector">04. Planning Commission Sector/Division</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_ProjectType">05. Type of Project (Investment/Technical/Feasibility Study)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_LocationTable">06. Location of the Project (As per Project Document)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_EtimatedCostTable">07. Estimated Cost, Implementation Period and Approval</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_ObjectiveDiv">08. Objective of the Project</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_ProjectBackground">09. Background of the Project (In brief)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_MajorActivities">10. Major Activities</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_RevisionReason">11. Reasons for Revision (if applicable)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_NoCostRevisionReason">11.1 Reasons for No-Cost Time Extension (if applicable)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_FinancialAgreement">12. Financing Arrangement (Source-wise)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_LoanStatus_ForeignTable">12.1 Status of Loan/Grant</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_UtilizationTable">12.2 Utilization of Project Aid (Source wise)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secA_RpaTable">12.3 Reimbursable project Aid (RPA)</a>
+                                <br /><br />
+                            </div>
+
+
+
+                            <!-- B IMPLEMENTATION POSITION -->
+                            <button onclick="pcrForm.unHideSubMenu('SecB_Menu')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">B</span> IMPLEMENTATION POSITION</button>
+                            <div id="SecB_Menu" class="w3-hide w3-container">
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#SecB">IMPLEMENTATION POSITION MENU</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">13. Implementation Period</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_PrjCostTable">14. Cost of the Project</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_PdInfoTable">15. Information regarding Project Director (s)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">16.1 Personnel of Project implementation Unit (PIU)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">16.2 Personnel Required after the Project Completion</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">17. Training (Foreign/Local)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">18. Component-wise Progress (As per latest approved Project Document)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">19. Procurement of Transport (in Nos.)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">20. Project Consultant (s) (Local/Foreign)</a>
+                                <br />
+                                <i class="fa fa-times w3-text-red" aria-hidden="true"></i> <a href="#secB_ImplPeriodTable">21. Infrastructure/Erection/Installation Tools & Equipment</a>
+                            </div>
+
+                            <!-- C. FINANCIAL AND PHYSICAL TARGET AND PROGRESS -->
+                            <button onclick="pcrForm.unHideSubMenu('SecC_Menu')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">C</span> FINANCIAL AND PHYSICAL <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TARGET AND PROGRESS</button>
+                            <div id="SecC_Menu" class="w3-hide w3-container">
+                                <ul class="w3-padding">
+                                    <li><a href="#SecC">FINANCIAL AND PHYSICAL TARGET AND PROGRESS</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- D. ACHIEVEMENT OF OBJECTIVES OF THE PROJECT -->
+                            <button onclick="pcrForm.unHideSubMenu('SecD_Menu')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">D</span> ACHIEVEMENT OF <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBJECTIVES OF THE PROJECT</button>
+                            <div id="SecD_Menu" class="w3-hide w3-container">
+                                <ul class="w3-padding">
+                                    <li><a href="#SecD">ACHIEVEMENT OF OBJECTIVES OF THE PROJECT</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- E. BENEFIT ANALYSIS -->
+                            <button onclick="pcrForm.unHideSubMenu('SecE_Menu')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">E</span> BENEFIT ANALYSIS</button>
+                            <div id="SecE_Menu" class="w3-hide w3-container">
+                                <ul class="w3-padding">
+                                    <li><a href="#SecE">BENEFIT ANALYSIS</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- F. MONITORING AND AUDITING -->
+                            <button onclick="pcrForm.unHideSubMenu('SecF_Menu')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">F</span> MONITORING AND AUDITING</button>
+                            <div id="SecF_Menu" class="w3-hide w3-container">
+                                <ul class="w3-padding">
+                                    <li><a href="#SecF">MONITORING AND AUDITING</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- G. POST-PROJECT REMARKS -->
+                            <button onclick="pcrForm.unHideSubMenu('SecG_Menu')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">G</span> POST-PROJECT REMARKS</button>
+                            <div id="SecG_Menu" class="w3-hide w3-container">
+                                <ul class="w3-padding">
+                                    <li><a href="#SecG">POST-PROJECT REMARKS</a></li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <br />
+
+                </div>
+
+
+                <!-- Right Section -->
+                <div class="w3-col m9 w3-padding-small">
+
+
+                    <!-- Title -->
+                    <div class="w3-card w3-round w3-white w3-padding-small w3-center">
+                        <br />
+                        <h4>
+                            <b>
+                                Government of the People’s Republic of Bangladesh
+                                <br />
+                                Ministry of planning
+                                <br />
+                                <u>Implementation Monitoring and Evaluation Division</u>
+                            </b>
+                        </h4>
+                        <br />
+                        <h4>
+                            <b>
+                                <u>PROJECT COMPLETION REPORT (PCR): IMED 04/2024 (Revised)</u>
+                            </b>
+                        </h4>
+                        <br />
+                    </div>
+
+                    <br />
+
+                    <!-- A PROJECT DESCRIPTION -->
+                    <button onclick="pcrForm.unHideSubMenu('SecA')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">A</span> PROJECT DESCRIPTION <small class="w3-right">Click to Open/Close</small></button>
+                    <div id="SecA" class="w3-card w3-round w3-white w3-padding w3-hide">
+                        <h4 class="w3-center">
+                            <b>
+                                A. <u>PROJECT DESCRIPTION</u>
+                            </b>
+                        </h4>
+                        <div class="w3-responsive">
+                            <table class="w3-table-all w3-hoverable">
+                                <tr>
+                                    <td><b>01.</b></td>
+                                    <td><b>Name of the Project</b></td>
+                                    <td>:</td>
+                                    <td><input id="secA_ProjectName" name="secA_ProjectName" class="w3-input w3-border w3-round-large" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>02.</b></td>
+                                    <td><b>Administrative Ministry/Division</b></td>
+                                    <td>:</td>
+                                    <td>
+                                        <select id="secA_Ministry" name="secA_Ministry" class="w3-select">
+                                            <option value="" disabled selected>Choose your option</option>
+                                            <option value="1">President’s Office</option>
+                                            <option value="1">Chief Adviser's Office</option>
+                                            <option value="1">Armed Forces Division</option>
+                                            <option value="1">Cabinet Division</option>
+                                            <option value="1">Ministry of Education</option>
+                                            <option value="1">Ministry of Housing and Public Works</option>
+                                            <option value="1">Parliament Secretariat</option>
+                                            <option value="1">Ministry of Public Administration</option>
+                                            <option value="1">Ministry Of Land</option>
+                                            <option value="1">Ministry of Chittagong Hill Tracts Affairs</option>
+                                            <option value="1">Ministry of Civil Aviation and Tourism</option>
+                                            <option value="1">Ministry of Law, Justice and Parliamentary Affairs</option>
+                                            <option value="1">Ministry of Social Welfare</option>
+                                            <option value="1">Ministry of Agriculture</option>
+                                            <option value="1">Ministry of Health & Family Welfare</option>
+                                            <option value="1">Ministry of Foreign Affairs</option>
+                                            <option value="1">Ministry of Women and Children Affairs</option>
+                                            <option value="1">Ministry of Textiles & Jute</option>
+                                            <option value="1">Ministry of Power, Energy and Mineral Resources</option>
+                                            <option value="1">Ministry of Planning</option>
+                                            <option value="1">Ministry of Local Government, Rural Development and Co-operatives</option>
+                                            <option value="1">Ministry of Commerce</option>
+                                            <option value="1">Ministry of Road Transport and Bridges</option>
+                                            <option value="1">Ministry of Cultural Affairs</option>
+                                            <option value="1">Ministry of Defence</option>
+                                            <option value="1">Ministry of Disaster Management and Relief</option>
+                                            <option value="1">Ministry of Environment, Forest and Climate Change</option>
+                                            <option value="1">Ministry of Expatriates’ Welfare and Overseas Employment</option>
+                                            <option value="1">Ministry of Fisheries And Livestock</option>
+                                            <option value="1">Ministry of Food</option>
+                                            <option value="1">Ministry of Home Affairs</option>
+                                            <option value="1">Ministry of Industries</option>
+                                            <option value="1">Ministry of Labour and Employment</option>
+                                            <option value="1">Ministry of Liberation War Affairs</option>
+                                            <option value="1">Ministry of Posts, Telecommunications and Information Technology</option>
+                                            <option value="1">Ministry of Religious Affairs</option>
+                                            <option value="1">Ministry of Primary and Mass Education</option>
+                                            <option value="1">Ministry of Railways</option>
+                                            <option value="1">Ministry of Shipping</option>
+                                            <option value="1">Ministry of Science and Technology</option>
+                                            <option value="1">Ministry of Water Resources</option>
+                                            <option value="1">Ministry of Youth and Sports</option>
+                                            <option value="1">Ministry of Information and Broadcasting</option>
+                                            <option value="1">Ministry of Finance</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>03.</b></td>
+                                    <td><b>Executing Agency</b></td>
+                                    <td>:</td>
+                                    <td><input id="secA_Agency" name="secA_Agency" class="w3-input w3-border w3-round-large" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>04.</b></td>
+                                    <td><b>Planning Commission Sector/Division</b></td>
+                                    <td>:</td>
+                                    <td>
+                                        <select id="secA_PlanningSector" name="secA_PlanningSector" class="w3-select">
+                                            <option value="" disabled selected>Choose your option</option>
+                                            <option value="1">1</option>
+                                            <option value="1">2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>05.</b></td>
+                                    <td><b>Type of Project</b></td>
+                                    <td>:</td>
+                                    <td>
+                                        <select id="secA_ProjectType" name="secA_ProjectType" class="w3-select">
+                                            <option value="" disabled selected>Choose your option</option>
+                                            <option value="1">Investment</option>
+                                            <option value="2">Technical</option>
+                                            <option value="3">Feasibility Study</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <table id="secA_LocationTable" class="w3-table-all w3-hoverable">
+                                <tr>
+                                    <td><b>06.</b></td>
+                                    <td colspan="2"><b>Location of the Project (As per Project Document):</b></td>
+                                    <td>
+                                        <button onclick="pcrForm.secA_LocationTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secA_LocationTable',2);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sl. No</td>
+                                    <td>Division</td>
+                                    <td>District</td>
+                                    <td>City Corporation/Municipality/Upazila</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <table id="secA_EtimatedCostTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td><b>07.</b></td>
+                                    <td colspan="5"><b>Estimated Cost, Implementation Period and Approval (In Lakh Taka):</b></td>
+                                    <td colspan="2">
+                                        <button onclick="pcrForm.secA_EtimatedCostTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secA_EtimatedCostTable',4);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Subject</td>
+                                    <td colspan="4">Approved Estimated Cost</td>
+                                    <td rowspan="2">Implementation Period</td>
+                                    <td rowspan="2">Date of Approval</td>
+                                    <td rowspan="2">Approved By</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>GOB<br />(Foreign Exchange)</td>
+                                    <td>PA<br />(RPA)</td>
+                                    <td>Self-finance</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+
+                        <div id="secA_ObjectiveDiv">
+                            <b>08. Objective of the Project</b>
+                            <div class="w3-border w3-padding">
+                                Overall objective:
+                                <textarea class="w3-input w3-border"></textarea>
+                                <br />
+                                Specific Objectives (single line for each point):
+                                <textarea class="w3-input w3-border"></textarea>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div>
+                            <b>09. Background of the Project (In brief):</b>
+                            <textarea id="secA_ProjectBackground" class="w3-input w3-border"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div>
+                            <b>10. Major Activities:</b>
+                            <textarea id="secA_MajorActivities" class="w3-input w3-border"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div>
+                            <b>11. Reasons for Revision (if applicable):</b>
+                            <textarea id="secA_RevisionReason" class="w3-input w3-border">1st Revision:&#13;&#10;2nd Revision:</textarea>
+                        </div>
+
+                        <br />
+
+                        <div>
+                            <b>11.1 Reasons for No-Cost Time Extension (if applicable):</b>
+                            <textarea id="secA_NoCostRevisionReason" class="w3-input w3-border">1st time No-Cost Time Extension:&#13;&#10;2nd time No-Cost Time Extension:</textarea>
+                        </div>
+
+                        <br />
+
+                        <div id="secA_FinancialAgreement"><b>12. Financing Arrangement (Source-wise):</b></div>
+
+                        <div><b>12.1 Status of Loan/Grant</b></div>
+
+                        <div class="w3-responsive">
+                            <table id="secA_LoanStatus_ForeignTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td>a)</td>
+                                    <td colspan="4">Foreign Financing:</td>
+                                    <td colspan="3">
+                                        <button onclick="pcrForm.secA_LoanStatus_ForeignTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secA_LoanStatus_ForeignTable',4);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Source (s)</td>
+                                    <td rowspan="2">Currency as per Agreement</td>
+                                    <td rowspan="2">Amount in US$ (million)</td>
+                                    <td rowspan="2">Nature</td>
+                                    <td rowspan="2">Date of Agreement</td>
+                                    <td rowspan="2">Date of Effectiveness</td>
+                                    <td colspan="2">Date of Closing</td>
+                                </tr>
+                                <tr>
+                                    <td>Original</td>
+                                    <td>Revised</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <table id="secA_LoanStatus_GobTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td>b)</td>
+                                    <td colspan="2">GOB:</td>
+                                    <td>
+                                        <button onclick="pcrForm.secA_LoanStatus_GobTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secA_LoanStatus_GobTable',3);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Total amount</td>
+                                    <td>Loan</td>
+                                    <td>Grant</td>
+                                    <td>Cash Foreign Exchange</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <table id="secA_LoanStatus_SelfTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td>c)</td>
+                                    <td colspan="2">Self-finance/Equity:</td>
+                                    <td>
+                                        <button onclick="pcrForm.secA_LoanStatus_SelfTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secA_LoanStatus_SelfTable',3);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Total amount</td>
+                                    <td>Self-finance</td>
+                                    <td>Equity</td>
+                                    <td>Cash Foreign Exchange</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>12.2 Utilization of Project Aid (Source wise):</b>
+                            <table id="secA_UtilizationTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td colspan="4">&nbsp;</td>
+                                    <td colspan="3">
+                                        <button onclick="pcrForm.secA_UtilizationTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secA_UtilizationTable',4);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Source (s)</td>
+                                    <td colspan="2">Total Amount</td>
+                                    <td colspan="2">Actual Expenditure</td>
+                                    <td colspan="2">Unutilized Amount</td>
+                                </tr>
+                                <tr>
+                                    <td>In Us$</td>
+                                    <td>In Local Currency</td>
+                                    <td>In Us$</td>
+                                    <td>In Local Currency</td>
+                                    <td>In Us$</td>
+                                    <td>In Local Currency</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>12.3 Reimbursable project Aid (RPA):</b>
+                            <table id="secA_RpaTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td colspan="4">&nbsp;</td>
+                                    <td colspan="3">
+                                        <button onclick="pcrForm.secA_RpaTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secA_RpaTable',4);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Source (s)</td>
+                                    <td colspan="2">RPA Amount</td>
+                                    <td>Amount</td>
+                                    <td>Amount</td>
+                                    <td>Amount</td>
+                                    <td rowspan="2">Remarks</td>
+                                </tr>
+                                <tr>
+                                    <td>As per</td>
+                                    <td>As per</td>
+                                    <td>Spent</td>
+                                    <td>Claimed</td>
+                                    <td>Re-imbrued</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                    </div>
+
+                    <br />
+
+
+                    <!-- B IMPLEMENTATION POSITION -->
+                    <button onclick="pcrForm.unHideSubMenu('SecB')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">B</span> IMPLEMENTATION POSITION <small class="w3-right">Click to Open/Close</small></button>
+                    <div id="SecB" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                        <h4 class="w3-center">
+                            <b>
+                                B. <u>IMPLEMENTATION POSITION</u>
+                            </b>
+                        </h4>
+
+                        <div class="w3-responsive">
+                            <b>13. Implementation Period:</b>
+                            <table id="secB_ImplPeriodTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                    <td colspan="3">
+                                        <button onclick="pcrForm.secB_ImplPeriodTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_ImplPeriodTable',4);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Implementation Period as per Project Document</td>
+                                    <td rowspan="2">Actual implementation</td>
+                                    <td rowspan="2">Time Over-run (% of original implementation period</td>
+                                    <td rowspan="2">Remarks</td>
+                                </tr>
+                                <tr>
+                                    <td>Original</td>
+                                    <td>Latest Revised</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>14. Cost of the Project:</b>
+                            <table id="secB_PrjCostTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                    <td colspan="4">
+                                        <button onclick="pcrForm.secB_PrjCostTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_PrjCostTable',4);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Description</td>
+                                    <td colspan="2">Estimated Cost</td>
+                                    <td rowspan="2">Actual expenditure</td>
+                                    <td rowspan="2">Cost over-run (% of original cost)</td>
+                                    <td rowspan="2">Remarks</td>
+                                </tr>
+                                <tr>
+                                    <td>Original</td>
+                                    <td>Latest Revised</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>15. Information regarding Project Director (s):</b>
+                            <table id="secB_PdInfoTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                    <td colspan="5">
+                                        <button onclick="pcrForm.secB_PdInfoTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_PdInfoTable',4);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Name, Main Designation & Grade. Mobile Number (From Beginning)</td>
+                                    <td rowspan="2">Full time</td>
+                                    <td rowspan="2">Part time</td>
+                                    <td rowspan="2">Responsible for more than one project</td>
+                                    <td colspan="2">Period</td>
+                                    <td rowspan="2">Remarks</td>
+                                </tr>
+                                <tr>
+                                    <td>Joining</td>
+                                    <td>Transfer</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div><b>16. Personnel</b></div>
+
+                        <div class="w3-responsive">
+                            <table id="secB_PiuTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td><b>16.1</b></td>
+                                    <td colspan="2"><b>Personnel of Project implementation Unit (PIU):</b></td>
+                                    <td colspan="1">
+                                        <button onclick="pcrForm.secB_PiuTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_PiuTable',3,1);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sl. No</td>
+                                    <td>Name of Post (Grade)</td>
+                                    <td>Approved Strength</td>
+                                    <td>Employed during Implementation </td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <table id="secB_PerReqAftComTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td><b>16.2</b></td>
+                                    <td colspan="3"><b>Personnel Required after the Project Completion:</b></td>
+                                    <td colspan="1">
+                                        <button onclick="pcrForm.secB_PerReqAftComTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_PerReqAftComTable',4,1);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Sl. No</td>
+                                    <td colspan="2">As P reposed in Project Document (PD)</td>
+                                    <td rowspan="2">Recruited</td>
+                                    <td rowspan="2">If not recruited explain reason and latest stats</td>
+                                </tr>
+                                <tr>
+                                    <td>Name of Post</td>
+                                    <td>Number</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>17. Training (Foreign/Local):</b>
+                            <table id="secB_TrainingTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="4"></td>
+                                    <td colspan="3">
+                                        <button onclick="pcrForm.secB_TrainingTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_TrainingTable',5,1);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">Sl. No</td>
+                                    <td rowspan="3">Category</td>
+                                    <td colspan="6">No. of Days/Weeks/Months (D/W/M), Batch & Participants</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">As in Project Document</td>
+                                    <td colspan="3">Achievement</td>
+                                </tr>
+                                <tr>
+                                    <td>D/W/M</td>
+                                    <td>Batch (s)</td>
+                                    <td>Participants(s)</td>
+                                    <td>D/W/M</td>
+                                    <td>Batch (s)</td>
+                                    <td>Participants(s)</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                            </table>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PD= Project Document)
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>18. Component-wise Progress (As per latest approved Project Document):</b>
+                            <table id="secB_CompWiseProgressTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="6"></td>
+                                    <td colspan="7">
+                                        <button onclick="pcrForm.secB_CompWiseProgressTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_CompWiseProgressTable',4,3);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Revenue / Capital</td>
+                                    <td rowspan="2">Name of Component</td>
+                                    <td rowspan="2">Unit</td>
+                                    <td rowspan="2">Quantity</td>
+                                    <td colspan="5">Estimated Cost (Taka in Lac)</td>
+                                    <td colspan="5">Actual Progress (Taka in Lac)</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>GOB</td>
+                                    <td>PA</td>
+                                    <td>Self-finance</td>
+                                    <td>Others</td>
+                                    <td>Total</td>
+                                    <td>GOB</td>
+                                    <td>PA</td>
+                                    <td>Self-finance</td>
+                                    <td>Others</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                    <td>(9)</td>
+                                    <td>(10)</td>
+                                    <td>(11)</td>
+                                    <td>(12)</td>
+                                    <td>(13)</td>
+                                    <td>(14)</td>
+                                </tr>
+                                <tr>
+                                    <td>Sub-total (Revenue)</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Sub-total (Capital)</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Total a+b (Revenue+ Capital)</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>19. Procurement of Transport (in Nos.) :</b>
+                            <table id="secB_ProcureTransportTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="3"></td>
+                                    <td colspan="4">
+                                        <button onclick="pcrForm.secB_ProcureTransportTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_ProcureTransportTable',3,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Type of transport</td>
+                                    <td>Number as per Project Document</td>
+                                    <td>Number Procured with date</td>
+                                    <td>Transferred to Transport Pool with Date</td>
+                                    <td>Transferred to O & M with date</td>
+                                    <td>Condemned/damaged with date</td>
+                                    <td>Returned or transferred to following project</td>
+                                    <td>Remarks</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>20. Project Consultant (s) (Local/Foreign):</b>
+                            <table id="secB_PrjConsultantTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="3"></td>
+                                    <td colspan="4">
+                                        <button onclick="pcrForm.secB_PrjConsultantTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_PrjConsultantTable',4,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Local/Foreign</td>
+                                    <td rowspan="2">Name of the Field</td>
+                                    <td colspan="2">Approved man month</td>
+                                    <td rowspan="2">Actual man month utilized</td>
+                                    <td colspan="2">Number of Deliverables</td>
+                                    <td rowspan="2">Remarks</td>
+                                </tr>
+                                <tr>
+                                    <td>As per Project Document</td>
+                                    <td>As per contract</td>
+                                    <td>As per Project Document</td>
+                                    <td>Actual</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>21. Infrastructure/Erection/Installation Tools & Equipment:</b>
+                            <table id="secB_ToolsEquipTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="3"></td>
+                                    <td colspan="4">
+                                        <button onclick="pcrForm.secB_ToolsEquipTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_ToolsEquipTable',3,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td>Quantity (as per project document)</td>
+                                    <td>Quantity Procured with date</td>
+                                    <td>Transferred to O & M with date</td>
+                                    <td>Disposed-off as per rule with date</td>
+                                    <td>Balance</td>
+                                    <td>Remarks</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>22. Procurement of Goods, Works and Services:</b>
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>22.1 Information on packages:</b>
+                            <ol type="a">
+                                <li>Total number of packages as per Project Document: <input type="number"> (Goods- <input type="number"> Works- Services- <input type="number">)</li>
+                                <li>Total number of packages procured: <input type="number"> (Goods- <input type="number"> Works- <input type="number"> Services- <input type="number">)</li>
+                                <li>Reason for not procuring (if any): <textarea class="w3-input w3-border w3-round-large"></textarea></li>
+                                <li>Number of packages for which the estimated cost is more than 1% of the estimated cost of the project: <input type="number"> (Goods- <input type="number"> Works- <input type="number"> Services- <input type="number">)</li>
+                            </ol>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>22.2 Detailed Package-wise information of Goods, Works and Services (For each case the highest 50 (fifty) packages) (Please use the format as in Annexure-l (a), l(b) and l(c))</b>
+                        </div>
+
+                        <br />
+
+                    </div>
+
+                    <br />
+
+                    <!-- C. FINANCIAL AND PHYSICAL TARGET AND PROGRESS -->
+                    <button onclick="pcrForm.unHideSubMenu('SecC')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">C</span> FINANCIAL AND PHYSICAL TARGET AND PROGRESS <small class="w3-right">Click to Open/Close</small></button>
+                    <div id="SecC" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                        <h4 class="w3-center">
+                            <b>
+                                C. <u>FINANCIAL AND PHYSICAL TARGET AND PROGRESS</u>
+                            </b>
+                        </h4>
+
+                        <div class="w3-responsive">
+                            <b>23. Original and Revised Financial Provision and physical Target (as per Project Document):</b>
+                            <table id="secC_FinProvPhyTgtTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="6"></td>
+                                    <td colspan="6">
+                                        <button onclick="pcrForm.secC_FinProvPhyTgtTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secC_FinProvPhyTgtTable',4,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Financial Year</td>
+                                    <td colspan="6">Financial provision & physical target as per original Project Document</td>
+                                    <td colspan="6">Financial provision & physical target as per latest revised Project Document</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>GOB</td>
+                                    <td>P.A.</td>
+                                    <td>Self-finance</td>
+                                    <td>Others</td>
+                                    <td>Physical %</td>
+                                    <td>Total</td>
+                                    <td>GOB</td>
+                                    <td>P.A.</td>
+                                    <td>Self-finance</td>
+                                    <td>Others</td>
+                                    <td>Physical %</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                    <td>(9)</td>
+                                    <td>(10)</td>
+                                    <td>(11)</td>
+                                    <td>(12)</td>
+                                    <td>(13)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>24. Revised ADP allocation and progress:</b>
+                            <table id="secC_RevAdpTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="7"></td>
+                                    <td colspan="7">
+                                        <button onclick="pcrForm.secC_RevAdpTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secC_RevAdpTable',4,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Financial Year</td>
+                                    <td colspan="6">Revised Allocation & target</td>
+                                    <td rowspan="2">GOB Release</td>
+                                    <td colspan="6">Expenditure & physical progress</td>
+                                    <td rowspan="2">Unspent* GoB Released</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>GOB</td>
+                                    <td>P.A.</td>
+                                    <td>Self-finance</td>
+                                    <td>Others</td>
+                                    <td>Physical %</td>
+                                    <td>Total</td>
+                                    <td>GOB</td>
+                                    <td>P.A.</td>
+                                    <td>Self-finance</td>
+                                    <td>Others</td>
+                                    <td>Physical %</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                    <td>(6)</td>
+                                    <td>(7)</td>
+                                    <td>(8)</td>
+                                    <td>(9)</td>
+                                    <td>(10)</td>
+                                    <td>(11)</td>
+                                    <td>(12)</td>
+                                    <td>(13)</td>
+                                    <td>(14)</td>
+                                    <td>(15)= 8-10</td>
+                                </tr>
+                            </table>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Attach the Proof for Reconciliation of Unspent GOB Released<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** To determine the physical quantity, use the formula as in the circular of Planning Division
+                        </div>
+
+                        <br />
+
+
+
+                    </div>
+
+                    <br />
+
+                    <!-- D. ACHIEVEMENT OF OBJECTIVES OF THE PROJECT -->
+                    <button onclick="pcrForm.unHideSubMenu('SecD')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">D</span> ACHIEVEMENT OF OBJECTIVES OF THE PROJECT <small class="w3-right">Click to Open/Close</small></button>
+                    <div id="SecD" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                        <h4 class="w3-center">
+                            <b>
+                                D. <u>ACHIEVEMENT OF OBJECTIVES OF THE PROJECT</u>
+                            </b>
+                        </h4>
+
+                        <div class="w3-responsive">
+                            <b>25. Project objective, Actual achievement and Reason for shortfall (if any)::</b>
+                            <table id="secD_PrjAchievementTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="1"></td>
+                                    <td colspan="2">
+                                        <button onclick="pcrForm.secD_PrjAchievementTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secD_PrjAchievementTable',2,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sl. No.</td>
+                                    <td>Objectives as per Project Document</td>
+                                    <td>Actual achievement</td>
+                                    <td>Reasons for shortfall (if any)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                    </div>
+
+                    <br />
+
+                    <!-- E. BENEFIT ANALYSIS -->
+                    <button onclick="pcrForm.unHideSubMenu('SecE')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">E</span> BENEFIT ANALYSIS <small class="w3-right">Click to Open/Close</small></button>
+                    <div id="SecE" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                        <h4 class="w3-center">
+                            <b>
+                                E. <u>BENEFIT ANALYSIS</u>
+                            </b>
+                        </h4>
+
+                        <div class="w3-responsive">
+                            <b>26. Annual Out-put:</b>
+                            <table id="secE_AnnOutTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="3"></td>
+                                    <td>
+                                        <button onclick="pcrForm.secE_AnnOutTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secE_AnnOutTable',2,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sl. No.</td>
+                                    <td>Items of out-put</td>
+                                    <td>Unit</td>
+                                    <td> Estimated quantity expected at full capacity</td>
+                                    <td>Actual quantity of out-put during the 1st year of operation at full capacity (or during, real production for newly completed project)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>27. Cost/Benefit:</b>
+                            <table id="secE_CostBenifitTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td colspan="2">
+                                        <button onclick="pcrForm.secE_CostBenifitTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secE_CostBenifitTable',2,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Category</td>
+                                    <td>Item</td>
+                                    <td>Estimated</td>
+                                    <td>Actual</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>28. Please give reasons for shortfall, if any, between the estimated and actual benefit:</b>
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                        </div>
+
+                        <br />
+
+                    </div>
+
+                    <br />
+
+                    <!-- F. MONITORING AND AUDITING -->
+                    <button onclick="pcrForm.unHideSubMenu('SecF')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">F</span> MONITORING AND AUDITING <small class="w3-right">Click to Open/Close</small></button>
+                    <div id="SecF" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                        <h4 class="w3-center">
+                            <b>
+                                F. <u>MONITORING AND AUDITING</u>
+                            </b>
+                        </h4>
+
+                        <div class="w3-responsive">
+                            <b>29. Monitoring:</b>
+                            <table id="secF_MonitorTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="2"></td>
+                                    <td colspan="2">
+                                        <button onclick="pcrForm.secF_MonitorTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secF_MonitorTable',2,0);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Name & Designation of the inspecting official</td>
+                                    <td>Date</td>
+                                    <td>Identified Problems</td>
+                                    <td>Recommendations</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>30. Auditing during and after Implementation:</b>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <table id="secF_IntAuditTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td><b>30.1</b></td>
+                                    <td colspan="2"><b>Internal Audit:</b></td>
+                                    <td colspan="2">
+                                        <button onclick="pcrForm.secF_IntAuditTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secF_IntAuditTable',3,1);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sl. No.</td>
+                                    <td>Period of Audit</td>
+                                    <td>Date of submission of Audit Report</td>
+                                    <td>Major findings/objections and Money involved</td>
+                                    <td>Whether objections resolved or not (if not, mention status)</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Total findings/objections and Money involved=</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <table id="secF_ExtAuditTable" class="tbl_bordered w3-centered">
+                                <tr>
+                                    <td><b>30.2</b></td>
+                                    <td colspan="2"><b>External Audit:</b></td>
+                                    <td colspan="2">
+                                        <button onclick="pcrForm.secF_ExtAuditTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secF_ExtAuditTable',3,1);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sl. No.</td>
+                                    <td>Period of Audit</td>
+                                    <td>Date of submission of Audit Report</td>
+                                    <td>Major findings/objections and Money involved</td>
+                                    <td>Whether objections resolved or not (if not, mention status)</td>
+                                </tr>
+                                <tr>
+                                    <td>(1)</td>
+                                    <td>(2)</td>
+                                    <td>(3)</td>
+                                    <td>(4)</td>
+                                    <td>(5)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Total findings/objections and Money involved=</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                    </div>
+
+                    <br />
+
+                    <!-- G. POST-PROJECT REMARKS -->
+                    <button onclick="pcrForm.unHideSubMenu('SecG')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">G</span> POST-PROJECT REMARKS <small class="w3-right">Click to Open/Close</small></button>
+                    <div id="SecG" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                        <h4 class="w3-center">
+                            <b>
+                                G. <u>POST-PROJECT REMARKS</u>
+                            </b>
+                        </h4>
+
+                        <div class="w3-responsive">
+                            <b>31. General Observations/Remarks on the Project</b>
+                            <br />
+                            <b>31.1 Background</b>
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <br />
+                            <b>31.2 Justification/Adequacy</b>
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <br />
+                            <b>31.3 Objectives and</b>
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <br />
+                            <b>31.4 Project revision with reasons</b>
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>32. Rationale of the project (Consider the following issues):</b>
+                            <br />
+                            <b>32.1 Concept</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>32.2 Design</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>32.3 Location and</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>32.4 Timing. </b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>33. Brief description on planning and financing of the project and its applicability (Consider the following issues):</b>
+                            <br />
+                            <b>33.1 Project Identification</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.2 Project Preparation</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.3 Appraisal</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.4 Credit Negotiation</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.5 Credit Agreement</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.6 Credit Effectiveness</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.7 Loan Disbursement</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.8 Loan Conditions</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.9 Project Approval and</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>33.10 Others(specify)</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>34. Analysis of the post- implementation situation and result of the project (Consider following issues):</b>
+                            <br />
+                            <b>34.1 Whether the beneficiaries of the project have clear knowledge about the Target/Objectives of the project.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.2 Programme for use of created-facilities of the project</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.3 O & M Program of the project.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.4 Impact of the project (Direct & Indirect)</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.5 Transfer of Technology and Institutional Building through the project.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.6 Employment generation through the project.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.7 Possibility of Self employment.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.8 Possibility of Women-employment opportunity.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.9 Women’s participation in development.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.10 Probable Impact on Socio-Economic activity.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.11 Impact on environment.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.12 Sustainability of the project.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.13 Contribution to poverty alleviation/reduction.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.14 Opinion of the public representatives, local elite, local administration, teachers, religious leaders, women’s representatives etc.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>34.15 Contribution of Micro-credit programs and Comments on overlapping with any NGO activities.</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>35. Problems encountered during Implementation (with duration & steps taken to resolve those) (Consider following issues):</b>
+                            <br />
+                            <b>35.1 Project management:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.2 Project Director:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.3 Land Acquisition:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.4 Procurement:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.5 Consultancy:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.6 Contractor:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.7 Manpower:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.8 Law & Order:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.9 Natural calamity:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.10 Project financing:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.11 Allocation and release:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.12 Design formulation/approval:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.13 Project aid disbursement and re-imbursement:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.14 Mission of the development partners:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.15 Time & Cost Over-run:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.16 Project Monitoring:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.17 Delay in Decision:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.18 Transport, Training:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <b>35.19 Approval and Others:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>36. Remarks & Recommendations of the Project Director:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <br />
+                            <div class="w3-row">
+                                <div class="w3-col m5">Date: <input class="w3-input w3-border w3-round-large" type="date"></div>
+                                <div class="w3-col m2">&nbsp;</div>
+                                <div class="w3-col m5">
+                                    <div id="pdSign" class="w3-center">
+                                        <h2 class="w3-red w3-center" onclick="document.getElementById('pdSignInput').click();">Click to Add Sign</h2>
+                                        <input class="w3-hide" type="file" name="photo" multiple="" id="pdSignInput" accept="image/png, image/jpeg" onchange="pcrForm.loadSign('pdSign');">
+                                    </div>
+                                    <hr />
+                                    Signature and seal of the Project Director
+                                    <textarea class="w3-input w3-border w3-round-large" rows="4">(Name)&#13;&#10;Designation&#13;&#10;Ministry</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>37. Remarks/Comments of Agency Head:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <br />
+                            <div class="w3-row">
+                                <div class="w3-col m5">Date: <input class="w3-input w3-border w3-round-large" type="date"></div>
+                                <div class="w3-col m2">&nbsp;</div>
+                                <div class="w3-col m5">
+                                    <div id="ahSign" class="w3-center">
+                                        <h2 class="w3-red w3-center" onclick="document.getElementById('ahSignInput').click();">Click to Add Sign</h2>
+                                        <input class="w3-hide" type="file" name="photo" multiple="" id="ahSignInput" accept="image/png, image/jpeg" onchange="pcrForm.loadSign('ahSign');">
+                                    </div>
+                                    <hr />
+                                    Signature and seal of Agency Head
+                                    <textarea class="w3-input w3-border w3-round-large" rows="4">(Name)&#13;&#10;Designation&#13;&#10;Ministry</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="w3-responsive">
+                            <b>38. Remarks/Comments of the Secretary/Senior Secretary of the Ministry/Division:</b>
+                            <br />
+                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            <br />
+                            <div class="w3-row">
+                                <div class="w3-col m5">Date: <input class="w3-input w3-border w3-round-large" type="date"></div>
+                                <div class="w3-col m2">&nbsp;</div>
+                                <div class="w3-col m5">
+                                    <div id="secSign" class="w3-center">
+                                        <h2 class="w3-red w3-center" onclick="document.getElementById('secSignInput').click();">Click to Add Sign</h2>
+                                        <input class="w3-hide" type="file" name="photo" multiple="" id="secSignInput" accept="image/png, image/jpeg" onchange="pcrForm.loadSign('secSign');">
+                                    </div>
+                                    <hr />
+                                    Signature and seal of Secretary
+                                    <textarea class="w3-input w3-border w3-round-large" rows="4">(Name)&#13;&#10;Designation&#13;&#10;Ministry</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                    </div>
+
+                    <br />
+
+                </div>
+            </div>
+
+            <!-- Preview, Print, Save as draft, Download, Submit option -->
+            <div>
+                <div class="w3-bottom w3-padding">
+                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right w3-right" title="Preview"><i class="fa fa-eye" aria-hidden="true"></i> Preview</button>
+                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right w3-right" title="Print"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right w3-right" title="Download"><i class="fa fa-download" aria-hidden="true"></i> Download</button>
+                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right w3-right" title="Save as Draft"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save as Draft</button>
+                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right w3-right" title="Submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Submit</button>
+                    <button onclick="this.parentElement.classList.add('w3-hide');this.parentElement.parentElement.getElementsByClassName('w3-bottom')[1].classList.remove('w3-hide');" class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right w3-right" title="Change Style"><i class="fa fa-recycle" aria-hidden="true"></i> Change Style</button>
+                </div>
+                <div class="w3-bottom w3-padding w3-hide">
+                    <div class="w3-right">
+                        <button onclick="this.parentElement.parentElement.classList.add('w3-hide');this.parentElement.parentElement.parentElement.getElementsByClassName('w3-bottom')[2].classList.remove('w3-hide');" class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-bottom" title="Change Style"><i class="fa fa-recycle" aria-hidden="true"></i> Change Style</button>
+                        <br /><button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-bottom" title="Preview"><i class="fa fa-eye" aria-hidden="true"></i> Preview</button>
+                        <br /><button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-bottom" title="Print"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+                        <br /><button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-bottom" title="Download"><i class="fa fa-download" aria-hidden="true"></i> Download</button>
+                        <br /><button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-bottom" title="Save as Draft"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save as Draft</button>
+                        <br /><button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-bottom" title="Submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Submit</button>
+                    </div>
+                </div>
+                <div class="w3-bottom w3-padding w3-dropdown-hover w3-hide">
+                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-right w3-margin-right"><i class="fa fa-caret-up" aria-hidden="true"></i> Save</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4" style="right:25px;bottom:50px;">
+                        <a href="javascript:;" class="w3-bar-item w3-button"><i class="fa fa-eye" aria-hidden="true"></i> Preview</a>
+                        <a href="javascript:;" class="w3-bar-item w3-button"><i class="fa fa-print" aria-hidden="true"></i> Print</a>
+                        <a href="javascript:;" class="w3-bar-item w3-button"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                        <a href="javascript:;" class="w3-bar-item w3-button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save as Draft</a>
+                        <a href="javascript:;" class="w3-bar-item w3-button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Submit</a>
+                        <a href="javascript:;" onclick="this.parentElement.parentElement.classList.add('w3-hide');this.parentElement.parentElement.parentElement.getElementsByClassName('w3-bottom')[0].classList.remove('w3-hide');" class="w3-bar-item w3-button"><i class="fa fa-recycle" aria-hidden="true"></i> Change Style</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Footer -->
+            <footer class="w3-container w3-theme-d5">
+                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            </footer>
+
+    </body>
+</html>
+
+
+<script>
+    if (typeof (pcrForm) === 'undefined') {
+        let pcrForm = null;
+    }
+    pcrForm = new PcrForm();
+    pcrForm.initialize("/");
+</script>
