@@ -1,8 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ProjectManagementMVC.Services;
+﻿using System.Text.Json;
+using System.Text.Json.Nodes;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProjectCompletionReport.Models;
+using ProjectCompletionReport.Services;
 
-namespace ProjectManagementMVC.Controllers
+namespace ProjectCompletionReport.Controllers
 {
+    
     public class ProjectsController : Controller
     {
         public ProjectsController(ApplicationDBContext context)
@@ -12,10 +17,33 @@ namespace ProjectManagementMVC.Controllers
 
         public ApplicationDBContext Context { get; }
 
+        
         public IActionResult Index()
         {
-            var personalInfos = Context.PersonalInfos.ToList();
-            return View(personalInfos);
+            return View("Index");
+        }
+
+        [Route("/Projects/SaveProject")]
+        [HttpPost]
+        public IActionResult SaveProject([FromBody] Project payload)
+        {       
+            try
+            {
+                if (payload == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                Context.Projects.Add(payload);
+                Context.SaveChanges();
+            }
+            catch
+            {
+                // Log.Error("API call failed. URL: {url} User: {UserName}", HttpContext.Request.Path, HttpContext.Request.Cookies["UserName"]);
+                return Problem("Failed to insert");
+            }
+            return Ok(new { message = "success" });
+
+            
         }
     }
 }

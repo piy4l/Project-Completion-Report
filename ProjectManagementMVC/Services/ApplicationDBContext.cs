@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProjectManagementMVC.Models;
+using ProjectCompletionReport.Models;
 
-namespace ProjectManagementMVC.Services
+namespace ProjectCompletionReport.Services
 {
     public class ApplicationDBContext : DbContext
     {
@@ -9,8 +9,7 @@ namespace ProjectManagementMVC.Services
         {
 
         }
-
-        public DbSet<PersonalInfo> PersonalInfos { get; set; }
+        public DbSet<Project> Projects { get; set; }
 
     }
 }

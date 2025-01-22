@@ -4739,9 +4739,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\ProjectManagementMVC.csproj",
-      "projectName": "ProjectManagementMVC",
-      "projectPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\ProjectManagementMVC.csproj",
+      "projectUniqueName": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\ProjectCompletionReport.csproj",
+      "projectName": "ProjectCompletionReport",
+      "projectPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\ProjectCompletionReport.csproj",
       "packagesPath": "C:\\Users\\souvi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\",
       "projectStyle": "PackageReference",

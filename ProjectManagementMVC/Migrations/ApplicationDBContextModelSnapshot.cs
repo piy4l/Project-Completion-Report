@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProjectManagementMVC.Services;
+using ProjectCompletionReport.Services;
 
 #nullable disable
 
-namespace ProjectManagementMVC.Migrations
+namespace ProjectCompletionReport.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
     partial class ApplicationDBContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace ProjectManagementMVC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ProjectManagementMVC.Models.PersonalInfo", b =>
+            modelBuilder.Entity("ProjectCompletionReport.Models.PersonalInfo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

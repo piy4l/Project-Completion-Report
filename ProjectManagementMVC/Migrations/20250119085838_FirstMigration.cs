@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ProjectManagementMVC.Migrations
+namespace ProjectCompletionReport.Migrations
 {
     /// <inheritdoc />
     public partial class FirstMigration : Migration

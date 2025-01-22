@@ -170,3 +170,4 @@ C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectManagementMVC.pdb
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectManagementMVC.genruntimeconfig.cache
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ref\ProjectManagementMVC.dll
+C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectManagementMVC.sourcelink.json

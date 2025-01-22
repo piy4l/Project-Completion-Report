@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ProjectManagementMVC.Services;
+using ProjectCompletionReport.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

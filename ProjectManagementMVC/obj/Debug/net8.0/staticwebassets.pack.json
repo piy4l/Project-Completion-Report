@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectManagementMVC.bundle.scp.css",
-      "PackagePath": "staticwebassets\\ProjectManagementMVC.kzk4l5wsv8.bundle.scp.css"
+      "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectCompletionReport.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ProjectCompletionReport.yutvvr6tbp.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\site.css",
@@ -245,24 +245,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectManagementMVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectCompletionReport.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectManagementMVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectCompletionReport.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ProjectManagementMVC.props",
-      "PackagePath": "build\\ProjectManagementMVC.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ProjectCompletionReport.props",
+      "PackagePath": "build\\ProjectCompletionReport.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjectManagementMVC.props",
-      "PackagePath": "buildMultiTargeting\\ProjectManagementMVC.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjectCompletionReport.props",
+      "PackagePath": "buildMultiTargeting\\ProjectCompletionReport.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ProjectManagementMVC.props",
-      "PackagePath": "buildTransitive\\ProjectManagementMVC.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ProjectCompletionReport.props",
+      "PackagePath": "buildTransitive\\ProjectCompletionReport.props"
     }
   ],
   "ElementsToRemove": []

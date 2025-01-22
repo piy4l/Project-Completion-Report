@@ -1,4 +1,4 @@
-namespace ProjectManagementMVC.Models
+namespace ProjectCompletionReport.Models
 {
     public class ErrorViewModel
     {

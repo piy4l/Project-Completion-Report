@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ProjectManagementMVC.Models;
+using ProjectCompletionReport.Models;
 
-namespace ProjectManagementMVC.Controllers
+namespace ProjectCompletionReport.Controllers
 {
     public class HomeController : Controller
     {
