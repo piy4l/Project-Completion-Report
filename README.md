@@ -1,4 +1,4 @@
-Creating the Tables:
+## Creating the Tables:
 
 CREATE TABLE [dbo].[06LocationOfTheProject] (
     [Id]                          INT           NOT NULL,
