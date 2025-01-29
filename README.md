@@ -41,7 +41,7 @@ CREATE TABLE [dbo].[_07EstimatedCostPeriodApproval] (
     CONSTRAINT [FK_07EstimatedCostPeriodApproval] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_12.1aStatusOfLoanGrantForeignFinancing] (
+CREATE TABLE [dbo].[_12_1aStatusOfLoanGrantForeignFinancing] (
     [Id]                     INT           NOT NULL,
     [ProjectId]              INT           NOT NULL,
     [Source]                 NVARCHAR (50) NULL,
@@ -53,10 +53,10 @@ CREATE TABLE [dbo].[_12.1aStatusOfLoanGrantForeignFinancing] (
     [OriginalDateOfClosing]  NVARCHAR (50) NULL,
     [RevisedDateOfClosing]   NVARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_12.1aStatusOfLoanGrantForeignFinancing] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_12_1aStatusOfLoanGrantForeignFinancing] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_12.1bStatusOfLoanGrantGOB] (
+CREATE TABLE [dbo].[_12_1bStatusOfLoanGrantGOB] (
     [Id]                  INT           NOT NULL,
     [ProjectId]           INT           NOT NULL,
     [TotalAmount]         NVARCHAR (50) NULL,
@@ -64,10 +64,10 @@ CREATE TABLE [dbo].[_12.1bStatusOfLoanGrantGOB] (
     [Grant]               NVARCHAR (50) NULL,
     [CashForeignExchange] NVARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_12.1bStatusOfLoanGrantGOB] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_12_1bStatusOfLoanGrantGOB] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_12.1cStatusOfLoanGrantSelfFinanceEquity] (
+CREATE TABLE [dbo].[_12_1cStatusOfLoanGrantSelfFinanceEquity] (
     [Id]                  INT           NOT NULL,
     [ProjectId]           INT           NOT NULL,
     [TotalAmount]         NVARCHAR (50) NULL,
@@ -75,10 +75,10 @@ CREATE TABLE [dbo].[_12.1cStatusOfLoanGrantSelfFinanceEquity] (
     [Equity]              NVARCHAR (50) NULL,
     [CashForeignExchange] NVARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_12.1cStatusOfLoanGrantSelfFinanceEquity] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_12_1cStatusOfLoanGrantSelfFinanceEquity] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_12.2UtilizationOfProjectAid] (
+CREATE TABLE [dbo].[_12_2UtilizationOfProjectAid] (
     [Id]                               INT           NOT NULL,
     [ProjectId]                        INT           NOT NULL,
     [Source]                           NVARCHAR (50) NULL,
@@ -89,10 +89,10 @@ CREATE TABLE [dbo].[_12.2UtilizationOfProjectAid] (
     [UnutilizedAmountInUSD]            NVARCHAR (50) NULL,
     [UnutilizedAmountInLocalCurrency]  NVARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_12.2UtilizationOfProjectAid] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_12_2UtilizationOfProjectAid] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_12.3ReimbursableProjectAid] (
+CREATE TABLE [dbo].[_12_3ReimbursableProjectAid] (
     [Id]                      INT            NOT NULL,
     [ProjectId]               INT            NOT NULL,
     [Source]                  NVARCHAR (50)  NULL,
@@ -103,7 +103,7 @@ CREATE TABLE [dbo].[_12.3ReimbursableProjectAid] (
     [AmountReimbursed]        NVARCHAR (50)  NULL,
     [Remarks]                 NVARCHAR (MAX) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_12.3ReimbursableProjectAid] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_12_3ReimbursableProjectAid] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
 CREATE TABLE [dbo].[_13ImplementationPeriod] (
@@ -145,17 +145,17 @@ CREATE TABLE [dbo].[_15InfoProjectDirectors] (
     CONSTRAINT [FK_15InfoProjectDirectors] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_16.1PersonnelOfPIU] (
+CREATE TABLE [dbo].[_16_1PersonnelOfPIU] (
     [Id]                           INT           NOT NULL,
     [ProjectId]                    INT           NOT NULL,
     [NameOfPost]                   NVARCHAR (50) NULL,
     [ApprovedStrength]             NVARCHAR (50) NULL,
     [EmployedDuringImplementation] NVARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_16.1PersonnelOfPIU] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_16_1PersonnelOfPIU] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_16.2PersonnelRequiredAfterCompletion] (
+CREATE TABLE [dbo].[_16_2PersonnelRequiredAfterCompletion] (
     [Id]                    INT            NOT NULL,
     [ProjectId]             INT            NOT NULL,
     [NameOfPost]            NVARCHAR (50)  NULL,
@@ -163,7 +163,7 @@ CREATE TABLE [dbo].[_16.2PersonnelRequiredAfterCompletion] (
     [Recruited]             NVARCHAR (50)  NULL,
     [ReasonForNotRecruited] NVARCHAR (MAX) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_16.2PersonnelRequiredAfterCompletion] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_16_2PersonnelRequiredAfterCompletion] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
 CREATE TABLE [dbo].[_16Personnel] (
@@ -267,7 +267,7 @@ CREATE TABLE [dbo].[_21InfrastructureErectionInstallation] (
     CONSTRAINT [FK_21InfrastructureErectionInstallation] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_22.1InfoOnPackages] (
+CREATE TABLE [dbo].[_22_1InfoOnPackages] (
     [Id]                          INT            NOT NULL,
     [ProjectId]                   INT            NOT NULL,
     [TotalPackagesAsPerPD]        NVARCHAR (50)  NULL,
@@ -284,7 +284,7 @@ CREATE TABLE [dbo].[_22.1InfoOnPackages] (
     [WorksMoreThanOnePct]         NVARCHAR (50)  NULL,
     [ServicesMoreThanOnePct]      NVARCHAR (50)  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_22.1InfoOnPackages] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_22_1InfoOnPackages] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
 CREATE TABLE [dbo].[_23OriginalAndRevisedProvisionTarget] (
@@ -373,7 +373,7 @@ CREATE TABLE [dbo].[_29Monitoring] (
     CONSTRAINT [FK_29Monitoring] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_30.1InternalAudit] (
+CREATE TABLE [dbo].[_30_1InternalAudit] (
     [Id]                        INT            NOT NULL,
     [ProjectId]                 INT            NOT NULL,
     [StartDate]                 DATE           NULL,
@@ -382,10 +382,10 @@ CREATE TABLE [dbo].[_30.1InternalAudit] (
     [MajorFindings]             NVARCHAR (MAX) NULL,
     [WhetherObjectionsResolved] NVARCHAR (MAX) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_30.1InternalAudit] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_30_1InternalAudit] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_30.2ExternalAudit] (
+CREATE TABLE [dbo].[_30_2ExternalAudit] (
     [Id]                        INT            NOT NULL,
     [ProjectId]                 INT            NOT NULL,
     [StartDate]                 DATE           NULL,
@@ -394,10 +394,10 @@ CREATE TABLE [dbo].[_30.2ExternalAudit] (
     [MajorFindings]             NVARCHAR (MAX) NULL,
     [WhetherObjectionsResolved] NVARCHAR (MAX) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_30.2ExternalAudit] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_30_2ExternalAudit] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
-CREATE TABLE [dbo].[_G.PostProjectRemarks] (
+CREATE TABLE [dbo].[_G_PostProjectRemarks] (
     [Id]                         INT            NOT NULL,
     [ProjectId]                  INT            NOT NULL,
     [Background]                 NVARCHAR (MAX) NULL,
@@ -455,6 +455,6 @@ CREATE TABLE [dbo].[_G.PostProjectRemarks] (
     [Field36]                    NVARCHAR (MAX) NULL,
     [Field28ReasonsForShortFall] NVARCHAR (MAX) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_G.PostProjectRemarks] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
+    CONSTRAINT [FK_G_PostProjectRemarks] FOREIGN KEY ([ProjectId]) REFERENCES [dbo].[Projects] ([ProjectId]) ON DELETE CASCADE
 );
 
