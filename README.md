@@ -5,7 +5,7 @@ CREATE TABLE [dbo].[Projects] (
     [Name]                             NVARCHAR (MAX) NOT NULL,
     [AdministrativeMinistryDivision]   NVARCHAR (100) NULL,
     [ExecutingAgency]                  NVARCHAR (100) NULL,
-    [PlanningCommissionSectorDivision] INT            NULL,
+    [PlanningCommissionSectorDivision] NVARCHAR (100) NULL,
     [Type]                             NVARCHAR (50)  NULL,
     [OverallObjective]                 NVARCHAR (MAX) NULL,
     [SpecificObjectives]               NVARCHAR (MAX) NULL,
