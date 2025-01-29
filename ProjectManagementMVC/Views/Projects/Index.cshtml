@@ -17,8 +17,7 @@
       padding: 8px;
     }
 </style>
-
-    
+ 
 <html>
     <head>
         <title>PROJECT COMPLETION REPORT (PCR)</title>
@@ -231,7 +230,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td rowspan="2">Source (s)</td>
+                                    <td rowspan="2">Source(s)</td>
                                     <td rowspan="2">Currency as per Agreement</td>
                                     <td rowspan="2">Amount in US$ (million)</td>
                                     <td rowspan="2">Nature</td>
@@ -369,11 +368,11 @@
                                     <td rowspan="2">Remarks</td>
                                 </tr>
                                 <tr>
-                                    <td>As per</td>
-                                    <td>As per</td>
+                                    <td>As per Project Document</td>
+                                    <td>As per Agreement</td>
                                     <td>Spent</td>
                                     <td>Claimed</td>
-                                    <td>Re-imbrued</td>
+                                    <td>Re-imbursed</td>
                                 </tr>
                                 <tr>
                                     <td>(1)</td>
@@ -552,8 +551,8 @@
                                 </tr>
                                 <tr>
                                     <td rowspan="2">Sl. No</td>
-                                    <td colspan="2">As P reposed in Project Document (PD)</td>
-                                    <td rowspan="2">Recruited</td>
+                                    <td colspan="2">As Proposed in Project Document (PD)</td>
+                                    <td rowspan="2">Recruited (Yes/No)</td>
                                     <td rowspan="2">If not recruited explain reason and latest stats</td>
                                 </tr>
                                 <tr>
@@ -587,12 +586,12 @@
                                     <td colspan="4"></td>
                                     <td colspan="3">
                                         <button onclick="pcrForm.secB_TrainingTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
-                                        <button onclick="pcrForm.removeTableLastRow('secB_TrainingTable',5,1);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
+                                        <button onclick="pcrForm.removeTableLastRow('secB_TrainingTable',5,3);" type="button" class="w3-button w3-theme"><i class="fa fa-minus" aria-hidden="true"></i> Remove Last</button>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td rowspan="3">Sl. No</td>
                                     <td rowspan="3">Category</td>
+                                    <td rowspan="3">Sl. No</td>
                                     <td colspan="6">No. of Days/Weeks/Months (D/W/M), Batch & Participants</td>
                                 </tr>
                                 <tr>
@@ -618,8 +617,25 @@
                                     <td>(8)</td>
                                 </tr>
                                 <tr>
-                                    <td>Total</td>
+                                <td colspan="2">Sub-total (Local Training)</td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                                <tr>
+                                <td colspan="2">Sub-total (Foreign Training)</td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Total (Local + Foreign)</td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
@@ -681,26 +697,7 @@
                                     <td>(14)</td>
                                 </tr>
                                 <tr>
-                                    <td>Sub-total (Revenue)</td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                </tr>
-                                <tr>
-                                    <td>Sub-total (Capital)</td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
-                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td colspan="4">Sub-total (Revenue)</td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
@@ -713,10 +710,20 @@
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                 </tr>
                                 <tr>
-                                    <td>Total a+b (Revenue+ Capital)</td>
+                                    <td colspan="4">Sub-total (Capital)</td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                    <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Total (Revenue + Capital)</td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
                                     <td><input class="w3-input w3-border w3-round-large" type="number" value="0"></td>
@@ -845,7 +852,7 @@
 
                         <div class="w3-responsive">
                             <b>22. Procurement of Goods, Works and Services:</b>
-                            <textarea class="w3-input w3-border w3-round-large"></textarea>
+                            @* <textarea class="w3-input w3-border w3-round-large"></textarea> *@
                         </div>
 
                         <br />
@@ -853,10 +860,10 @@
                         <div class="w3-responsive">
                             <b>22.1 Information on packages:</b>
                             <ol type="a">
-                                <li>Total number of packages as per Project Document: <input type="number"> (Goods- <input type="number"> Works- Services- <input type="number">)</li>
-                                <li>Total number of packages procured: <input type="number"> (Goods- <input type="number"> Works- <input type="number"> Services- <input type="number">)</li>
+                            <li>Total number of packages as per Project Document: <input type="text"> (Goods- <input type="text"> Works- <input type="text"> Services- <input type="text">)</li>
+                            <li>Total number of packages procured: <input type="text"> (Goods- <input type="text"> Works- <input type="text"> Services- <input type="text">)</li>
                                 <li>Reason for not procuring (if any): <textarea class="w3-input w3-border w3-round-large"></textarea></li>
-                                <li>Number of packages for which the estimated cost is more than 1% of the estimated cost of the project: <input type="number"> (Goods- <input type="number"> Works- <input type="number"> Services- <input type="number">)</li>
+                            <li>Number of packages for which the estimated cost is more than 1% of the estimated cost of the project: <input type="text"> (Goods- <input type="text"> Works- <input type="text"> Services- <input type="text">)</li>
                             </ol>
                         </div>
 
@@ -1114,7 +1121,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
+                                    <td>Category</td>
                                     <td>Name & Designation of the inspecting official</td>
                                     <td>Date</td>
                                     <td>Identified Problems</td>
@@ -1557,9 +1564,9 @@
             tmpCell = row.insertCell(1);
             tmpCell.innerHTML = this._getDivisionList();
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = this._getDistrictList();
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = this._getUpazilaList();
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             this.tableReserial("secA_LocationTable",2);
         }
 
@@ -1569,19 +1576,19 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = '<select class="w3-select"><option>Original</option><option>1st Revised</option><option>2nd Revised</option><option>3rd Revised</option><option>4th Revised</option><option>5th Revised</option><option>1st No Cost Extension</option><option>2nd No Cost Extension</option><option>3rd No Cost Extension</option><option>4th No Cost Extension</option><option>5th No Cost Extension</option><option>Intercomponent Adjustment</option></select>';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(7);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
 
         this.secA_LoanStatus_ForeignTable_Add = function(){
@@ -1592,9 +1599,9 @@
             tmpCell = row.insertCell(1);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<select class="w3-select"><option>Loan</option><option>Grant</option><option>supplier’s credit</option></select>';
+            tmpCell.innerHTML = '<select class="w3-select"><option>Loan</option><option>Grant</option><option>Supplier’s credit</option></select>';
             tmpCell = row.insertCell(4);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(5);
@@ -1609,11 +1616,11 @@
             let table = document.getElementById("secA_LoanStatus_GobTable");
             let row = table.insertRow(-1);
             let tmpCell = row.insertCell(0);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1622,11 +1629,11 @@
             let table = document.getElementById("secA_LoanStatus_SelfTable");
             let row = table.insertRow(-1);
             let tmpCell = row.insertCell(0);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1637,17 +1644,17 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
 
         this.secA_RpaTable_Add = function(){
@@ -1656,15 +1663,15 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1673,13 +1680,13 @@
             let table = document.getElementById("secB_ImplPeriodTable");
             let row = table.insertRow(-1);
             let tmpCell = row.insertCell(0);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1690,13 +1697,13 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1726,11 +1733,11 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = "0";
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             this.tableReserial("secB_PiuTable",3,true);
             //this.tableSum("secB_PiuTable",3,[1,2,3]);
         }
@@ -1743,7 +1750,7 @@
             tmpCell = row.insertCell(1);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
             tmpCell.innerHTML = '<select class="w3-select"><option>Yes</option><option>No</option></select>';
             tmpCell = row.insertCell(4);
@@ -1754,24 +1761,26 @@
 
         this.secB_TrainingTable_Add = function(){
             let table = document.getElementById("secB_TrainingTable");
-            let row = table.insertRow(table.rows.length-1);
+            let row = table.insertRow(table.rows.length-3);
             let tmpCell = row.insertCell(0);
-            tmpCell.innerHTML = "0";
-            tmpCell = row.insertCell(1);
+            // tmpCell.innerHTML = "0";
+            // tmpCell = row.insertCell(1);
             tmpCell.innerHTML = '<select class="w3-select"><option>Local Training</option><option>Foreign Training</option></select>';
+            tmpCell = row.insertCell(1);
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
             tmpCell.innerHTML = '<textarea class="w3-input w3-border w3-round-large"></textarea>';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(7);
             tmpCell.innerHTML = '<textarea class="w3-input w3-border w3-round-large"></textarea>';
-            this.tableReserial("secB_TrainingTable",5,true);
+            //this.tableReserial("secB_TrainingTable",5,true);
             //this.tableSum("secB_PiuTable",3,[1,2,3]);
         }
 
@@ -1783,29 +1792,29 @@
             tmpCell = row.insertCell(1);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(7);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(8);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(9);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(10);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(11);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(12);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(13);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             //this.tableSum("secB_PiuTable",3,[1,2,3]);
         }
 
@@ -1815,17 +1824,17 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = '<select class="w3-select"><option>Car</option><option>Jeep</option><option>Microbus</option><option>Minibus</option><option>Bus</option><option>Pick-up</option><option>Truck</option><option>Motor-Cycle</option><option>By-cycle</option><option>Speed Boat</option><option>Launch</option><option>Other</option></select>';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number"><input class="w3-input w3-border w3-round-large" type="date">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number"><input class="w3-input w3-border w3-round-large" type="date">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number"><input class="w3-input w3-border w3-round-large" type="date">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number"><input class="w3-input w3-border w3-round-large" type="date">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number"><input class="w3-input w3-border w3-round-large" type="date">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(7);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1838,15 +1847,15 @@
             tmpCell = row.insertCell(1);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(7);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1857,15 +1866,15 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="date">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="date">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text"><input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -1874,66 +1883,66 @@
             let table = document.getElementById("secC_FinProvPhyTgtTable");
             let row = table.insertRow(-1);
             let tmpCell = row.insertCell(0);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(7);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(8);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(9);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(10);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(11);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(12);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
 
         this.secC_RevAdpTable_Add = function(){
             let table = document.getElementById("secC_RevAdpTable");
             let row = table.insertRow(-1);
             let tmpCell = row.insertCell(0);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(4);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(5);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(7);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(8);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(9);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(10);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(11);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(12);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(13);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(14);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
 
         this.secD_PrjAchievementTable_Add = function(){
@@ -1956,9 +1965,9 @@
             let tmpCell = row.insertCell(0);
             tmpCell.innerHTML = '0';
             tmpCell = row.insertCell(1);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<textarea class="w3-input w3-border w3-round-large"></textarea>';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
             tmpCell.innerHTML = '<textarea class="w3-input w3-border w3-round-large"></textarea>';
             tmpCell = row.insertCell(4);
@@ -1974,9 +1983,9 @@
             tmpCell = row.insertCell(1);
             tmpCell.innerHTML = '<select class="w3-select"><option>Financial</option><option>Economic</option></select>';
             tmpCell = row.insertCell(2);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(3);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="number">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
 
         this.secF_MonitorTable_Add = function(){

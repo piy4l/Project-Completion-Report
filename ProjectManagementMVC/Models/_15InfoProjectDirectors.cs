@@ -1,0 +1,18 @@
+﻿namespace ProjectCompletionReport.Models
+{
+    public class _15InfoProjectDirectors
+    {
+        public int Id { get; set; }
+        public int ProjectId { get; set; }
+        public string? NameAndDetails { get; set; }
+        public string? FullTime { get; set; }
+        public string? PartTime { get; set; }
+        public string? ResponsibleForMoreThanOneProject { get; set; }
+        public DateTime? Joining { get; set; } // Using DateTime? for nullable dates
+        public DateTime? Transfer { get; set; } // Using DateTime? for nullable dates
+        public string? Remarks { get; set; }
+
+        // Navigation property to the Project entity
+        public Project? Project { get; set; }
+    }
+}
