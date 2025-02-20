@@ -11,7 +11,5 @@
         public string? CostOverRun { get; set; }
         public string? Remarks { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

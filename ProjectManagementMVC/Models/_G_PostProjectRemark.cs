@@ -1,6 +1,6 @@
 ﻿namespace ProjectCompletionReport.Models
 {
-    public class _G_PostProjectRemarks
+    public class _G_PostProjectRemark
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
@@ -59,7 +59,5 @@
         public string? _36 { get; set; }
         public string? _28ReasonsForShortFall { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

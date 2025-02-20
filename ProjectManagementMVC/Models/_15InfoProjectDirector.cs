@@ -1,6 +1,6 @@
 ﻿namespace ProjectCompletionReport.Models
 {
-    public class _15InfoProjectDirectors
+    public class _15InfoProjectDirector
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
@@ -12,7 +12,5 @@
         public DateTime? Transfer { get; set; } // Using DateTime? for nullable dates
         public string? Remarks { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

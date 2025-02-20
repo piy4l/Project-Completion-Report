@@ -10,7 +10,5 @@
         public string? MajorFindings { get; set; }
         public string? WhetherObjectionsResolved { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

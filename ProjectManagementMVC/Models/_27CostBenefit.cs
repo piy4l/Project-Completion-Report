@@ -9,7 +9,5 @@
         public string? Estimated { get; set; }
         public string? Actual { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

@@ -8,8 +8,5 @@
         public string? Unit { get; set; }
         public string? EstimatedQuantity { get; set; }
         public string? ActualQuantity { get; set; }
-
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

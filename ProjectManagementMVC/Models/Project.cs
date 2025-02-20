@@ -6,7 +6,7 @@
         public string? Name { get; set; }
         public string? AdministrativeMinistryDivision { get; set; }
         public string? ExecutingAgency { get; set; }
-        public int? PlanningCommissionSectorDivision { get; set; }
+        public string? PlanningCommissionSectorDivision { get; set; }
         public string? Type { get; set; }
         public string? OverallObjective { get; set; }
         public string? SpecificObjectives { get; set; }

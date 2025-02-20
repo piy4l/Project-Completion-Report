@@ -8,7 +8,5 @@
         public string? Achievement { get; set; }
         public string? ReasonsForShortfall { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

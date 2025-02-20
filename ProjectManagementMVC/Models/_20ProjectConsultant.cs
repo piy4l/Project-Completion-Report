@@ -1,6 +1,6 @@
 ﻿namespace ProjectCompletionReport.Models
 {
-    public class _20ProjectConsultants
+    public class _20ProjectConsultant
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
@@ -13,7 +13,5 @@
         public string? NumberOfDeliverablesActual { get; set; }
         public string? Remarks { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

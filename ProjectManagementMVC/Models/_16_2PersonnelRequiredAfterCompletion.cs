@@ -9,7 +9,5 @@
         public string? Recruited { get; set; }
         public string? ReasonForNotRecruited { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

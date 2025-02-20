@@ -18,7 +18,5 @@
         public DateTime? ReturnedToFollowingProjectDate { get; set; } // Using DateTime? for nullable dates
         public string? Remarks { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

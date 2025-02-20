@@ -20,7 +20,5 @@
         public string? PhysicalPercentageProgress { get; set; }
         public string? UnspentGOBReleased { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

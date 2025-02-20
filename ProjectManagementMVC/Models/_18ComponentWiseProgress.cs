@@ -18,7 +18,5 @@
         public string? ActualSelfFinance { get; set; }
         public string? ActualOthers { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

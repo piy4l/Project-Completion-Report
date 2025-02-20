@@ -12,7 +12,5 @@
         public string? TotalRecruited { get; set; }
         public string? TotalReasonForNotRecruited { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

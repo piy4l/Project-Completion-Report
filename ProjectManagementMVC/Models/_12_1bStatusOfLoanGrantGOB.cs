@@ -8,8 +8,5 @@
         public string? Loan { get; set; }
         public string? Grant { get; set; }
         public string? CashForeignExchange { get; set; }
-
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

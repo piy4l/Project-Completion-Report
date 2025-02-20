@@ -8,8 +8,5 @@
         public string? SelfFinance { get; set; }
         public string? Equity { get; set; }
         public string? CashForeignExchange { get; set; }
-
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

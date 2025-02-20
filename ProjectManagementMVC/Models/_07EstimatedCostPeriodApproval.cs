@@ -10,10 +10,7 @@
         public string? PA { get; set; }
         public string? SelfFinance { get; set; }
         public string? ImplementationPeriod { get; set; }
-        public string? DateOfApproval { get; set; }
+        public DateTime? DateOfApproval { get; set; }
         public string? ApprovedBy { get; set; }
-
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

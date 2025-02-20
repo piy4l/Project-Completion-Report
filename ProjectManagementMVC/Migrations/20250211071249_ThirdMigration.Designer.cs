@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectCompletionReport.Services;
 
@@ -11,9 +12,11 @@ using ProjectCompletionReport.Services;
 namespace ProjectCompletionReport.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250211071249_ThirdMigration")]
+    partial class ThirdMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -65,7 +68,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasKey("ProjectId");
 
-                    b.ToTable("Projects", (string)null);
+                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._06LocationOfTheProject", b =>
@@ -90,7 +93,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("_06LocationOfTheProjects", (string)null);
+                    b.ToTable("_06LocationOfTheProjects");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._07EstimatedCostPeriodApproval", b =>
@@ -132,7 +135,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_07EstimatedCostPeriodApprovals", (string)null);
+                    b.ToTable("_07EstimatedCostPeriodApprovals");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._12_1aStatusOfLoanGrantForeignFinancing", b =>
@@ -174,7 +177,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_12_1aStatusOfLoanGrantForeignFinancings", (string)null);
+                    b.ToTable("_12_1aStatusOfLoanGrantForeignFinancings");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._12_1bStatusOfLoanGrantGOB", b =>
@@ -204,7 +207,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_12_1bStatusOfLoanGrantGOBs", (string)null);
+                    b.ToTable("_12_1bStatusOfLoanGrantGOBs");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._12_1cStatusOfLoanGrantSelfFinanceEquity", b =>
@@ -234,7 +237,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_12_1cStatusOfLoanGrantSelfFinanceEquities", (string)null);
+                    b.ToTable("_12_1cStatusOfLoanGrantSelfFinanceEquities");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._12_2UtilizationOfProjectAid", b =>
@@ -273,7 +276,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_12_2UtilizationOfProjectAids", (string)null);
+                    b.ToTable("_12_2UtilizationOfProjectAids");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._12_3ReimbursableProjectAid", b =>
@@ -312,7 +315,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_12_3ReimbursableProjectAids", (string)null);
+                    b.ToTable("_12_3ReimbursableProjectAids");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._13ImplementationPeriod", b =>
@@ -345,7 +348,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_13ImplementationPeriods", (string)null);
+                    b.ToTable("_13ImplementationPeriods");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._14CostOfTheProject", b =>
@@ -381,7 +384,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_14CostOfTheProjects", (string)null);
+                    b.ToTable("_14CostOfTheProjects");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._15InfoProjectDirector", b =>
@@ -420,7 +423,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_15InfoProjectDirectors", (string)null);
+                    b.ToTable("_15InfoProjectDirectors");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._16Personnel", b =>
@@ -459,7 +462,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_16Personnels", (string)null);
+                    b.ToTable("_16Personnels");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._16_1PersonnelOfPIU", b =>
@@ -486,7 +489,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_16_1PersonnelOfPIUs", (string)null);
+                    b.ToTable("_16_1PersonnelOfPIUs");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._16_2PersonnelRequiredAfterCompletion", b =>
@@ -516,7 +519,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_16_2PersonnelRequiredAfterCompletions", (string)null);
+                    b.ToTable("_16_2PersonnelRequiredAfterCompletions");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._17TrainingForeignLocal", b =>
@@ -558,7 +561,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_17TrainingForeignLocals", (string)null);
+                    b.ToTable("_17TrainingForeignLocals");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._18ComponentWiseProgress", b =>
@@ -615,7 +618,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_18ComponentWiseProgresses", (string)null);
+                    b.ToTable("_18ComponentWiseProgresses");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._19ProcurementOfTransport", b =>
@@ -672,7 +675,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_19ProcurementOfTransports", (string)null);
+                    b.ToTable("_19ProcurementOfTransports");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._20ProjectConsultant", b =>
@@ -714,7 +717,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_20ProjectConsultants", (string)null);
+                    b.ToTable("_20ProjectConsultants");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._21InfrastructureErectionInstallation", b =>
@@ -762,7 +765,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_21InfrastructureErectionInstallations", (string)null);
+                    b.ToTable("_21InfrastructureErectionInstallations");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._22_1InfoOnPackage", b =>
@@ -819,7 +822,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_222_1InfoOnPackages", (string)null);
+                    b.ToTable("_222_1InfoOnPackages");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._23OriginalAndRevisedProvisionTarget", b =>
@@ -876,7 +879,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_23OriginalAndRevisedProvisionTargets", (string)null);
+                    b.ToTable("_23OriginalAndRevisedProvisionTargets");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._24RevisedADPAllocationAndProgress", b =>
@@ -939,7 +942,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_24RevisedADPAllocationAndProgresses", (string)null);
+                    b.ToTable("_24RevisedADPAllocationAndProgresses");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._25ObjectiveAchievement", b =>
@@ -966,7 +969,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_25ObjectiveAchievements", (string)null);
+                    b.ToTable("_25ObjectiveAchievements");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._26AnnualOutput", b =>
@@ -996,7 +999,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_26AnnualOutputs", (string)null);
+                    b.ToTable("_26AnnualOutputs");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._27CostBenefit", b =>
@@ -1026,7 +1029,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_27CostBenefits", (string)null);
+                    b.ToTable("_27CostBenefits");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._29Monitoring", b =>
@@ -1059,7 +1062,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_29Monitorings", (string)null);
+                    b.ToTable("_29Monitorings");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._30_1InternalAudit", b =>
@@ -1092,7 +1095,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_30_1InternalAudits", (string)null);
+                    b.ToTable("_30_1InternalAudits");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._30_2ExternalAudit", b =>
@@ -1125,7 +1128,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_30_2ExternalAudits", (string)null);
+                    b.ToTable("_30_2ExternalAudits");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._G_PostProjectRemark", b =>
@@ -1305,7 +1308,7 @@ namespace ProjectCompletionReport.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("_G_PostProjectRemarks", (string)null);
+                    b.ToTable("_G_PostProjectRemarks");
                 });
 
             modelBuilder.Entity("ProjectCompletionReport.Models._07EstimatedCostPeriodApproval", b =>

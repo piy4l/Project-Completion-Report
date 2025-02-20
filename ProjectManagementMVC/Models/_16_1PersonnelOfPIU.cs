@@ -7,8 +7,5 @@
         public string? NameOfPost { get; set; }
         public string? ApprovedStrength { get; set; }
         public string? EmployedDuringImplementation { get; set; }
-
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

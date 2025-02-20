@@ -1,6 +1,6 @@
 ﻿namespace ProjectCompletionReport.Models
 {
-    public class _22_1InfoOnPackages
+    public class _22_1InfoOnPackage
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
@@ -18,7 +18,5 @@
         public string? WorksMoreThanOnePct { get; set; }
         public string? ServicesMoreThanOnePct { get; set; }
 
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

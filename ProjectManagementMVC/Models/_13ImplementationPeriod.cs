@@ -9,8 +9,5 @@
         public string? ActualImplementation { get; set; }
         public string? TimeOverRun { get; set; }
         public string? Remarks { get; set; }
-
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

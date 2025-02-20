@@ -11,8 +11,5 @@
         public string? ActualExpenditureInLocalCurrency { get; set; }
         public string? UnutilizedAmountInUSD { get; set; }
         public string? UnutilizedAmountInLocalCurrency { get; set; }
-
-        // Navigation property to the Project entity
-        public Project? Project { get; set; }
     }
 }

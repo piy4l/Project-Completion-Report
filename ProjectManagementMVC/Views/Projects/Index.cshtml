@@ -102,10 +102,10 @@
                                     <td>:</td>
                                     <td>
                                         <select id="secA_ProjectType" name="secA_ProjectType" class="w3-select">
-                                            <option value="" disabled selected>Choose your option</option>
-                                            <option value="1">Investment</option>
-                                            <option value="2">Technical</option>
-                                            <option value="3">Feasibility Study</option>
+                                            <option value="N/A" disabled selected>Choose your option</option>
+                                            <option value="Investment">Investment</option>
+                                            <option value="Technical">Technical</option>
+                                            <option value="Feasibility Study">Feasibility Study</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -178,10 +178,10 @@
                             <b>08. Objective of the Project</b>
                             <div class="w3-border w3-padding">
                                 Overall objective:
-                                <textarea class="w3-input w3-border"></textarea>
+                                <textarea id="secA_OverallObjective" class="w3-input w3-border"></textarea>
                                 <br />
                                 Specific Objectives (single line for each point):
-                                <textarea class="w3-input w3-border"></textarea>
+                                <textarea id="secA_SpecificObjectives" class="w3-input w3-border"></textarea>
                             </div>
                         </div>
 
@@ -1549,8 +1549,8 @@
                 //x.previousElementSibling.className = x.previousElementSibling.className.replace(" w3-theme-d1", "");
             }
         }
-
-        this._getDivisionList = function(){return '<select class="w3-select"><option value="dhaka">Dhaka</option><option value="chattogram">Chattogram</option><option value="rajshahi">Rajshahi</option><option value="khulna">Khulna</option><option value="sylhet">Sylhet</option><option value="barishal">Barishal</option><option value="rangpur">Rangpur</option><option value="mymensingh">Mymensingh</option>';}
+        
+        this._getDivisionList = function(){return '<select id="secA_Divison" name="secA_Division" class="w3-select"><option value="Dhaka" selected>Dhaka</option><option value="Chattogram">Chattogram</option><option value="Rajshahi">Rajshahi</option><option value="Khulna">Khulna</option><option value="Sylhet">Sylhet</option><option value="Barishal">Barishal</option><option value="Rangpur">Rangpur</option><option value="Mymensingh">Mymensingh</option></select>';}
 
         this._getDistrictList = function(division){return '<select class="w3-select"><option value="dhaka">Dhaka</option><option value="chattogram">Chattogram</option><option value="rajshahi">Rajshahi</option><option value="khulna">Khulna</option><option value="sylhet">Sylhet</option></select>';}
 
@@ -1586,7 +1586,7 @@
             tmpCell = row.insertCell(5);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
             tmpCell = row.insertCell(6);
-            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
+            tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="date">';
             tmpCell = row.insertCell(7);
             tmpCell.innerHTML = '<input class="w3-input w3-border w3-round-large" type="text">';
         }
@@ -2100,13 +2100,20 @@
         
         var payload = {
             Name: $("#secA_ProjectName").val(),
-            AdministrativeMinistryDivision: $("#secA_MinistryDivision"). val(),
-			ExecutingAgency: $("#secA_Agency").val(),
-			PlanningCommissionSectorDivision: $("#secA_PlanningSector").val(),           
-        };
+            AdministrativeMinistryDivision: $("#secA_MinistryDivision").val(),
+            ExecutingAgency: $("#secA_Agency").val(),
+            PlanningCommissionSectorDivision: $("#secA_PlanningSector").val(),
+            Type: $("#secA_ProjectType").val(),
+            OverallObjective: $("#secA_OverallObjective").val(),
+            SpecificObjectives: $("#secA_SpecificObjectives").val(),
+            Background: $("#secA_ProjectBackground").val(),
+            MajorActivities: $("#secA_MajorActivities").val(),
+            ReasonsForRevision: $("#secA_RevisionReason").val(),
+            ReasonsForNoCostTimeExtension: $("#secA_NoCostRevisionReason").val()
+        };     
 
-		// console.log(payload);
-            
+        console.log(payload);
+
         $.ajax({
             type: "POST",
             url: "/Projects/SaveProject",
@@ -2115,14 +2122,292 @@
             dataType: "json", // Expected data type from the server
             success: function (response) {
                 console.log("Success:", response.message);
-				alert("Project saved successfully");
+                
+
+                //After successfully saving the project data, you can save the other models.
+                const projectId = response.projectId;
+				// alert("Project ID: " + projectId);
+                saveLocationData(projectId);
+                // saveEstimatedCostData(projectId);
+                saveLoanGrantForeignFinancingData(projectId);
+                // ... call other save functions for the remaining models
+
+                alert("Project saved successfully!");
+
                 // refresh the page
-				location.reload();
+                location.reload();
             },
             error: function (error) {
                 console.error("Error:", error.responseText);
-				alert("Error: " + error.responseText);
+                alert("Error: " + error.responseText);
             }
         });
     }
+
+    function saveLocationData(projectId) {
+
+		// console.log("Saving location data for project ID:", projectId);
+
+        var _06LocationOfTheProject = [];
+
+
+        const locationTable = document.getElementById("secA_LocationTable");
+        const locationRows = locationTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2))"); // Skip header rows
+
+        locationRows.forEach(row => {
+            const location = {
+                ProjectId: projectId,
+                Division: "",
+                District: "",
+                CityCorpMunicipalityUpazila: ""
+            };
+
+            // Get input values from cells (handle potential missing inputs)
+            const divisionInput = row.cells[1].querySelector("select");
+            if (divisionInput) {
+                location.Division = divisionInput.value;
+            } else {
+                console.warn("Division input not found in row:", row);
+            }
+
+            const districtInput = row.cells[2].querySelector("input");
+            if (districtInput) {
+                location.District = districtInput.value;
+            } else {
+                console.warn("District input not found in row:", row);
+            }
+
+            const cityInput = row.cells[3].querySelector("input");
+            if (cityInput) {
+                location.CityCorpMunicipalityUpazila = cityInput.value;
+            } else {
+                console.warn("City input not found in row:", row);
+            }
+
+
+            _06LocationOfTheProject.push(location);
+        });
+
+        console.log(_06LocationOfTheProject); // Check the collected data
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveLocationOfTheProject",
+            data: JSON.stringify(_06LocationOfTheProject),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("Location data saved:", response);
+                alert("Location data saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving location data:", error.responseText);
+                alert("Error saving location data: " + error.responseText);
+            }
+        });
+
+    }
+
+    function saveEstimatedCostData(projectId) {
+
+		// console.log("Saving estimated cost data for project ID:", projectId);
+       
+        var _07EstimatedCostPeriodApproval = [];
+        
+
+        const costTable = document.getElementById("secA_EtimatedCostTable");
+        const costRows = costTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
+        
+        costRows.forEach(row => {
+            const cost = {
+                ProjectId: projectId,
+                Subject: "",
+                Total: "",
+                GOB: "",
+                PA: "",
+                SelfFinance: "",
+                ImplementationPeriod: "",
+                DateOfApproval: "",
+                ApprovedBy: ""
+            };
+
+            // Get input values from cells (handle potential missing inputs)
+            const subjectInput = row.cells[0].querySelector("select");
+            if (subjectInput) {
+                cost.Subject = subjectInput.value;
+            } else {
+                console.warn("Subject input not found in row:", row);
+            }
+
+            const totalInput = row.cells[1].querySelector("input");
+            if (totalInput) {
+                cost.Total = totalInput.value;
+            } else {
+                console.warn("Total input not found in row:", row);
+            }
+
+            const gobInput = row.cells[2].querySelector("input");
+            if (gobInput) {
+                cost.GOB = gobInput.value;
+            } else {
+                console.warn("GOB input not found in row:", row);
+            }
+
+            const paInput = row.cells[3].querySelector("input");
+            if (paInput) {
+                cost.PA = paInput.value;
+            } else {
+                console.warn("PA input not found in row:", row);
+            }
+
+            const selfFinanceInput = row.cells[4].querySelector("input");
+            if (selfFinanceInput) {
+                cost.SelfFinance = selfFinanceInput.value;
+            } else {
+                console.warn("Self Finance input not found in row:", row);
+            }
+
+            const implPeriodInput = row.cells[5].querySelector("input");
+            if (implPeriodInput) {
+                cost.ImplementationPeriod = implPeriodInput.value;
+            } else {
+                console.warn("Implementation Period input not found in row:", row);
+            }
+
+            const dateOfApprovalInput = row.cells[6].querySelector("input");
+            if (dateOfApprovalInput) {
+                cost.DateOfApproval = dateOfApprovalInput.value;
+            } else {
+                console.warn("Date of Approval input not found in row:", row);
+            }
+
+            const approvedByInput = row.cells[7].querySelector("input");
+            if (approvedByInput) {
+                cost.ApprovedBy = approvedByInput.value;
+            } else {
+                console.warn("Approved By input not found in row:", row);
+            }
+
+            _07EstimatedCostPeriodApproval.push(cost);
+        });
+
+		console.log(_07EstimatedCostPeriodApproval);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveEstimatedCostPeriodApproval",
+            data: JSON.stringify(_07EstimatedCostPeriodApproval),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("Estimated cost data saved:", response);
+                alert("Estimated cost data saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving Estimated cost data:", error.responseText);
+                alert("Error saving Estimated cost data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveLoanGrantForeignFinancingData(projectId) {
+
+        var _12_1aStatusOfLoanGrantForeignFinancings = [];
+
+        const loanGrantTable = document.getElementById("secA_LoanStatus_ForeignTable");
+        const loanGrantRows = loanGrantTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))"); // Skip header rows
+
+        loanGrantRows.forEach(row => {
+            const loanGrant = {
+                ProjectId: projectId,
+                Source: "",
+                CurrencyAsPerAgreement: "",
+                AmountInUSD: "",
+                Nature: "",
+                DateOfAgreement: null,
+                DateOfEffectiveness: null,
+                OriginalDateOfClosing: null,
+                RevisedDateOfClosing: null
+            };
+
+            // Get input values from cells (handle potential missing inputs)
+            const sourceInput = row.cells[0].querySelector("input");
+            if (sourceInput) {
+                loanGrant.Source = sourceInput.value;
+            } else {
+                console.warn("Source input not found in row:", row);
+            }
+
+            const currencyInput = row.cells[1].querySelector("input");
+            if (currencyInput) {
+                loanGrant.CurrencyAsPerAgreement = currencyInput.value;
+            } else {
+                console.warn("Currency input not found in row:", row);
+            }
+
+            const amountInput = row.cells[2].querySelector("input");
+            if (amountInput) {
+                loanGrant.AmountInUSD = amountInput.value;
+            } else {
+                console.warn("Amount in USD input not found in row:", row);
+            }
+
+            const natureInput = row.cells[3].querySelector("select");
+            if (natureInput) {
+                loanGrant.Nature = natureInput.value;
+            } else {
+                console.warn("Nature input not found in row:", row);
+            }
+
+            const agreementDateInput = row.cells[4].querySelector("input");
+            if (agreementDateInput) {
+                loanGrant.DateOfAgreement = agreementDateInput.value;
+            } else {
+                console.warn("Date of Agreement input not found in row:", row);
+            }
+
+            const effectivenessDateInput = row.cells[5].querySelector("input");
+            if (effectivenessDateInput) {
+                loanGrant.DateOfEffectiveness = effectivenessDateInput.value;
+            } else {
+                console.warn("Date of Effectiveness input not found in row:", row);
+            }
+
+            const originalClosingDateInput = row.cells[6].querySelector("input");
+            if (originalClosingDateInput) {
+                loanGrant.OriginalDateOfClosing = originalClosingDateInput.value;
+            } else {
+                console.warn("Original Date of Closing input not found in row:", row);
+            }
+
+            const revisedClosingDateInput = row.cells[7].querySelector("input");
+            if (revisedClosingDateInput) {
+                loanGrant.RevisedDateOfClosing = revisedClosingDateInput.value;
+            } else {
+                console.warn("Revised Date of Closing input not found in row:", row);
+            }
+
+            _12_1aStatusOfLoanGrantForeignFinancings.push(loanGrant);
+        });
+
+        console.log(_12_1aStatusOfLoanGrantForeignFinancings); // Check the collected data
+        console.log(JSON.stringify(_12_1aStatusOfLoanGrantForeignFinancings));
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveLoanGrantForeignFinancing",
+            data: JSON.stringify(_12_1aStatusOfLoanGrantForeignFinancings),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("Loan grant foreign financing data saved:", response);
+                alert("Loan grant foreign financing data saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving loan grant foreign financing data:", error.responseText);
+                alert("Error saving loan grant foreign financing data: " + error.responseText);
+            }
+        });
+    }
+
 </script>
