@@ -8,9 +8,9 @@
         public string? CurrencyAsPerAgreement { get; set; }
         public string? AmountInUSD { get; set; }
         public string? Nature { get; set; }
-        public DateTime? DateOfAgreement { get; set; }
-        public DateTime? DateOfEffectiveness { get; set; }
-        public DateTime? OriginalDateOfClosing { get; set; }
-        public DateTime? RevisedDateOfClosing { get; set; }
+        public string? DateOfAgreement { get; set; }
+        public string? DateOfEffectiveness { get; set; }
+        public string? OriginalDateOfClosing { get; set; }
+        public string? RevisedDateOfClosing { get; set; }
     }
 }

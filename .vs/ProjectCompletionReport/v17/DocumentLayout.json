@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\ProjectCompletionReport.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\ProjectCompletionReport.csproj|solutionrelative:projectmanagementmvc\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\ProjectCompletionReport.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\ProjectCompletionReport.csproj|solutionrelative:projectmanagementmvc\\views\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\ProjectCompletionReport.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\ProjectCompletionReport.csproj|solutionrelative:projectmanagementmvc\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
               "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
               "RelativeToolTip": "ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
-              "ViewState": "AgIAAD8IAAAAOFQ6succwFEIAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-17T08:04:07.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProjectsController.cs",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\ProjectsController.cs",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Controllers\\ProjectsController.cs",
               "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\ProjectsController.cs",
               "RelativeToolTip": "ProjectManagementMVC\\Controllers\\ProjectsController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAADgvzQAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAswPcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T08:04:16.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T08:04:16.214Z"
             }
           ]
         }

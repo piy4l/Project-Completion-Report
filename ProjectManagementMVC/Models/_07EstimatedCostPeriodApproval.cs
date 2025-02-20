@@ -1,4 +1,4 @@
-﻿namespace ProjectCompletionReport.Models
+﻿ namespace ProjectCompletionReport.Models
 {
     public class _07EstimatedCostPeriodApproval
     {
@@ -10,7 +10,7 @@
         public string? PA { get; set; }
         public string? SelfFinance { get; set; }
         public string? ImplementationPeriod { get; set; }
-        public DateTime? DateOfApproval { get; set; }
+        public string? DateOfApproval { get; set; }
         public string? ApprovedBy { get; set; }
     }
 }

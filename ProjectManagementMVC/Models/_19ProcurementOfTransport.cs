@@ -7,15 +7,15 @@
         public string? TypeOfTransport { get; set; }
         public string? NumberAsPerProjectDocument { get; set; }
         public string? NumberProcured { get; set; }
-        public DateTime? NumberProcuredDate { get; set; } // Using DateTime? for nullable dates
+        public string? NumberProcuredDate { get; set; }
         public string? TransferredToTransferPool { get; set; }
-        public DateTime? TransferredToTransferPoolDate { get; set; } // Using DateTime? for nullable dates
+        public string? TransferredToTransferPoolDate { get; set; }
         public string? TransferredToOM { get; set; }
-        public DateTime? TransferredToOMDate { get; set; } // Using DateTime? for nullable dates
+        public string? TransferredToOMDate { get; set; }
         public string? CondemnedDamaged { get; set; }
-        public DateTime? CondemnedDamagedDate { get; set; } // Using DateTime? for nullable dates
+        public string? CondemnedDamagedDate { get; set; }
         public string? ReturnedToFollowingProject { get; set; }
-        public DateTime? ReturnedToFollowingProjectDate { get; set; } // Using DateTime? for nullable dates
+        public string? ReturnedToFollowingProjectDate { get; set; }
         public string? Remarks { get; set; }
 
     }

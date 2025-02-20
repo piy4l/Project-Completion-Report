@@ -8,8 +8,8 @@
         public string? FullTime { get; set; }
         public string? PartTime { get; set; }
         public string? ResponsibleForMoreThanOneProject { get; set; }
-        public DateTime? Joining { get; set; } // Using DateTime? for nullable dates
-        public DateTime? Transfer { get; set; } // Using DateTime? for nullable dates
+        public string? Joining { get; set; }
+        public string? Transfer { get; set; }
         public string? Remarks { get; set; }
 
     }

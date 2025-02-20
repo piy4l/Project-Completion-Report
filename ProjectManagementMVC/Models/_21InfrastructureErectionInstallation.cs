@@ -7,11 +7,11 @@
         public string? Description { get; set; }
         public string? QuantityAsPerProjectDocument { get; set; }
         public string? QuantityProcured { get; set; }
-        public DateTime? QuantityProcuredDate { get; set; }
+        public string? QuantityProcuredDate { get; set; }
         public string? TransferredToOM { get; set; }
-        public DateTime? TransferredToOMDate { get; set; }
+        public string? TransferredToOMDate { get; set; }
         public string? DisposedOff { get; set; }
-        public DateTime? DisposedOffDate { get; set; }
+        public string? DisposedOffDate { get; set; }
         public string? Balance { get; set; }
         public string? Remarks { get; set; }
 

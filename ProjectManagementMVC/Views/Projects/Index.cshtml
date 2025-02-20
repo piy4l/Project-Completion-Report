@@ -2118,24 +2118,30 @@
             type: "POST",
             url: "/Projects/SaveProject",
             data: JSON.stringify(payload),
-            contentType: "application/json; charset=utf-8", // Inform the server of the JSON format
-            dataType: "json", // Expected data type from the server
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
             success: function (response) {
                 console.log("Success:", response.message);
                 
-
-                //After successfully saving the project data, you can save the other models.
                 const projectId = response.projectId;
 				// alert("Project ID: " + projectId);
+
                 saveLocationData(projectId);
-                // saveEstimatedCostData(projectId);
+                saveEstimatedCostData(projectId);
                 saveLoanGrantForeignFinancingData(projectId);
+                saveLoanGrantGOBData(projectId);
+                saveLoanGrantSelfFinanceEquityData(projectId);
+                saveUtilizationOfProjectAidData(projectId);
+                saveReimbursableProjectAidData(projectId);
+                saveImplementationPeriodData(projectId);
+                saveCostOfTheProjectData(projectId);
+				saveInfoProjectDirectorData(projectId);
                 // ... call other save functions for the remaining models
 
                 alert("Project saved successfully!");
 
                 // refresh the page
-                location.reload();
+                // location.reload();
             },
             error: function (error) {
                 console.error("Error:", error.responseText);
@@ -2146,59 +2152,32 @@
 
     function saveLocationData(projectId) {
 
-		// console.log("Saving location data for project ID:", projectId);
-
-        var _06LocationOfTheProject = [];
-
+        var _06LocationOfTheProjects = [];
 
         const locationTable = document.getElementById("secA_LocationTable");
-        const locationRows = locationTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2))"); // Skip header rows
+        const locationRows = locationTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2))");
 
         locationRows.forEach(row => {
             const location = {
                 ProjectId: projectId,
-                Division: "",
-                District: "",
-                CityCorpMunicipalityUpazila: ""
-            };
-
-            // Get input values from cells (handle potential missing inputs)
-            const divisionInput = row.cells[1].querySelector("select");
-            if (divisionInput) {
-                location.Division = divisionInput.value;
-            } else {
-                console.warn("Division input not found in row:", row);
-            }
-
-            const districtInput = row.cells[2].querySelector("input");
-            if (districtInput) {
-                location.District = districtInput.value;
-            } else {
-                console.warn("District input not found in row:", row);
-            }
-
-            const cityInput = row.cells[3].querySelector("input");
-            if (cityInput) {
-                location.CityCorpMunicipalityUpazila = cityInput.value;
-            } else {
-                console.warn("City input not found in row:", row);
-            }
-
-
-            _06LocationOfTheProject.push(location);
+                Division: row.cells[1].querySelector("select").value,
+                District: row.cells[2].querySelector("input").value,
+                CityCorpMunicipalityUpazila: row.cells[3].querySelector("input").value
+            };           
+            _06LocationOfTheProjects.push(location);
         });
 
-        console.log(_06LocationOfTheProject); // Check the collected data
+        console.log(_06LocationOfTheProjects);
 
         $.ajax({
             type: "POST",
             url: "/Projects/SaveLocationOfTheProject",
-            data: JSON.stringify(_06LocationOfTheProject),
+            data: JSON.stringify(_06LocationOfTheProjects),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (response) {
                 console.log("Location data saved:", response);
-                alert("Location data saved successfully!");
+                // alert("Location data saved successfully!");
             },
             error: function (error) {
                 console.error("Error saving location data:", error.responseText);
@@ -2209,99 +2188,38 @@
     }
 
     function saveEstimatedCostData(projectId) {
-
-		// console.log("Saving estimated cost data for project ID:", projectId);
        
-        var _07EstimatedCostPeriodApproval = [];
+        var _07EstimatedCostPeriodApprovals = [];
         
-
         const costTable = document.getElementById("secA_EtimatedCostTable");
         const costRows = costTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
         
         costRows.forEach(row => {
             const cost = {
                 ProjectId: projectId,
-                Subject: "",
-                Total: "",
-                GOB: "",
-                PA: "",
-                SelfFinance: "",
-                ImplementationPeriod: "",
-                DateOfApproval: "",
-                ApprovedBy: ""
-            };
-
-            // Get input values from cells (handle potential missing inputs)
-            const subjectInput = row.cells[0].querySelector("select");
-            if (subjectInput) {
-                cost.Subject = subjectInput.value;
-            } else {
-                console.warn("Subject input not found in row:", row);
-            }
-
-            const totalInput = row.cells[1].querySelector("input");
-            if (totalInput) {
-                cost.Total = totalInput.value;
-            } else {
-                console.warn("Total input not found in row:", row);
-            }
-
-            const gobInput = row.cells[2].querySelector("input");
-            if (gobInput) {
-                cost.GOB = gobInput.value;
-            } else {
-                console.warn("GOB input not found in row:", row);
-            }
-
-            const paInput = row.cells[3].querySelector("input");
-            if (paInput) {
-                cost.PA = paInput.value;
-            } else {
-                console.warn("PA input not found in row:", row);
-            }
-
-            const selfFinanceInput = row.cells[4].querySelector("input");
-            if (selfFinanceInput) {
-                cost.SelfFinance = selfFinanceInput.value;
-            } else {
-                console.warn("Self Finance input not found in row:", row);
-            }
-
-            const implPeriodInput = row.cells[5].querySelector("input");
-            if (implPeriodInput) {
-                cost.ImplementationPeriod = implPeriodInput.value;
-            } else {
-                console.warn("Implementation Period input not found in row:", row);
-            }
-
-            const dateOfApprovalInput = row.cells[6].querySelector("input");
-            if (dateOfApprovalInput) {
-                cost.DateOfApproval = dateOfApprovalInput.value;
-            } else {
-                console.warn("Date of Approval input not found in row:", row);
-            }
-
-            const approvedByInput = row.cells[7].querySelector("input");
-            if (approvedByInput) {
-                cost.ApprovedBy = approvedByInput.value;
-            } else {
-                console.warn("Approved By input not found in row:", row);
-            }
-
-            _07EstimatedCostPeriodApproval.push(cost);
+                Subject: row.cells[0].querySelector("select").value,
+                Total: row.cells[1].querySelector("input").value,
+                GOB: row.cells[2].querySelector("input").value,
+                PA: row.cells[3].querySelector("input").value,
+                SelfFinance: row.cells[4].querySelector("input").value,
+                ImplementationPeriod: row.cells[5].querySelector("input").value,
+                DateOfApproval: row.cells[6].querySelector("input").value,
+                ApprovedBy: row.cells[7].querySelector("input").value
+            };            
+            _07EstimatedCostPeriodApprovals.push(cost);
         });
 
-		console.log(_07EstimatedCostPeriodApproval);
+		console.log(_07EstimatedCostPeriodApprovals);
 
         $.ajax({
             type: "POST",
             url: "/Projects/SaveEstimatedCostPeriodApproval",
-            data: JSON.stringify(_07EstimatedCostPeriodApproval),
+            data: JSON.stringify(_07EstimatedCostPeriodApprovals),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (response) {
                 console.log("Estimated cost data saved:", response);
-                alert("Estimated cost data saved successfully!");
+                // alert("Estimated cost data saved successfully!");
             },
             error: function (error) {
                 console.error("Error saving Estimated cost data:", error.responseText);
@@ -2315,83 +2233,24 @@
         var _12_1aStatusOfLoanGrantForeignFinancings = [];
 
         const loanGrantTable = document.getElementById("secA_LoanStatus_ForeignTable");
-        const loanGrantRows = loanGrantTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))"); // Skip header rows
+        const loanGrantRows = loanGrantTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
 
         loanGrantRows.forEach(row => {
             const loanGrant = {
                 ProjectId: projectId,
-                Source: "",
-                CurrencyAsPerAgreement: "",
-                AmountInUSD: "",
-                Nature: "",
-                DateOfAgreement: null,
-                DateOfEffectiveness: null,
-                OriginalDateOfClosing: null,
-                RevisedDateOfClosing: null
-            };
-
-            // Get input values from cells (handle potential missing inputs)
-            const sourceInput = row.cells[0].querySelector("input");
-            if (sourceInput) {
-                loanGrant.Source = sourceInput.value;
-            } else {
-                console.warn("Source input not found in row:", row);
-            }
-
-            const currencyInput = row.cells[1].querySelector("input");
-            if (currencyInput) {
-                loanGrant.CurrencyAsPerAgreement = currencyInput.value;
-            } else {
-                console.warn("Currency input not found in row:", row);
-            }
-
-            const amountInput = row.cells[2].querySelector("input");
-            if (amountInput) {
-                loanGrant.AmountInUSD = amountInput.value;
-            } else {
-                console.warn("Amount in USD input not found in row:", row);
-            }
-
-            const natureInput = row.cells[3].querySelector("select");
-            if (natureInput) {
-                loanGrant.Nature = natureInput.value;
-            } else {
-                console.warn("Nature input not found in row:", row);
-            }
-
-            const agreementDateInput = row.cells[4].querySelector("input");
-            if (agreementDateInput) {
-                loanGrant.DateOfAgreement = agreementDateInput.value;
-            } else {
-                console.warn("Date of Agreement input not found in row:", row);
-            }
-
-            const effectivenessDateInput = row.cells[5].querySelector("input");
-            if (effectivenessDateInput) {
-                loanGrant.DateOfEffectiveness = effectivenessDateInput.value;
-            } else {
-                console.warn("Date of Effectiveness input not found in row:", row);
-            }
-
-            const originalClosingDateInput = row.cells[6].querySelector("input");
-            if (originalClosingDateInput) {
-                loanGrant.OriginalDateOfClosing = originalClosingDateInput.value;
-            } else {
-                console.warn("Original Date of Closing input not found in row:", row);
-            }
-
-            const revisedClosingDateInput = row.cells[7].querySelector("input");
-            if (revisedClosingDateInput) {
-                loanGrant.RevisedDateOfClosing = revisedClosingDateInput.value;
-            } else {
-                console.warn("Revised Date of Closing input not found in row:", row);
-            }
-
+                Source: row.cells[0].querySelector("input").value,
+                CurrencyAsPerAgreement: row.cells[1].querySelector("input").value,
+                AmountInUSD: row.cells[2].querySelector("input").value,
+                Nature: row.cells[3].querySelector("select").value,
+                DateOfAgreement: row.cells[4].querySelector("input").value,
+                DateOfEffectiveness: row.cells[5].querySelector("input").value,
+                OriginalDateOfClosing: row.cells[6].querySelector("input").value,
+                RevisedDateOfClosing: row.cells[7].querySelector("input").value
+            };           
             _12_1aStatusOfLoanGrantForeignFinancings.push(loanGrant);
         });
 
-        console.log(_12_1aStatusOfLoanGrantForeignFinancings); // Check the collected data
-        console.log(JSON.stringify(_12_1aStatusOfLoanGrantForeignFinancings));
+		console.log(_12_1aStatusOfLoanGrantForeignFinancings);
 
         $.ajax({
             type: "POST",
@@ -2401,11 +2260,282 @@
             dataType: "json",
             success: function (response) {
                 console.log("Loan grant foreign financing data saved:", response);
-                alert("Loan grant foreign financing data saved successfully!");
+                // alert("Loan grant foreign financing data saved successfully!");
             },
             error: function (error) {
                 console.error("Error saving loan grant foreign financing data:", error.responseText);
                 alert("Error saving loan grant foreign financing data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveLoanGrantGOBData(projectId) {
+
+        var _12_1bStatusOfLoanGrantGOBs = [];
+
+        const loanGrantTable = document.getElementById("secA_LoanStatus_GobTable");
+        const loanGrantRows = loanGrantTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3))");
+
+        loanGrantRows.forEach(row => {
+            const loanGrant = {
+                ProjectId: projectId,
+                TotalAmount: row.cells[0].querySelector("input").value,
+                Loan: row.cells[1].querySelector("input").value,
+                Grant: row.cells[2].querySelector("input").value,
+                CashForeignExchange: row.cells[3].querySelector("input").value
+            };
+            _12_1bStatusOfLoanGrantGOBs.push(loanGrant);
+        });
+
+        console.log(_12_1bStatusOfLoanGrantGOBs);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveLoanGrantGOB",
+            data: JSON.stringify(_12_1bStatusOfLoanGrantGOBs),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("Loan grant GOB data saved:", response);
+                // alert("Loan grant GOB data saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving loan grant GOB data:", error.responseText);
+                alert("Error saving loan grant GOB data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveLoanGrantSelfFinanceEquityData(projectId) {
+
+        var _12_1cStatusOfLoanGrantSelfFinanceEquities = [];
+
+        const loanGrantTable = document.getElementById("secA_LoanStatus_SelfTable");
+        const loanGrantRows = loanGrantTable.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3))");
+
+        loanGrantRows.forEach(row => {
+            const loanGrant = {
+                ProjectId: projectId,
+                TotalAmount: row.cells[0].querySelector("input").value,
+                SelfFinance: row.cells[1].querySelector("input").value,
+                Equity: row.cells[2].querySelector("input").value,
+                CashForeignExchange: row.cells[3].querySelector("input").value
+            };
+            _12_1cStatusOfLoanGrantSelfFinanceEquities.push(loanGrant);
+        });
+
+        console.log(_12_1cStatusOfLoanGrantSelfFinanceEquities);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveLoanGrantSelfFinanceEquity",
+            data: JSON.stringify(_12_1cStatusOfLoanGrantSelfFinanceEquities),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("Loan grant Self-Finance/Equity data saved:", response);
+                // alert("Loan grant Self-Finance/Equity data saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving loan grant Self-Finance/Equity data:", error.responseText);
+                alert("Error saving loan grant Self-Finance/Equity data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveUtilizationOfProjectAidData(projectId) {
+
+        var _12_2UtilizationOfProjectAids = [];
+
+        const table = document.getElementById("secA_UtilizationTable");
+        const tableRows = table.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
+     
+        tableRows.forEach(row => {
+            const data = {
+                ProjectId: projectId,
+                Source: row.cells[0].querySelector("input").value,
+                TotalAmountInUSD: row.cells[1].querySelector("input").value,
+                TotalAmountInLocalCurrency: row.cells[2].querySelector("input").value,
+                ActualExpenditureInUSD: row.cells[3].querySelector("input").value,
+                ActualExpenditureInLocalCurrency: row.cells[4].querySelector("input").value,
+                UnutilizedAmountInUSD: row.cells[5].querySelector("input").value,
+				UnutilizedAmountInLocalCurrency: row.cells[6].querySelector("input").value
+            };
+            _12_2UtilizationOfProjectAids.push(data);
+        });
+
+        console.log(_12_2UtilizationOfProjectAids);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveUtilizationOfProjectAid",
+            data: JSON.stringify(_12_2UtilizationOfProjectAids),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("_12_2UtilizationOfProjectAid data saved:", response);
+                // alert("_12_2UtilizationOfProjectAid saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving _12_2UtilizationOfProjectAid data:", error.responseText);
+                alert("Error saving _12_2UtilizationOfProjectAid data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveReimbursableProjectAidData(projectId) {
+
+        var _12_3ReimbursableProjectAids = [];
+
+        const table = document.getElementById("secA_RpaTable");
+        const tableRows = table.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
+
+        tableRows.forEach(row => {
+            const data = {
+                ProjectId: projectId,
+                Source: row.cells[0].querySelector("input").value,
+                RPAAmountAsPerPD: row.cells[1].querySelector("input").value,
+                RPAAmountAsPerAgreement: row.cells[2].querySelector("input").value,
+                AmountSpent: row.cells[3].querySelector("input").value,
+                AmountClaimed: row.cells[4].querySelector("input").value,
+                AmountReimbursed: row.cells[5].querySelector("input").value,
+                Remarks: row.cells[6].querySelector("input").value
+            };
+            _12_3ReimbursableProjectAids.push(data);
+        });
+
+        console.log(_12_3ReimbursableProjectAids);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveReimbursableProjectAid",
+            data: JSON.stringify(_12_3ReimbursableProjectAids),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("_12_3ReimbursableProjectAid data saved:", response);
+                // alert("_12_3ReimbursableProjectAid saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving _12_3ReimbursableProjectAid data:", error.responseText);
+                alert("Error saving _12_3ReimbursableProjectAid data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveImplementationPeriodData(projectId) {
+
+        var _13ImplementationPeriods = [];
+
+        const table = document.getElementById("secB_ImplPeriodTable");
+        const tableRows = table.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
+
+        tableRows.forEach(row => {
+            const data = {
+                ProjectId: projectId,
+                Original: row.cells[0].querySelector("input").value,
+                LatestRevised: row.cells[1].querySelector("input").value,
+                ActualImplementation: row.cells[2].querySelector("input").value,
+                TimeOverRun: row.cells[3].querySelector("input").value,
+                Remarks: row.cells[4].querySelector("input").value,               
+            };
+            _13ImplementationPeriods.push(data);
+        });
+
+        console.log(_13ImplementationPeriods);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveImplementationPeriod",
+            data: JSON.stringify(_13ImplementationPeriods),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("_13ImplementationPeriod data saved:", response);
+                // alert("_13ImplementationPeriod saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving _13ImplementationPeriod data:", error.responseText);
+                alert("Error saving _13ImplementationPeriod data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveCostOfTheProjectData(projectId) {
+
+        var _14CostOfTheProjects = [];
+
+        const table = document.getElementById("secB_PrjCostTable");
+        const tableRows = table.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
+        
+        tableRows.forEach(row => {
+            const data = {
+                ProjectId: projectId,
+                Description: row.cells[0].querySelector("input").value,
+                OriginalEstimatedCost: row.cells[1].querySelector("input").value,
+                LatestRevisedEstimatedCost: row.cells[2].querySelector("input").value,
+                ActualExpenditure: row.cells[3].querySelector("input").value,
+                CostOverRun: row.cells[4].querySelector("input").value,
+				Remarks: row.cells[5].querySelector("input").value
+            };
+            _14CostOfTheProjects.push(data);
+        });
+
+        console.log(_14CostOfTheProjects);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveCostOfTheProject",
+            data: JSON.stringify(_14CostOfTheProjects),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("_14CostOfTheProject data saved:", response);
+                // alert("_14CostOfTheProject saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving _14CostOfTheProject data:", error.responseText);
+                alert("Error saving _14CostOfTheProject data: " + error.responseText);
+            }
+        });
+    }
+
+    function saveInfoProjectDirectorData(projectId) {
+
+        var _15InfoProjectDirectors = [];
+
+        const table = document.getElementById("secB_PdInfoTable");
+        const tableRows = table.querySelectorAll("tr:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4))");
+
+        tableRows.forEach(row => {
+            const data = {
+                ProjectId: projectId,
+                NameAndDetails: row.cells[0].querySelector("textarea").value,
+                FullTime: row.cells[1].querySelector("select").value,
+                PartTime: row.cells[2].querySelector("select").value,
+                ResponsibleForMoreThanOneProject: row.cells[3].querySelector("select").value,
+                Joining: row.cells[4].querySelector("input").value,
+                Transfer: row.cells[5].querySelector("input").value,
+				Remarks: row.cells[6].querySelector("input").value
+            };
+            _15InfoProjectDirectors.push(data);
+        });
+
+        console.log(_15InfoProjectDirectors);
+
+        $.ajax({
+            type: "POST",
+            url: "/Projects/SaveInfoProjectDirector",
+            data: JSON.stringify(_15InfoProjectDirectors),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                console.log("_15InfoProjectDirector data saved:", response);
+                // alert("_15InfoProjectDirector saved successfully!");
+            },
+            error: function (error) {
+                console.error("Error saving _15InfoProjectDirector data:", error.responseText);
+                alert("Error saving _15InfoProjectDirector data: " + error.responseText);
             }
         });
     }

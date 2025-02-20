@@ -50,8 +50,8 @@ namespace ProjectCompletionReport.Controllers
         {
             try
             {
-                Context._06LocationOfTheProjects.AddRange(payload); // Bulk insert
-                Context.SaveChanges(); // Save once
+                Context._06LocationOfTheProjects.AddRange(payload);
+                Context.SaveChanges();
 
                 return Ok(new { message = "success" });
             }
@@ -70,8 +70,8 @@ namespace ProjectCompletionReport.Controllers
         {
             try
             {
-                Context._07EstimatedCostPeriodApprovals.AddRange(payload); // Bulk insert
-                Context.SaveChanges(); // Save once
+                Context._07EstimatedCostPeriodApprovals.AddRange(payload);
+                Context.SaveChanges();
 
                 return Ok(new { message = "success" });
             }
@@ -86,12 +86,12 @@ namespace ProjectCompletionReport.Controllers
 
         [Route("/Projects/SaveLoanGrantForeignFinancing")]
         [HttpPost]
-        public ActionResult SaveLoanGrantForeignFinancing([FromBody] _12_1aStatusOfLoanGrantForeignFinancing[] data)
+        public ActionResult SaveLoanGrantForeignFinancing([FromBody] _12_1aStatusOfLoanGrantForeignFinancing[] payload)
         {
             try
             {
-                Context._12_1aStatusOfLoanGrantForeignFinancings.AddRange(data); // Bulk insert
-                Context.SaveChanges(); // Save once
+                Context._12_1aStatusOfLoanGrantForeignFinancings.AddRange(payload);
+                Context.SaveChanges();
 
                 return Ok(new { message = "success" });
             }
@@ -102,6 +102,151 @@ namespace ProjectCompletionReport.Controllers
                 return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
             }
         }
+
+
+        [Route("/Projects/SaveLoanGrantGOB")]
+        [HttpPost]
+        public ActionResult SaveLoanGrantGOB([FromBody] _12_1bStatusOfLoanGrantGOB[] payload)
+        {
+            try
+            {
+                Context._12_1bStatusOfLoanGrantGOBs.AddRange(payload);
+                Context.SaveChanges();
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
+
+
+        [Route("/Projects/SaveLoanGrantSelfFinanceEquity")]
+        [HttpPost]
+        public ActionResult SaveLoanGrantSelfFinanceEquity([FromBody] _12_1cStatusOfLoanGrantSelfFinanceEquity[] payload)
+        {
+            try
+            {
+                Context._12_1cStatusOfLoanGrantSelfFinanceEquities.AddRange(payload);
+                Context.SaveChanges();
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
+
+
+        [Route("/Projects/SaveUtilizationOfProjectAid")]
+        [HttpPost]
+        public ActionResult SaveUtilizationOfProjectAid([FromBody] _12_2UtilizationOfProjectAid[] payload)
+        {
+            try
+            {
+                Context._12_2UtilizationOfProjectAids.AddRange(payload);
+                Context.SaveChanges();
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
+
+
+        [Route("/Projects/SaveReimbursableProjectAid")]
+        [HttpPost]
+        public ActionResult SaveReimbursableProjectAid([FromBody] _12_3ReimbursableProjectAid[] payload)
+        {
+            try
+            {
+                Context._12_3ReimbursableProjectAids.AddRange(payload);
+                Context.SaveChanges();
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
+
+
+        [Route("/Projects/SaveImplementationPeriod")]
+        [HttpPost]
+        public ActionResult SaveImplementationPeriod([FromBody] _13ImplementationPeriod[] payload)
+        {
+            try
+            {
+                Context._13ImplementationPeriods.AddRange(payload);
+                Context.SaveChanges();
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
+
+
+
+        [Route("/Projects/SaveCostOfTheProject")]
+        [HttpPost]
+        public ActionResult SaveCostOfTheProject([FromBody] _14CostOfTheProject[] payload)
+        {
+            try
+            {
+                Context._14CostOfTheProjects.AddRange(payload);
+                Context.SaveChanges();
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
+
+
+        [Route("/Projects/SaveInfoProjectDirector")]
+        [HttpPost]
+        public ActionResult SaveInfoProjectDirector([FromBody] _15InfoProjectDirector[] payload)
+        {
+            try
+            {
+                Context._15InfoProjectDirectors.AddRange(payload);
+                Context.SaveChanges();
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
+
+
+
+
 
         // ... Add similar controller actions for the other models ...
 
