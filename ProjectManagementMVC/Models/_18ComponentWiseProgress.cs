@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
+        public string? Category { get; set; }
         public string? NameOfComponent { get; set; }
         public string? Unit { get; set; }
         public string? Quantity { get; set; }

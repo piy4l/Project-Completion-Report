@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
-              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
-              "RelativeToolTip": "ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
-              "ViewState": "AgIAAN4IAAAAAAAAAAAswO8JAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-17T08:04:07.784Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -41,9 +28,22 @@
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Controllers\\ProjectsController.cs",
               "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\ProjectsController.cs",
               "RelativeToolTip": "ProjectManagementMVC\\Controllers\\ProjectsController.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAswPcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMBAAAAAAAAAAAYwIcCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T08:04:16.214Z",
+              "WhenOpened": "2025-02-24T04:01:12.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
+              "RelativeToolTip": "ProjectManagementMVC\\Views\\Projects\\Index.cshtml",
+              "ViewState": "AgIAAJcKAAAAAAAAAAAMwGINAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T08:04:07.784Z",
               "EditorCaption": ""
             }
           ]

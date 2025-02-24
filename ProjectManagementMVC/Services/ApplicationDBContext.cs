@@ -25,10 +25,11 @@ namespace ProjectCompletionReport.Services
         public DbSet<_16Personnel> _16Personnels { get; set; }
         public DbSet<_17TrainingForeignLocal> _17TrainingForeignLocals { get; set; }
         public DbSet<_18ComponentWiseProgress> _18ComponentWiseProgresses { get; set; }
+        public DbSet<_17_18Total> _17_18Totals { get; set; }
         public DbSet<_19ProcurementOfTransport> _19ProcurementOfTransports { get; set; }
         public DbSet<_20ProjectConsultant> _20ProjectConsultants { get; set; }
         public DbSet<_21InfrastructureErectionInstallation> _21InfrastructureErectionInstallations { get; set; }
-        public DbSet<_22_1InfoOnPackage> _222_1InfoOnPackages { get; set; }
+        public DbSet<_22_1InfoOnPackage> _22_1InfoOnPackages { get; set; }
         public DbSet<_23OriginalAndRevisedProvisionTarget> _23OriginalAndRevisedProvisionTargets { get; set; }
         public DbSet<_24RevisedADPAllocationAndProgress> _24RevisedADPAllocationAndProgresses { get; set; }
         public DbSet<_25ObjectiveAchievement> _25ObjectiveAchievements { get; set; }
@@ -37,6 +38,7 @@ namespace ProjectCompletionReport.Services
         public DbSet<_29Monitoring> _29Monitorings { get; set; }
         public DbSet<_30_1InternalAudit> _30_1InternalAudits { get; set; }
         public DbSet<_30_2ExternalAudit> _30_2ExternalAudits { get; set; }
+        public DbSet<_30Auditing> _30Auditings { get; set; }
         public DbSet<_G_PostProjectRemark> _G_PostProjectRemarks { get; set; }
 
     }

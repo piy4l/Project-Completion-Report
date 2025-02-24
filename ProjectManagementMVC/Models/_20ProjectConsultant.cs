@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
-        public string? LocalForeign { get; set; }
+        public string? Category { get; set; }
         public string? NameOfTheField { get; set; }
         public string? ApprovedManMonthAsPerPD { get; set; }
         public string? ApprovedManMonthAsPerContract { get; set; }
