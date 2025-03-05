@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProjectCompletionReport.Services;
+using Rotativa.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.PropertyNamingPolicy = null; // Preserve PascalCase
 });
 
-
+RotativaConfiguration.Setup(builder.Environment.WebRootPath, "Rotativa");
 
 var app = builder.Build();
 

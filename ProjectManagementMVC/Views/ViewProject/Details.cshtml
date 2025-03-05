@@ -1,0 +1,1676 @@
+﻿@model ProjectCompletionReport.Models.ProjectModel
+
+@{
+    ViewData["Title"] = "Project Details";
+}
+
+<style>
+    .tbl_bordered {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .tbl_bordered th {
+            border: 1px solid #000;
+            text-align: left;
+            padding: 8px;
+            background-color: #f2f2f2;
+        }
+
+        .tbl_bordered td {
+            border: 1px solid #000;
+            text-align: left;
+            padding: 8px;
+        }
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    h4 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    b {
+        font-weight: bold;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+
+    .section {
+        margin-bottom: 30px;
+        page-break-inside: avoid; /* Prevents breaking sections across pages */
+    }
+
+    .w3-responsive {
+        overflow-x: auto;
+    }
+
+    .signature-seal {
+        max-width: 200px;
+        margin-top: 10px;
+    }
+</style>
+
+<html>
+<head>
+    <title>PROJECT COMPLETION REPORT (PCR) - Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-theme-l5">
+    <div class="w3-container w3-margin-top">
+        <!-- Title -->
+        <div class="section w3-center">
+            <h4>
+                <b>
+                    Government of the People’s Republic of Bangladesh
+                    <br />
+                    Ministry of Planning
+                    <br />
+                    <u>Implementation Monitoring and Evaluation Division</u>
+                </b>
+            </h4>
+            <h4>
+                <b>
+                    <u>PROJECT COMPLETION REPORT (PCR): IMED 04/2024 (Revised) - Details</u>
+                </b>
+            </h4>
+        </div>
+
+        <!-- A PROJECT DESCRIPTION -->
+        <div class="section">
+            <h4><b>A. <u>PROJECT DESCRIPTION</u></b></h4>
+            <div class="w3-responsive">
+                <table class="w3-table-all">
+                    <tr>
+                        <td><b>01.</b></td>
+                        <td><b>Name of the Project</b></td>
+                        <td>:</td>
+                        <td>@Model.Project.Name</td>
+                    </tr>
+                    <tr>
+                        <td><b>02.</b></td>
+                        <td><b>Administrative Ministry/Division</b></td>
+                        <td>:</td>
+                        <td>@Model.Project.AdministrativeMinistryDivision</td>
+                    </tr>
+                    <tr>
+                        <td><b>03.</b></td>
+                        <td><b>Executing Agency</b></td>
+                        <td>:</td>
+                        <td>@Model.Project.ExecutingAgency</td>
+                    </tr>
+                    <tr>
+                        <td><b>04.</b></td>
+                        <td><b>Planning Commission Sector/Division</b></td>
+                        <td>:</td>
+                        <td>@Model.Project.PlanningCommissionSectorDivision</td>
+                    </tr>
+                    <tr>
+                        <td><b>05.</b></td>
+                        <td><b>Type of Project</b></td>
+                        <td>:</td>
+                        <td>@Model.Project.Type</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <table id="secA_LocationTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="4"><b>06. Location of the Project (As per Project Document):</b></th>
+                    </tr>
+                    <tr>
+                        <th>Sl. No</th>
+                        <th>Division</th>
+                        <th>District</th>
+                        <th>City Corporation/Municipality/Upazila</th>
+                    </tr>
+                    @if (Model._06LocationOfTheProjects != null)
+                    {
+                        var slNo = 1;
+                        foreach (var location in Model._06LocationOfTheProjects)
+                        {
+                            <tr>
+                                <td>@slNo</td>
+                                <td>@location.Division</td>
+                                <td>@location.District</td>
+                                <td>@location.CityCorpMunicipalityUpazila</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <table id="secA_EtimatedCostTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="8"><b>07. Estimated Cost, Implementation Period and Approval (In Lakh Taka):</b></th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Subject</th>
+                        <th colspan="4">Approved Estimated Cost</th>
+                        <th rowspan="2">Implementation Period</th>
+                        <th rowspan="2">Date of Approval</th>
+                        <th rowspan="2">Approved By</th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th>GOB<br />(Foreign Exchange)</th>
+                        <th>PA<br />(RPA)</th>
+                        <th>Self-finance</th>
+                    </tr>
+                    @if (Model._07EstimatedCostPeriodApprovals != null)
+                    {
+                        foreach (var cost in Model._07EstimatedCostPeriodApprovals)
+                        {
+                            <tr>
+                                <td>@cost.Subject</td>
+                                <td>@cost.Total</td>
+                                <td>@cost.GOB</td>
+                                <td>@cost.PA</td>
+                                <td>@cost.SelfFinance</td>
+                                <td>@cost.ImplementationPeriod</td>
+                                <td>@cost.DateOfApproval</td>
+                                <td>@cost.ApprovedBy</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div>
+                <b>08. Objective of the Project</b>
+                <div>
+                    <p><strong>Overall objective:</strong></p>
+                    <p>@Model.Project.OverallObjective</p>
+                    <p><strong>Specific Objectives (single line for each point):</strong></p>
+                    <ul>
+                        @foreach (var objective in Model.Project.SpecificObjectives?.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries) ?? new string[0])
+                        {
+                            <li>@objective</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <b>09. Background of the Project (In brief):</b>
+                <p>@Model.Project.Background</p>
+            </div>
+
+            <div>
+                <b>10. Major Activities:</b>
+                <p>@Model.Project.MajorActivities</p>
+            </div>
+
+            <div>
+                <b>11. Reasons for Revision (if applicable):</b>
+                <p>@Model.Project.ReasonsForRevision</p>
+            </div>
+
+            <div>
+                <b>11.1 Reasons for No-Cost Time Extension (if applicable):</b>
+                <p>@Model.Project.ReasonsForNoCostTimeExtension</p>
+            </div>
+
+            <div><b>12. Financing Arrangement (Source-wise):</b></div>
+
+            <div><b>12.1 Status of Loan/Grant</b></div>
+
+            <div class="w3-responsive">
+                <table id="secA_LoanStatus_ForeignTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="8">a) Foreign Financing:</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Source(s)</th>
+                        <th rowspan="2">Currency as per Agreement</th>
+                        <th rowspan="2">Amount in US$ (million)</th>
+                        <th rowspan="2">Nature</th>
+                        <th rowspan="2">Date of Agreement</th>
+                        <th rowspan="2">Date of Effectiveness</th>
+                        <th colspan="2">Date of Closing</th>
+                    </tr>
+                    <tr>
+                        <th>Original</th>
+                        <th>Revised</th>
+                    </tr>
+                    @if (Model._12_1aStatusOfLoanGrantForeignFinancings != null)
+                    {
+                        foreach (var financing in Model._12_1aStatusOfLoanGrantForeignFinancings)
+                        {
+                            <tr>
+                                <td>@financing.Source</td>
+                                <td>@financing.CurrencyAsPerAgreement</td>
+                                <td>@financing.AmountInUSD</td>
+                                <td>@financing.Nature</td>
+                                <td>@financing.DateOfAgreement</td>
+                                <td>@financing.DateOfEffectiveness</td>
+                                <td>@financing.OriginalDateOfClosing</td>
+                                <td>@financing.RevisedDateOfClosing</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <table id="secA_LoanStatus_GobTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="4">b) GOB:</th>
+                    </tr>
+                    <tr>
+                        <th>Total amount</th>
+                        <th>Loan</th>
+                        <th>Grant</th>
+                        <th>Cash Foreign Exchange</th>
+                    </tr>
+                    @if (Model._12_1bStatusOfLoanGrantGOBs != null)
+                    {
+                        foreach (var gob in Model._12_1bStatusOfLoanGrantGOBs)
+                        {
+                            <tr>
+                                <td>@gob.TotalAmount</td>
+                                <td>@gob.Loan</td>
+                                <td>@gob.Grant</td>
+                                <td>@gob.CashForeignExchange</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <table id="secA_LoanStatus_SelfTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="4">c) Self-finance/Equity:</th>
+                    </tr>
+                    <tr>
+                        <th>Total amount</th>
+                        <th>Self-finance</th>
+                        <th>Equity</th>
+                        <th>Cash Foreign Exchange</th>
+                    </tr>
+                    @if (Model._12_1cStatusOfLoanGrantSelfFinanceEquities != null)
+                    {
+                        foreach (var self in Model._12_1cStatusOfLoanGrantSelfFinanceEquities)
+                        {
+                            <tr>
+                                <td>@self.TotalAmount</td>
+                                <td>@self.SelfFinance</td>
+                                <td>@self.Equity</td>
+                                <td>@self.CashForeignExchange</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>12.2 Utilization of Project Aid (Source wise):</b>
+                <table id="secA_UtilizationTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Source (s)</th>
+                        <th colspan="2">Total Amount</th>
+                        <th colspan="2">Actual Expenditure</th>
+                        <th colspan="2">Unutilized Amount</th>
+                    </tr>
+                    <tr>
+                        <th>In US$</th>
+                        <th>In Local Currency</th>
+                        <th>In US$</th>
+                        <th>In Local Currency</th>
+                        <th>In US$</th>
+                        <th>In Local Currency</th>
+                    </tr>
+                    @if (Model._12_2UtilizationOfProjectAids != null)
+                    {
+                        foreach (var aid in Model._12_2UtilizationOfProjectAids)
+                        {
+                            <tr>
+                                <td>@aid.Source</td>
+                                <td>@aid.TotalAmountInUSD</td>
+                                <td>@aid.TotalAmountInLocalCurrency</td>
+                                <td>@aid.ActualExpenditureInUSD</td>
+                                <td>@aid.ActualExpenditureInLocalCurrency</td>
+                                <td>@aid.UnutilizedAmountInUSD</td>
+                                <td>@aid.UnutilizedAmountInLocalCurrency</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>12.3 Reimbursable project Aid (RPA):</b>
+                <table id="secA_RpaTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Source (s)</th>
+                        <th colspan="2">RPA Amount</th>
+                        <th>Amount</th>
+                        <th>Amount</th>
+                        <th>Amount</th>
+                        <th rowspan="2">Remarks</th>
+                    </tr>
+                    <tr>
+                        <th>As per Project Document</th>
+                        <th>As per Agreement</th>
+                        <th>Spent</th>
+                        <th>Claimed</th>
+                        <th>Re-imbursed</th>
+                    </tr>
+                    @if (Model._12_3ReimbursableProjectAids != null)
+                    {
+                        foreach (var rpa in Model._12_3ReimbursableProjectAids)
+                        {
+                            <tr>
+                                <td>@rpa.Source</td>
+                                <td>@rpa.RPAAmountAsPerPD</td>
+                                <td>@rpa.RPAAmountAsPerAgreement</td>
+                                <td>@rpa.AmountSpent</td>
+                                <td>@rpa.AmountClaimed</td>
+                                <td>@rpa.AmountReimbursed</td>
+                                <td>@rpa.Remarks</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+        </div>
+
+        <!-- B IMPLEMENTATION POSITION -->
+        <div class="section">
+            <h4><b>B. <u>IMPLEMENTATION POSITION</u></b></h4>
+
+            <div class="w3-responsive">
+                <b>13. Implementation Period:</b>
+                <table id="secB_ImplPeriodTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="2">Implementation Period as per Project Document</th>
+                        <th rowspan="2">Actual implementation</th>
+                        <th rowspan="2">Time Over-run (% of original implementation period)</th>
+                        <th rowspan="2">Remarks</th>
+                    </tr>
+                    <tr>
+                        <th>Original</th>
+                        <th>Latest Revised</th>
+                    </tr>
+                    @if (Model._13ImplementationPeriods != null)
+                    {
+                        foreach (var period in Model._13ImplementationPeriods)
+                        {
+                            <tr>
+                                <td>@period.Original</td>
+                                <td>@period.LatestRevised</td>
+                                <td>@period.ActualImplementation</td>
+                                <td>@period.TimeOverRun</td>
+                                <td>@period.Remarks</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>14. Cost of the Project:</b>
+                <table id="secB_PrjCostTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Description</th>
+                        <th colspan="2">Estimated Cost</th>
+                        <th rowspan="2">Actual expenditure</th>
+                        <th rowspan="2">Cost over-run (% of original cost)</th>
+                        <th rowspan="2">Remarks</th>
+                    </tr>
+                    <tr>
+                        <th>Original</th>
+                        <th>Latest Revised</th>
+                    </tr>
+                    @if (Model._14CostOfTheProjects != null)
+                    {
+                        foreach (var cost in Model._14CostOfTheProjects)
+                        {
+                            <tr>
+                                <td>@cost.Description</td>
+                                <td>@cost.OriginalEstimatedCost</td>
+                                <td>@cost.LatestRevisedEstimatedCost</td>
+                                <td>@cost.ActualExpenditure</td>
+                                <td>@cost.CostOverRun</td>
+                                <td>@cost.Remarks</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>15. Information regarding Project Director (s):</b>
+                <table id="secB_PdInfoTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Name, Main Designation & Grade. Mobile Number (From Beginning)</th>
+                        <th rowspan="2">Full time</th>
+                        <th rowspan="2">Part time</th>
+                        <th rowspan="2">Responsible for more than one project</th>
+                        <th colspan="2">Period</th>
+                        <th rowspan="2">Remarks</th>
+                    </tr>
+                    <tr>
+                        <th>Joining</th>
+                        <th>Transfer</th>
+                    </tr>
+                    @if (Model._15InfoProjectDirectors != null)
+                    {
+                        foreach (var director in Model._15InfoProjectDirectors)
+                        {
+                            <tr>
+                                <td>@director.NameAndDetails</td>
+                                <td>@director.FullTime</td>
+                                <td>@director.PartTime</td>
+                                <td>@director.ResponsibleForMoreThanOneProject</td>
+                                <td>@director.Joining</td>
+                                <td>@director.Transfer</td>
+                                <td>@director.Remarks</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div><b>16. Personnel</b></div>
+
+            <div class="w3-responsive">
+                <table id="secB_PiuTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="4"><b>16.1 Personnel of Project implementation Unit (PIU):</b></th>
+                    </tr>
+                    <tr>
+                        <th>Sl. No</th>
+                        <th>Name of Post (Grade)</th>
+                        <th>Approved Strength</th>
+                        <th>Employed during Implementation</th>
+                    </tr>
+                    @if (Model._16_1PersonnelOfPIUs != null)
+                    {
+                        var slNo = 1;
+                        foreach (var personnel in Model._16_1PersonnelOfPIUs)
+                        {
+                            <tr>
+                                <td>@slNo</td>
+                                <td>@personnel.NameOfPost</td>
+                                <td>@personnel.ApprovedStrength</td>
+                                <td>@personnel.EmployedDuringImplementation</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                    @if (Model._16Personnels != null && Model._16Personnels.Any())
+                    {
+                        var total = Model._16Personnels.First();
+                        <tr>
+                            <td>Total</td>
+                            <td>@total.TotalNameOfPostGrade</td>
+                            <td>@total.TotalApprovedStrength</td>
+                            <td>@total.TotalEmployedDuringImplementation</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <table id="secB_PerReqAftComTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="5"><b>16.2 Personnel Required after the Project Completion:</b></th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Sl. No</th>
+                        <th colspan="2">As Proposed in Project Document (PD)</th>
+                        <th rowspan="2">Recruited (Yes/No)</th>
+                        <th rowspan="2">If not recruited explain reason and latest stats</th>
+                    </tr>
+                    <tr>
+                        <th>Name of Post</th>
+                        <th>Number</th>
+                    </tr>
+                    @if (Model._16_2PersonnelRequiredAfterCompletions != null)
+                    {
+                        var slNo = 1;
+                        foreach (var personnel in Model._16_2PersonnelRequiredAfterCompletions)
+                        {
+                            <tr>
+                                <td>@slNo</td>
+                                <td>@personnel.NameOfPost</td>
+                                <td>@personnel.Number</td>
+                                <td>@personnel.Recruited</td>
+                                <td>@personnel.ReasonForNotRecruited</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                    @if (Model._16Personnels != null && Model._16Personnels.Any())
+                    {
+                        var total = Model._16Personnels.First();
+                        <tr>
+                            <td>Total</td>
+                            <td>@total.TotalNameOfPost</td>
+                            <td>@total.TotalNumber</td>
+                            <td>@total.TotalRecruited</td>
+                            <td>@total.TotalReasonForNotRecruited</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>17. Training (Foreign/Local):</b>
+                <table id="secB_TrainingTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="3">Category</th>
+                        <th rowspan="3">Sl. No</th>
+                        <th colspan="6">No. of Days/Weeks/Months (D/W/M), Batch & Participants</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">As in Project Document</th>
+                        <th colspan="3">Achievement</th>
+                    </tr>
+                    <tr>
+                        <th>D/W/M</th>
+                        <th>Batch (s)</th>
+                        <th>Participants(s)</th>
+                        <th>D/W/M</th>
+                        <th>Batch (s)</th>
+                        <th>Participants(s)</th>
+                    </tr>
+                    @if (Model._17TrainingForeignLocals != null)
+                    {
+                        var slNo = 1;
+                        foreach (var training in Model._17TrainingForeignLocals)
+                        {
+                            <tr>
+                                <td>@training.Category</td>
+                                <td>@slNo</td>
+                                <td>@training.DWMAsInPD</td>
+                                <td>@training.BatchAsInPD</td>
+                                <td>@training.ParticipantAsInPD</td>
+                                <td>@training.DWMAchievement</td>
+                                <td>@training.BatchAchievement</td>
+                                <td>@training.ParticipantAchievement</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                    @if (Model._17_18Totals != null && Model._17_18Totals.Any())
+                    {
+                        var total = Model._17_18Totals.First();
+                        <tr>
+                            <td colspan="2">Sub-total (Local Training)</td>
+                            <td>@total.SubTotalLocal_DWMAsInPD</td>
+                            <td>@total.SubTotalLocal_BatchAsInPD</td>
+                            <td>@total.SubTotalLocal_ParticipantAsInPD</td>
+                            <td>@total.SubTotalLocal_DWMAchievement</td>
+                            <td>@total.SubTotalLocal_BatchAchievement</td>
+                            <td>@total.SubTotalLocal_ParticipantAchievement</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Sub-total (Foreign Training)</td>
+                            <td>@total.SubTotalForeign_DWMAsInPD</td>
+                            <td>@total.SubTotalForeign_BatchAsInPD</td>
+                            <td>@total.SubTotalForeign_ParticipantAsInPD</td>
+                            <td>@total.SubTotalForeign_DWMAchievement</td>
+                            <td>@total.SubTotalForeign_BatchAchievement</td>
+                            <td>@total.SubTotalForeign_ParticipantAchievement</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Total (Local + Foreign)</td>
+                            <td>@total.TotalLocalForeign_DWMAsInPD</td>
+                            <td>@total.TotalLocalForeign_BatchAsInPD</td>
+                            <td>@total.TotalLocalForeign_ParticipantAsInPD</td>
+                            <td>@total.TotalLocalForeign_DWMAchievement</td>
+                            <td>@total.TotalLocalForeign_BatchAchievement</td>
+                            <td>@total.TotalLocalForeign_ParticipantAchievement</td>
+                        </tr>
+                    }
+                </table>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PD= Project Document)</p>
+            </div>
+
+            <div class="w3-responsive">
+                <b>18. Component-wise Progress (As per latest approved Project Document):</b>
+                <table id="secB_CompWiseProgressTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Category</th>
+                        <th rowspan="2">Name of Component</th>
+                        <th rowspan="2">Unit</th>
+                        <th rowspan="2">Quantity</th>
+                        <th colspan="5">Estimated Cost (Taka in Lac)</th>
+                        <th colspan="5">Actual Progress (Taka in Lac)</th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th>GOB</th>
+                        <th>PA</th>
+                        <th>Self-finance</th>
+                        <th>Others</th>
+                        <th>Total</th>
+                        <th>GOB</th>
+                        <th>PA</th>
+                        <th>Self-finance</th>
+                        <th>Others</th>
+                    </tr>
+                    @if (Model._18ComponentWiseProgresses != null)
+                    {
+                        foreach (var progress in Model._18ComponentWiseProgresses)
+                        {
+                            <tr>
+                                <td>@progress.Category</td>
+                                <td>@progress.NameOfComponent</td>
+                                <td>@progress.Unit</td>
+                                <td>@progress.Quantity</td>
+                                <td>@progress.EstimatedTotal</td>
+                                <td>@progress.EstimatedGOB</td>
+                                <td>@progress.EstimatedPA</td>
+                                <td>@progress.EstimatedSelfFinance</td>
+                                <td>@progress.EstimatedOthers</td>
+                                <td>@progress.ActualTotal</td>
+                                <td>@progress.ActualGOB</td>
+                                <td>@progress.ActualPA</td>
+                                <td>@progress.ActualSelfFinance</td>
+                                <td>@progress.ActualOthers</td>
+                            </tr>
+                        }
+                    }
+                    @if (Model._17_18Totals != null && Model._17_18Totals.Any())
+                    {
+                        var total = Model._17_18Totals.First();
+                        <tr>
+                            <td colspan="4">Sub-total (Revenue)</td>
+                            <td>@total.SubTotalRevenue_EstimatedTotal</td>
+                            <td>@total.SubTotalRevenue_EstimatedGOB</td>
+                            <td>@total.SubTotalRevenue_EstimatedPA</td>
+                            <td>@total.SubTotalRevenue_EstimatedSelfFinance</td>
+                            <td>@total.SubTotalRevenue_EstimatedOthers</td>
+                            <td>@total.SubTotalRevenue_ActualTotal</td>
+                            <td>@total.SubTotalRevenue_ActualGOB</td>
+                            <td>@total.SubTotalRevenue_ActualPA</td>
+                            <td>@total.SubTotalRevenue_ActualSelfFinance</td>
+                            <td>@total.SubTotalRevenue_ActualOthers</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Sub-total (Capital)</td>
+                            <td>@total.SubTotalCapital_EstimatedTotal</td>
+                            <td>@total.SubTotalCapital_EstimatedGOB</td>
+                            <td>@total.SubTotalCapital_EstimatedPA</td>
+                            <td>@total.SubTotalCapital_EstimatedSelfFinance</td>
+                            <td>@total.SubTotalCapital_EstimatedOthers</td>
+                            <td>@total.SubTotalCapital_ActualTotal</td>
+                            <td>@total.SubTotalCapital_ActualGOB</td>
+                            <td>@total.SubTotalCapital_ActualPA</td>
+                            <td>@total.SubTotalCapital_ActualSelfFinance</td>
+                            <td>@total.SubTotalCapital_ActualOthers</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Total (Revenue + Capital)</td>
+                            <td>@total.TotalRevenueCapital_EstimatedTotal</td>
+                            <td>@total.TotalRevenueCapital_EstimatedGOB</td>
+                            <td>@total.TotalRevenueCapital_EstimatedPA</td>
+                            <td>@total.TotalRevenueCapital_EstimatedSelfFinance</td>
+                            <td>@total.TotalRevenueCapital_EstimatedOthers</td>
+                            <td>@total.TotalRevenueCapital_ActualTotal</td>
+                            <td>@total.TotalRevenueCapital_ActualGOB</td>
+                            <td>@total.TotalRevenueCapital_ActualPA</td>
+                            <td>@total.TotalRevenueCapital_ActualSelfFinance</td>
+                            <td>@total.TotalRevenueCapital_ActualOthers</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>19. Procurement of Transport (in Nos.) :</b>
+                <table id="secB_ProcureTransportTable" class="tbl_bordered">
+                    <tr>
+                        <th>Type of transport</th>
+                        <th>Number as per Project Document</th>
+                        <th>Number Procured with date</th>
+                        <th>Transferred to Transport Pool with Date</th>
+                        <th>Transferred to O & M with date</th>
+                        <th>Condemned/damaged with date</th>
+                        <th>Returned or transferred to following project</th>
+                        <th>Remarks</th>
+                    </tr>
+                    @if (Model._19ProcurementOfTransports != null)
+                    {
+                        foreach (var transport in Model._19ProcurementOfTransports)
+                        {
+                            <tr>
+                                <td>@transport.TypeOfTransport</td>
+                                <td>@transport.NumberAsPerProjectDocument</td>
+                                <td>@transport.NumberProcured (@transport.NumberProcuredDate)</td>
+                                <td>@transport.TransferredToTransferPool (@transport.TransferredToTransferPoolDate)</td>
+                                <td>@transport.TransferredToOM (@transport.TransferredToOMDate)</td>
+                                <td>@transport.CondemnedDamaged (@transport.CondemnedDamagedDate)</td>
+                                <td>@transport.ReturnedToFollowingProject (@transport.ReturnedToFollowingProjectDate)</td>
+                                <td>@transport.Remarks</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>20. Project Consultant (s) (Local/Foreign):</b>
+                <table id="secB_PrjConsultantTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Category</th>
+                        <th rowspan="2">Name of the Field</th>
+                        <th colspan="2">Approved man month</th>
+                        <th rowspan="2">Actual man month utilized</th>
+                        <th colspan="2">Number of Deliverables</th>
+                        <th rowspan="2">Remarks</th>
+                    </tr>
+                    <tr>
+                        <th>As per Project Document</th>
+                        <th>As per contract</th>
+                        <th>As per Project Document</th>
+                        <th>Actual</th>
+                    </tr>
+                    @if (Model._20ProjectConsultants != null)
+                    {
+                        foreach (var consultant in Model._20ProjectConsultants)
+                        {
+                            <tr>
+                                <td>@consultant.Category</td>
+                                <td>@consultant.NameOfTheField</td>
+                                <td>@consultant.ApprovedManMonthAsPerPD</td>
+                                <td>@consultant.ApprovedManMonthAsPerContract</td>
+                                <td>@consultant.ActualManMonthUtilized</td>
+                                <td>@consultant.NumberOfDeliverablesAsPerPD</td>
+                                <td>@consultant.NumberOfDeliverablesActual</td>
+                                <td>@consultant.Remarks</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>21. Infrastructure/Erection/Installation Tools & Equipment:</b>
+                <table id="secB_ToolsEquipTable" class="tbl_bordered">
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantity (as per project document)</th>
+                        <th>Quantity Procured with date</th>
+                        <th>Transferred to O & M with date</th>
+                        <th>Disposed-off as per rule with date</th>
+                        <th>Balance</th>
+                        <th>Remarks</th>
+                    </tr>
+                    @if (Model._21InfrastructureErectionInstallations != null)
+                    {
+                        foreach (var tool in Model._21InfrastructureErectionInstallations)
+                        {
+                            <tr>
+                                <td>@tool.Description</td>
+                                <td>@tool.QuantityAsPerProjectDocument</td>
+                                <td>@tool.QuantityProcured (@tool.QuantityProcuredDate)</td>
+                                <td>@tool.TransferredToOM (@tool.TransferredToOMDate)</td>
+                                <td>@tool.DisposedOff (@tool.DisposedOffDate)</td>
+                                <td>@tool.Balance</td>
+                                <td>@tool.Remarks</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div>
+                <b>22. Procurement of Goods, Works and Services:</b>
+            </div>
+
+            <div class="w3-responsive">
+                <b>22.1 Information on packages:</b>
+                @if (Model._22_1InfoOnPackages != null && Model._22_1InfoOnPackages.Any())
+                {
+                    var info = Model._22_1InfoOnPackages.First();
+                    <ol type="a">
+                        <li>Total number of packages as per Project Document: @info.TotalPackagesAsPerPD (Goods- @info.GoodsAsPerPD Works- @info.WorksAsPerPD Services- @info.ServicesAsPerPD)</li>
+                        <li>Total number of packages procured: @info.TotalPackagesProcured (Goods- @info.GoodsProcured Works- @info.WorksProcured Services- @info.ServicesProcured)</li>
+                        <li>Reason for not procuring (if any): <p>@info.ReasonForNotProcuring</p></li>
+                        <li>Number of packages for which the estimated cost is more than 1% of the estimated cost of the project: @info.TotalPackagesMoreThanOnePct (Goods- @info.GoodsMoreThanOnePct Works- @info.WorksMoreThanOnePct Services- @info.ServicesMoreThanOnePct)</li>
+                    </ol>
+                }
+            </div>
+
+            <div>
+                <b>22.2 Detailed Package-wise information of Goods, Works and Services (For each case the highest 50 (fifty) packages) (Please use the format as in Annexure-l (a), l(b) and l(c))</b>
+                <!-- Placeholder for annexure data if available -->
+            </div>
+        </div>
+
+        <!-- C FINANCIAL AND PHYSICAL TARGET AND PROGRESS -->
+        <div class="section">
+            <h4><b>C. <u>FINANCIAL AND PHYSICAL TARGET AND PROGRESS</u></b></h4>
+
+            <div class="w3-responsive">
+                <b>23. Original and Revised Financial Provision and physical Target (as per Project Document):</b>
+                <table id="secC_FinProvPhyTgtTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Financial Year</th>
+                        <th colspan="6">Financial provision & physical target as per original Project Document</th>
+                        <th colspan="6">Financial provision & physical target as per latest revised Project Document</th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th>GOB</th>
+                        <th>P.A.</th>
+                        <th>Self-finance</th>
+                        <th>Others</th>
+                        <th>Physical %</th>
+                        <th>Total</th>
+                        <th>GOB</th>
+                        <th>P.A.</th>
+                        <th>Self-finance</th>
+                        <th>Others</th>
+                        <th>Physical %</th>
+                    </tr>
+                    @if (Model._23OriginalAndRevisedProvisionTargets != null)
+                    {
+                        foreach (var target in Model._23OriginalAndRevisedProvisionTargets)
+                        {
+                            <tr>
+                                <td>@target.FinancialYear</td>
+                                <td>@target.TotalOriginal</td>
+                                <td>@target.GOBOriginal</td>
+                                <td>@target.PAOriginal</td>
+                                <td>@target.SelfFinanceOriginal</td>
+                                <td>@target.OthersOriginal</td>
+                                <td>@target.PhysicalPercentageOriginal</td>
+                                <td>@target.TotalRevised</td>
+                                <td>@target.GOBRevised</td>
+                                <td>@target.PARevised</td>
+                                <td>@target.SelfFinanceRevised</td>
+                                <td>@target.OthersRevised</td>
+                                <td>@target.PhysicalPercentageRevised</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>24. Revised ADP allocation and progress:</b>
+                <table id="secC_RevAdpTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="2">Financial Year</th>
+                        <th colspan="6">Revised Allocation & target</th>
+                        <th rowspan="2">GOB Release</th>
+                        <th colspan="6">Expenditure & physical progress</th>
+                        <th rowspan="2">Unspent* GOB Released</th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th>GOB</th>
+                        <th>P.A.</th>
+                        <th>Self-Finance</th>
+                        <th>Others</th>
+                        <th>Physical %</th>
+                        <th>Total</th>
+                        <th>GOB</th>
+                        <th>P.A.</th>
+                        <th>Self-Finance</th>
+                        <th>Others</th>
+                        <th>Physical %</th>
+                    </tr>
+                    @if (Model._24RevisedADPAllocationAndProgresses != null)
+                    {
+                        foreach (var progress in Model._24RevisedADPAllocationAndProgresses)
+                        {
+                            <tr>
+                                <td>@progress.FinancialYear</td>
+                                <td>@progress.TotalAllocation</td>
+                                <td>@progress.GOBAllocation</td>
+                                <td>@progress.PAAllocation</td>
+                                <td>@progress.SelfFinanceAllocation</td>
+                                <td>@progress.OthersAllocation</td>
+                                <td>@progress.PhysicalPercentageAllocation</td>
+                                <td>@progress.GOBRelease</td>
+                                <td>@progress.TotalProgress</td>
+                                <td>@progress.GOBProgress</td>
+                                <td>@progress.PAProgress</td>
+                                <td>@progress.SelfFinanceProgress</td>
+                                <td>@progress.OthersProgress</td>
+                                <td>@progress.PhysicalPercentageProgress</td>
+                                <td>@progress.UnspentGOBReleased</td>
+                            </tr>
+                        }
+                    }
+                </table>
+                <p>*Attach the Proof for Reconciliation of Unspent GOB Released</p>
+                <p>**To determine the physical quantity, use the formula as in the circular of Planning Division</p>
+            </div>
+        </div>
+
+        <!-- D ACHIEVEMENT OF OBJECTIVES OF THE PROJECT -->
+        <div class="section">
+            <h4><b>D. <u>ACHIEVEMENT OF OBJECTIVES OF THE PROJECT</u></b></h4>
+
+            <div class="w3-responsive">
+                <b>25. Project objective, Actual achievement and Reason for shortfall (if any):</b>
+                <table id="secD_PrjAchievementTable" class="tbl_bordered">
+                    <tr>
+                        <th>Sl. No</th>
+                        <th>Objectives as per Project Document</th>
+                        <th>Actual achievement</th>
+                        <th>Reasons for shortfall (if any)</th>
+                    </tr>
+                    @if (Model._25ObjectiveAchievements != null)
+                    {
+                        var slNo = 1;
+                        foreach (var achievement in Model._25ObjectiveAchievements)
+                        {
+                            <tr>
+                                <td>@slNo</td>
+                                <td>@achievement.Objective</td>
+                                <td>@achievement.Achievement</td>
+                                <td>@achievement.ReasonsForShortfall</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                </table>
+            </div>
+        </div>
+
+        <!-- E BENEFIT ANALYSIS -->
+        <div class="section">
+            <h4><b>E. <u>BENEFIT ANALYSIS</u></b></h4>
+
+            <div class="w3-responsive">
+                <b>26. Annual Out-put:</b>
+                <table id="secE_AnnOutTable" class="tbl_bordered">
+                    <tr>
+                        <th>Sl. No</th>
+                        <th>Items of out-put</th>
+                        <th>Unit</th>
+                        <th>Estimated quantity expected at full capacity</th>
+                        <th>Actual quantity of out-put during the 1st year of operation at full capacity (or during real production for newly completed project)</th>
+                    </tr>
+                    @if (Model._26AnnualOutputs != null)
+                    {
+                        var slNo = 1;
+                        foreach (var output in Model._26AnnualOutputs)
+                        {
+                            <tr>
+                                <td>@slNo</td>
+                                <td>@output.Item</td>
+                                <td>@output.Unit</td>
+                                <td>@output.EstimatedQuantity</td>
+                                <td>@output.ActualQuantity</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <b>27. Cost/Benefit:</b>
+                <table id="secE_CostBenifitTable" class="tbl_bordered">
+                    <tr>
+                        <th>Category</th>
+                        <th>Item</th>
+                        <th>Estimated</th>
+                        <th>Actual</th>
+                    </tr>
+                    @if (Model._27CostBenefits != null)
+                    {
+                        foreach (var benefit in Model._27CostBenefits)
+                        {
+                            <tr>
+                                <td>@benefit.Category</td>
+                                <td>@benefit.Item</td>
+                                <td>@benefit.Estimated</td>
+                                <td>@benefit.Actual</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div>
+                <b>28. Please give reasons for shortfall, if any, between the estimated and actual benefit:</b>
+                @if (Model._G_PostProjectRemark != null)
+                {
+                    <p>@Model._G_PostProjectRemark._28ReasonsForShortFall</p>
+                }
+            </div>
+        </div>
+
+        <!-- F MONITORING AND AUDITING -->
+        <div class="section">
+            <h4><b>F. <u>MONITORING AND AUDITING</u></b></h4>
+
+            <div class="w3-responsive">
+                <b>29. Monitoring:</b>
+                <table id="secF_MonitorTable" class="tbl_bordered">
+                    <tr>
+                        <th>Category</th>
+                        <th>Name & Designation of the inspecting official</th>
+                        <th>Date</th>
+                        <th>Identified Problems</th>
+                        <th>Recommendations</th>
+                    </tr>
+                    @if (Model._29Monitorings != null)
+                    {
+                        foreach (var monitoring in Model._29Monitorings)
+                        {
+                            <tr>
+                                <td>@monitoring.Category</td>
+                                <td>@monitoring.NameAndDesignation</td>
+                                <td>@monitoring.Date</td>
+                                <td>@monitoring.IdentifiedProblems</td>
+                                <td>@monitoring.Recommendations</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div><b>30. Auditing during and after Implementation:</b></div>
+
+            <div class="w3-responsive">
+                <table id="secF_IntAuditTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="5"><b>30.1 Internal Audit:</b></th>
+                    </tr>
+                    <tr>
+                        <th>Sl. No</th>
+                        <th>Period of Audit</th>
+                        <th>Date of submission of Audit Report</th>
+                        <th>Major findings/objections and Money involved</th>
+                        <th>Whether objections resolved or not (if not, mention status)</th>
+                    </tr>
+                    @if (Model._30_1InternalAudits != null)
+                    {
+                        var slNo = 1;
+                        foreach (var audit in Model._30_1InternalAudits)
+                        {
+                            <tr>
+                                <td>@slNo</td>
+                                <td>@audit.StartDate - @audit.EndDate</td>
+                                <td>@audit.SubmissionDate</td>
+                                <td>@audit.MajorFindings</td>
+                                <td>@audit.WhetherObjectionsResolved</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                    @if (Model._30Auditings != null && Model._30Auditings.Any())
+                    {
+                        var total = Model._30Auditings.First();
+                        <tr>
+                            <td colspan="3">Total findings/objections and Money involved=</td>
+                            <td>@total.TotalInternalMajorFindings</td>
+                            <td>@total.TotalInternalWhetherResolved</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+            <div class="w3-responsive">
+                <table id="secF_ExtAuditTable" class="tbl_bordered">
+                    <tr>
+                        <th colspan="5"><b>30.2 External Audit:</b></th>
+                    </tr>
+                    <tr>
+                        <th>Sl. No</th>
+                        <th>Period of Audit</th>
+                        <th>Date of submission of Audit Report</th>
+                        <th>Major findings/objections and Money involved</th>
+                        <th>Whether objections resolved or not (if not, mention status)</th>
+                    </tr>
+                    @if (Model._30_2ExternalAudits != null)
+                    {
+                        var slNo = 1;
+                        foreach (var audit in Model._30_2ExternalAudits)
+                        {
+                            <tr>
+                                <td>@slNo</td>
+                                <td>@audit.StartDate - @audit.EndDate</td>
+                                <td>@audit.SubmissionDate</td>
+                                <td>@audit.MajorFindings</td>
+                                <td>@audit.WhetherObjectionsResolved</td>
+                            </tr>
+                            slNo++;
+                        }
+                    }
+                    @if (Model._30Auditings != null && Model._30Auditings.Any())
+                    {
+                        var total = Model._30Auditings.First();
+                        <tr>
+                            <td colspan="3">Total findings/objections and Money involved=</td>
+                            <td>@total.TotalExternalMajorFindings</td>
+                            <td>@total.TotalExternalWhetherResolved</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+        <!-- G POST-PROJECT REMARKS -->
+        <div class="section">
+            <h4><b>G. <u>POST-PROJECT REMARKS</u></b></h4>
+
+            @if (Model._G_PostProjectRemark != null)
+            {
+                var remark = Model._G_PostProjectRemark;
+                <div class="w3-responsive">
+                    <b>31. General Observations/Remarks on the Project</b>
+                    <br />
+                    <p><strong>31.1 Background:</strong> @remark.Background</p>
+                    <p><strong>31.2 Justification/Adequacy:</strong> @remark.JustificationAdequacy</p>
+                    <p><strong>31.3 Objectives:</strong> @remark.Objectives</p>
+                    <p><strong>31.4 Project revision with reasons:</strong> @remark.ProjectRevisionWithReasons</p>
+                </div>
+
+                <div class="w3-responsive">
+                    <b>32. Rationale of the project (Consider the following issues):</b>
+                    <br />
+                    <p><strong>32.1 Concept:</strong> @remark.Concept</p>
+                    <p><strong>32.2 Design:</strong> @remark.Design</p>
+                    <p><strong>32.3 Location:</strong> @remark.Location</p>
+                    <p><strong>32.4 Timing:</strong> @remark.Timing</p>
+                </div>
+
+                <div class="w3-responsive">
+                    <b>33. Brief description on planning and financing of the project and its applicability (Consider the following issues):</b>
+                    <br />
+                    <p><strong>33.1 Project Identification:</strong> @remark.ProjectIdentification</p>
+                    <p><strong>33.2 Project Preparation:</strong> @remark.ProjectPreparation</p>
+                    <p><strong>33.3 Appraisal:</strong> @remark.Appraisal</p>
+                    <p><strong>33.4 Credit Negotiation:</strong> @remark.CreditNegotiation</p>
+                    <p><strong>33.5 Credit Agreement:</strong> @remark.CreditAgreement</p>
+                    <p><strong>33.6 Credit Effectiveness:</strong> @remark.CreditEffectiveness</p>
+                    <p><strong>33.7 Loan Disbursement:</strong> @remark.LoanDisbursement</p>
+                    <p><strong>33.8 Loan Conditions:</strong> @remark.LoanConditions</p>
+                    <p><strong>33.9 Project Approval:</strong> @remark.ProjectApproval</p>
+                    <p><strong>33.10 Others (specify):</strong> @remark.OthersSpecify</p>
+                </div>
+
+                <div class="w3-responsive">
+                    <b>34. Analysis of the post-implementation situation and result of the project (Consider following issues):</b>
+                    <br />
+                    <p><strong>34.1 Whether the beneficiaries of the project have clear knowledge about the Target/Objectives of the project:</strong> @remark._34_1</p>
+                    <p><strong>34.2 Programme for use of created-facilities of the project:</strong> @remark._34_2</p>
+                    <p><strong>34.3 O & M Program of the project:</strong> @remark._34_3</p>
+                    <p><strong>34.4 Impact of the project (Direct & Indirect):</strong> @remark._34_4</p>
+                    <p><strong>34.5 Transfer of Technology and Institutional Building through the project:</strong> @remark._34_5</p>
+                    <p><strong>34.6 Employment generation through the project:</strong> @remark._34_6</p>
+                    <p><strong>34.7 Possibility of Self employment:</strong> @remark._34_7</p>
+                    <p><strong>34.8 Possibility of Women-employment opportunity:</strong> @remark._34_8</p>
+                    <p><strong>34.9 Women’s participation in development:</strong> @remark._34_9</p>
+                    <p><strong>34.10 Probable Impact on Socio-Economic activity:</strong> @remark._34_10</p>
+                    <p><strong>34.11 Impact on environment:</strong> @remark._34_11</p>
+                    <p><strong>34.12 Sustainability of the project:</strong> @remark._34_12</p>
+                    <p><strong>34.13 Contribution to poverty alleviation/reduction:</strong> @remark._34_13</p>
+                    <p><strong>34.14 Opinion of the public representatives, local elite, local administration, teachers, religious leaders, women’s representatives etc.:</strong> @remark._34_14</p>
+                    <p><strong>34.15 Contribution of Micro-credit programs and Comments on overlapping with any NGO activities:</strong> @remark._34_15</p>
+                </div>
+
+                <div class="w3-responsive">
+                    <b>35. Problems encountered during Implementation (with duration & steps taken to resolve those) (Consider following issues):</b>
+                    <br />
+                    <p><strong>35.1 Project management:</strong> @remark._35_1</p>
+                    <p><strong>35.2 Project Director:</strong> @remark._35_2</p>
+                    <p><strong>35.3 Land Acquisition:</strong> @remark._35_3</p>
+                    <p><strong>35.4 Procurement:</strong> @remark._35_4</p>
+                    <p><strong>35.5 Consultancy:</strong> @remark._35_5</p>
+                    <p><strong>35.6 Contractor:</strong> @remark._35_6</p>
+                    <p><strong>35.7 Manpower:</strong> @remark._35_7</p>
+                    <p><strong>35.8 Law & Order:</strong> @remark._35_8</p>
+                    <p><strong>35.9 Natural calamity:</strong> @remark._35_9</p>
+                    <p><strong>35.10 Project financing:</strong> @remark._35_10</p>
+                    <p><strong>35.11 Allocation and release:</strong> @remark._35_11</p>
+                    <p><strong>35.12 Design formulation/approval:</strong> @remark._35_12</p>
+                    <p><strong>35.13 Project aid disbursement and re-imbursement:</strong> @remark._35_13</p>
+                    <p><strong>35.14 Mission of the development partners:</strong> @remark._35_14</p>
+                    <p><strong>35.15 Time & Cost Over-run:</strong> @remark._35_15</p>
+                    <p><strong>35.16 Project Monitoring:</strong> @remark._35_16</p>
+                    <p><strong>35.17 Delay in Decision:</strong> @remark._35_17</p>
+                    <p><strong>35.18 Transport, Training:</strong> @remark._35_18</p>
+                    <p><strong>35.19 Approval and Others:</strong> @remark._35_19</p>
+                </div>
+
+                <div class="w3-responsive">
+                    <b>36. Remarks & Recommendations of the Project Director:</b>
+                    <p>@remark._36RemarksPD</p>
+                    <div class="w3-row">
+                        <div class="w3-col m5">
+                            <p><strong>Date:</strong> @remark._36DatePD</p>
+                        </div>
+                        <div class="w3-col m2">&nbsp;</div>
+                        <div class="w3-col m5">
+                            <div class="w3-center">
+                                <p><strong>Signature:</strong></p>
+                                @if (remark._36SignPD != null)
+                                {
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(remark._36SignPD)" alt="PD Signature" class="signature-seal" />
+                                }
+                                else
+                                {
+                                    <p>No signature available</p>
+                                }
+                            </div>
+                            <div class="w3-center">
+                                <p><strong>Seal:</strong></p>
+                                @if (remark._36SealPD != null)
+                                {
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(remark._36SealPD)" alt="PD Seal" class="signature-seal" />
+                                }
+                                else
+                                {
+                                    <p>No seal available</p>
+                                }
+                            </div>
+                            <hr />
+                            <p class="w3-center">Signature and seal of the Project Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-responsive">
+                    <b>37. Remarks/Comments of Agency Head:</b>
+                    <p>@remark._36RemarksAH</p>
+                    <div class="w3-row">
+                        <div class="w3-col m5">
+                            <p><strong>Date:</strong> @remark._36DateAH</p>
+                        </div>
+                        <div class="w3-col m2">&nbsp;</div>
+                        <div class="w3-col m5">
+                            <div class="w3-center">
+                                <p><strong>Signature:</strong></p>
+                                @if (remark._36SignAH != null)
+                                {
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(remark._36SignAH)" alt="AH Signature" class="signature-seal" />
+                                }
+                                else
+                                {
+                                    <p>No signature available</p>
+                                }
+                            </div>
+                            <div class="w3-center">
+                                <p><strong>Seal:</strong></p>
+                                @if (remark._36SealAH != null)
+                                {
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(remark._36SealAH)" alt="AH Seal" class="signature-seal" />
+                                }
+                                else
+                                {
+                                    <p>No seal available</p>
+                                }
+                            </div>
+                            <hr />
+                            <p class="w3-center">Signature and seal of Agency Head</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-responsive">
+                    <b>38. Remarks/Comments of the Secretary/Senior Secretary of the Ministry/Division:</b>
+                    <p>@remark._36RemarksSec</p>
+                    <div class="w3-row">
+                        <div class="w3-col m5">
+                            <p><strong>Date:</strong> @remark._36DateSec</p>
+                        </div>
+                        <div class="w3-col m2">&nbsp;</div>
+                        <div class="w3-col m5">
+                            <div class="w3-center">
+                                <p><strong>Signature:</strong></p>
+                                @if (remark._36SignSec != null)
+                                {
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(remark._36SignSec)" alt="Sec Signature" class="signature-seal" />
+                                }
+                                else
+                                {
+                                    <p>No signature available</p>
+                                }
+                            </div>
+                            <div class="w3-center">
+                                <p><strong>Seal:</strong></p>
+                                @if (remark._36SealSec != null)
+                                {
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(remark._36SealSec)" alt="Sec Seal" class="signature-seal" />
+                                }
+                                else
+                                {
+                                    <p>No seal available</p>
+                                }
+                            </div>
+                            <hr />
+                            <p class="w3-center">Signature and seal of Secretary</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        </<br />
+
+        <hr>
+        <!-- Annexure Section -->
+        <div class="w3-responsive">
+            <b>22.2 Detailed Package-wise information of Goods, Works and Services (For each case the highest 50 (fifty) packages) (As per Annexure-I (a), I (b) and I (c))</b>
+
+            <!-- Annexure-I (a): Goods -->
+            <div class="section">
+                <h4><b>Annexure-I (a): Packages of Goods</b></h4>
+                <table id="annexure1a_GoodsTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="4">Package No</th>
+                        <th rowspan="4">Description of Package</th>
+                        <th colspan="12">Details</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Estimated Cost</th>
+                        <th rowspan="3">Procurement Method</th>
+                        <th rowspan="3">Approving Authority</th>
+                        <th rowspan="3">Date of Tender Invitation</th>
+                        <th rowspan="4">Name of Newspaper Where Published</th>
+                        <th rowspan="3">Date of Opening</th>
+                        <th rowspan="3">Date of Approval</th>
+                        <th rowspan="3">Date of NOA</th>
+                        <th colspan="2">Contract</th>
+                        <th rowspan="3">Actual Payment</th>
+                        <th rowspan="3">Completion Date as per Contract</th>
+                        <th rowspan="3">Actual Completion Date</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Price</th>
+                        <th rowspan="2">Date</th>
+                    </tr>
+                    <tr>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                    </tr>
+                    @if (Model._Annex1A_ProcurementOfGoods != null)
+                    {
+                        foreach (var good in Model._Annex1A_ProcurementOfGoods.Take(50)) // Limit to 50 as per requirement
+                        {
+                            <tr>
+                                <td rowspan="3">@good.PackageNo</td>
+                                <td rowspan="3">@good.DescriptionOfPackage</td>
+                                <td>@good.PlanEstimatedCost</td>
+                                <td>@good.PlanProcurementMethod</td>
+                                <td>@good.PlanApprovingAuthority</td>
+                                <td>@good.PlanDateOfTenderInvitation</td>
+                                <td rowspan="3">@good.NameOfNewspaper</td>
+                                <td>@good.PlanDateOfOpening</td>
+                                <td>@good.PlanDateOfApproval</td>
+                                <td>@good.PlanDateOfNOA</td>
+                                <td>@good.ContractPrice</td>
+                                <td>@good.ContractDate</td>
+                                <td>@good.ActualPayment</td>
+                                <td>@good.CompletionDateAsPerContract</td>
+                                <td>@good.CompletionDateActual</td>
+                            </tr>
+                            <tr>
+                                <td>@good.ActualEstimatedCost</td>
+                                <td>@good.ActualProcurementMethod</td>
+                                <td>@good.ActualApprovingAuthority</td>
+                                <td>@good.ActualDateOfTenderInvitation</td>
+                                <td>@good.ActualDateOfOpening</td>
+                                <td>@good.ActualDateOfApproval</td>
+                                <td>@good.ActualDateOfNOA</td>
+                                <td colspan="2"></td> <!-- Contract Price/Date not repeated -->
+                                <td></td> <!-- Actual Payment not repeated -->
+                                <td></td> <!-- Completion Date as per Contract not repeated -->
+                                <td></td> <!-- Actual Completion Date not repeated -->
+                            </tr>
+                            <tr>
+                                <td>@good.DeviationEstimatedCost</td>
+                                <td>@good.DeviationProcurementMethod</td>
+                                <td>@good.DeviationApprovingAuthority</td>
+                                <td>@good.DeviationDateOfTenderInvitation</td>
+                                <td>@good.DeviationDateOfOpening</td>
+                                <td>@good.DeviationDateOfApproval</td>
+                                <td>@good.DeviationDateOfNOA</td>
+                                <td colspan="2"></td> <!-- Contract Price/Date not repeated -->
+                                <td></td> <!-- Actual Payment not repeated -->
+                                <td></td> <!-- Completion Date as per Contract not repeated -->
+                                <td></td> <!-- Actual Completion Date not repeated -->
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <!-- Annexure-I (b): Works -->
+            <div class="section">
+                <h4><b>Annexure-I (b): Packages of Works</b></h4>
+                <table id="annexure1b_WorksTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="4">Package No</th>
+                        <th rowspan="4">Description of Package</th>
+                        <th colspan="12">Details</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Estimated Cost</th>
+                        <th rowspan="3">Procurement Method</th>
+                        <th rowspan="3">Approving Authority</th>
+                        <th rowspan="3">Date of Tender Invitation</th>
+                        <th rowspan="4">Name of Newspaper Where Published</th>
+                        <th rowspan="3">Date of Opening</th>
+                        <th rowspan="3">Date of Approval</th>
+                        <th rowspan="3">Date of NOA</th>
+                        <th colspan="2">Contract</th>
+                        <th rowspan="3">Actual Payment</th>
+                        <th rowspan="3">Completion Date as per Contract</th>
+                        <th rowspan="3">Actual Completion Date</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Price</th>
+                        <th rowspan="2">Date</th>
+                    </tr>
+                    <tr>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                    </tr>
+                    @if (Model._Annex1B_ProcurementOfWorks != null)
+                    {
+                        foreach (var work in Model._Annex1B_ProcurementOfWorks.Take(50)) // Limit to 50 as per requirement
+                        {
+                            <tr>
+                                <td rowspan="3">@work.PackageNo</td>
+                                <td rowspan="3">@work.DescriptionOfPackage</td>
+                                <td>@work.PlanEstimatedCost</td>
+                                <td>@work.PlanProcurementMethod</td>
+                                <td>@work.PlanApprovingAuthority</td>
+                                <td>@work.PlanDateOfTenderInvitation</td>
+                                <td rowspan="3">@work.NameOfNewspaper</td>
+                                <td>@work.PlanDateOfOpening</td>
+                                <td>@work.PlanDateOfApproval</td>
+                                <td>@work.PlanDateOfNOA</td>
+                                <td>@work.ContractPrice</td>
+                                <td>@work.ContractDate</td>
+                                <td>@work.ActualPayment</td>
+                                <td>@work.CompletionDateAsPerContract</td>
+                                <td>@work.CompletionDateActual</td>
+                            </tr>
+                            <tr>
+                                <td>@work.ActualEstimatedCost</td>
+                                <td>@work.ActualProcurementMethod</td>
+                                <td>@work.ActualApprovingAuthority</td>
+                                <td>@work.ActualDateOfTenderInvitation</td>
+                                <td>@work.ActualDateOfOpening</td>
+                                <td>@work.ActualDateOfApproval</td>
+                                <td>@work.ActualDateOfNOA</td>
+                                <td colspan="2"></td> <!-- Contract Price/Date not repeated -->
+                                <td></td> <!-- Actual Payment not repeated -->
+                                <td></td> <!-- Completion Date as per Contract not repeated -->
+                                <td></td> <!-- Actual Completion Date not repeated -->
+                            </tr>
+                            <tr>
+                                <td>@work.DeviationEstimatedCost</td>
+                                <td>@work.DeviationProcurementMethod</td>
+                                <td>@work.DeviationApprovingAuthority</td>
+                                <td>@work.DeviationDateOfTenderInvitation</td>
+                                <td>@work.DeviationDateOfOpening</td>
+                                <td>@work.DeviationDateOfApproval</td>
+                                <td>@work.DeviationDateOfNOA</td>
+                                <td colspan="2"></td> <!-- Contract Price/Date not repeated -->
+                                <td></td> <!-- Actual Payment not repeated -->
+                                <td></td> <!-- Completion Date as per Contract not repeated -->
+                                <td></td> <!-- Actual Completion Date not repeated -->
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <!-- Annexure-I (c): Services -->
+            <div class="section">
+                <h4><b>Annexure-I (c): Packages of Services</b></h4>
+                <table id="annexure1c_ServicesTable" class="tbl_bordered">
+                    <tr>
+                        <th rowspan="4">Package No</th>
+                        <th rowspan="4">Description of Package</th>
+                        <th colspan="12">Details</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Estimated Cost</th>
+                        <th rowspan="3">Procurement Method</th>
+                        <th rowspan="3">Approving Authority</th>
+                        <th rowspan="3">Date of Tender Invitation</th>
+                        <th rowspan="4">Name of Newspaper Where Published</th>
+                        <th rowspan="3">Date of Opening</th>
+                        <th rowspan="3">Date of Approval</th>
+                        <th rowspan="3">Date of NOA</th>
+                        <th colspan="2">Contract</th>
+                        <th rowspan="3">Actual Payment</th>
+                        <th rowspan="3">Completion Date as per Contract</th>
+                        <th rowspan="3">Actual Completion Date</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Price</th>
+                        <th rowspan="2">Date</th>
+                    </tr>
+                    <tr>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Deviation</th>
+                    </tr>
+                    @if (Model._Annex1C_ProcurementOfServices != null)
+                    {
+                        foreach (var service in Model._Annex1C_ProcurementOfServices.Take(50)) // Limit to 50 as per requirement
+                        {
+                            <tr>
+                                <td rowspan="3">@service.PackageNo</td>
+                                <td rowspan="3">@service.DescriptionOfPackage</td>
+                                <td>@service.PlanEstimatedCost</td>
+                                <td>@service.PlanProcurementMethod</td>
+                                <td>@service.PlanApprovingAuthority</td>
+                                <td>@service.PlanDateOfTenderInvitation</td>
+                                <td rowspan="3">@service.NameOfNewspaper</td>
+                                <td>@service.PlanDateOfOpening</td>
+                                <td>@service.PlanDateOfApproval</td>
+                                <td>@service.PlanDateOfNOA</td>
+                                <td>@service.ContractPrice</td>
+                                <td>@service.ContractDate</td>
+                                <td>@service.ActualPayment</td>
+                                <td>@service.CompletionDateAsPerContract</td>
+                                <td>@service.CompletionDateActual</td>
+                            </tr>
+                            <tr>
+                                <td>@service.ActualEstimatedCost</td>
+                                <td>@service.ActualProcurementMethod</td>
+                                <td>@service.ActualApprovingAuthority</td>
+                                <td>@service.ActualDateOfTenderInvitation</td>
+                                <td>@service.ActualDateOfOpening</td>
+                                <td>@service.ActualDateOfApproval</td>
+                                <td>@service.ActualDateOfNOA</td>
+                                <td colspan="2"></td> <!-- Contract Price/Date not repeated -->
+                                <td></td> <!-- Actual Payment not repeated -->
+                                <td></td> <!-- Completion Date as per Contract not repeated -->
+                                <td></td> <!-- Actual Completion Date not repeated -->
+                            </tr>
+                            <tr>
+                                <td>@service.DeviationEstimatedCost</td>
+                                <td>@service.DeviationProcurementMethod</td>
+                                <td>@service.DeviationApprovingAuthority</td>
+                                <td>@service.DeviationDateOfTenderInvitation</td>
+                                <td>@service.DeviationDateOfOpening</td>
+                                <td>@service.DeviationDateOfApproval</td>
+                                <td>@service.DeviationDateOfNOA</td>
+                                <td colspan="2"></td> <!-- Contract Price/Date not repeated -->
+                                <td></td> <!-- Actual Payment not repeated -->
+                                <td></td> <!-- Completion Date as per Contract not repeated -->
+                                <td></td> <!-- Actual Completion Date not repeated -->
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add toggle functionality if desired
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.classList.toggle("w3-hide");
+        }
+    </script>
+</body>
+</html>

@@ -164,10 +164,14 @@ C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ProjectCompletionReport.props
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjectCompletionReport.props
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectC.60C534C6.Up2Date
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectCompletionReport.dll
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\refint\ProjectCompletionReport.dll
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectCompletionReport.pdb
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectCompletionReport.genruntimeconfig.cache
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ref\ProjectCompletionReport.dll
+C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\bin\Debug\net8.0\Rotativa.AspNetCore.dll
+C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectCompletionReport.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\bin\Debug\net8.0\X.PagedList.dll
+C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll

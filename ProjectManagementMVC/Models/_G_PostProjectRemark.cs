@@ -56,8 +56,18 @@
         public string? _35_17 { get; set; }
         public string? _35_18 { get; set; }
         public string? _35_19 { get; set; }
-        public string? _36 { get; set; }
+        public string? _36RemarksPD { get; set; }
+        public string? _36DatePD { get; set; }
+        public byte[]? _36SignPD { get; set; }
+        public byte[]? _36SealPD { get; set; }
+        public string? _36RemarksAH { get; set; }
+        public string? _36DateAH { get; set; }
+        public byte[]? _36SignAH { get; set; }
+        public byte[]? _36SealAH { get; set; }
+        public string? _36RemarksSec { get; set; }
+        public string? _36DateSec { get; set; }
+        public byte[]? _36SignSec { get; set; }
+        public byte[]? _36SealSec { get; set; }
         public string? _28ReasonsForShortFall { get; set; }
-
     }
 }

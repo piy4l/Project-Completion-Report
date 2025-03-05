@@ -40,6 +40,9 @@ namespace ProjectCompletionReport.Services
         public DbSet<_30_2ExternalAudit> _30_2ExternalAudits { get; set; }
         public DbSet<_30Auditing> _30Auditings { get; set; }
         public DbSet<_G_PostProjectRemark> _G_PostProjectRemarks { get; set; }
+        public DbSet<_Annex1A_ProcurementOfGood> _Annex1A_ProcurementOfGoods { get; set; }
+        public DbSet<_Annex1B_ProcurementOfWork> _Annex1B_ProcurementOfWorks { get; set; }
+        public DbSet<_Annex1C_ProcurementOfService> _Annex1C_ProcurementOfServices { get; set; }
 
     }
 }
