@@ -172,6 +172,5 @@ C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ref\ProjectCompletionReport.dll
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\bin\Debug\net8.0\Rotativa.AspNetCore.dll
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\ProjectCompletionReport.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\bin\Debug\net8.0\X.PagedList.dll
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll

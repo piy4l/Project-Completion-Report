@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectCompletionReport.bundle.scp.css",
-      "PackagePath": "staticwebassets\\ProjectCompletionReport.yutvvr6tbp.bundle.scp.css"
+      "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PCRMS.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PCRMS.wcjc40foxm.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
@@ -249,24 +249,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectCompletionReport.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PCRMS.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjectCompletionReport.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PCRMS.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ProjectCompletionReport.props",
-      "PackagePath": "build\\ProjectCompletionReport.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PCRMS.props",
+      "PackagePath": "build\\PCRMS.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjectCompletionReport.props",
-      "PackagePath": "buildMultiTargeting\\ProjectCompletionReport.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PCRMS.props",
+      "PackagePath": "buildMultiTargeting\\PCRMS.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ProjectCompletionReport.props",
-      "PackagePath": "buildTransitive\\ProjectCompletionReport.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PCRMS.props",
+      "PackagePath": "buildTransitive\\PCRMS.props"
     }
   ],
   "ElementsToRemove": []

@@ -1,28 +1,28 @@
 {
   "Version": 1,
-  "Hash": "WcqEuptShKqwIwJPAjOp8PxjyK6HaNsjtca2bpFgAro=",
-  "Source": "ProjectCompletionReport",
-  "BasePath": "_content/ProjectCompletionReport",
+  "Hash": "XG+m6+zNj6/OQVua5QI29MagdSW40qlAia0BLnXqs8s=",
+  "Source": "PCRMS",
+  "BasePath": "_content/PCRMS",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "ProjectCompletionReport\\wwwroot",
-      "Source": "ProjectCompletionReport",
+      "Name": "PCRMS\\wwwroot",
+      "Source": "PCRMS",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectCompletionReport.styles.css",
-      "SourceId": "ProjectCompletionReport",
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PCRMS.styles.css",
+      "SourceId": "PCRMS",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "ProjectCompletionReport#[.{fingerprint}]?.styles.css",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "PCRMS#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,19 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "yutvvr6tbp",
-      "Integrity": "6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI=",
+      "Fingerprint": "wcjc40foxm",
+      "Integrity": "AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectCompletionReport.styles.css"
+      "OriginalItemSpec": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PCRMS.styles.css"
     },
     {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectCompletionReport.bundle.scp.css",
-      "SourceId": "ProjectCompletionReport",
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PCRMS.bundle.scp.css",
+      "SourceId": "PCRMS",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "ProjectCompletionReport#[.{fingerprint}]!.bundle.scp.css",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "PCRMS#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -52,18 +52,18 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "yutvvr6tbp",
-      "Integrity": "6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI=",
+      "Fingerprint": "wcjc40foxm",
+      "Integrity": "AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectCompletionReport.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PCRMS.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\site.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -81,10 +81,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\favicon.ico",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -102,10 +102,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\site.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -122,179 +122,11 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "mpyigms19s",
-      "Integrity": "xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "73kdqttayv",
-      "Integrity": "DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "bpk8xqwxhs",
-      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "8inm30yfxf",
-      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ve6x09088i",
-      "Integrity": "SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "4gxs3k148c",
-      "Integrity": "VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "9b9oa1qrmt",
-      "Integrity": "22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "fctod5rc9n",
-      "Integrity": "j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
-    },
-    {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -312,10 +144,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -333,10 +165,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -354,10 +186,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -375,10 +207,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -396,10 +228,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -417,10 +249,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -438,10 +270,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -459,10 +291,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -480,10 +312,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -501,10 +333,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -522,10 +354,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -543,10 +375,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -564,10 +396,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -585,10 +417,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -606,10 +438,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -627,10 +459,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -648,10 +480,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -669,10 +501,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -690,10 +522,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -711,10 +543,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -732,10 +564,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -753,10 +585,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -774,10 +606,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -794,11 +626,179 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "SourceId": "ProjectCompletionReport",
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mpyigms19s",
+      "Integrity": "xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "73kdqttayv",
+      "Integrity": "DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bpk8xqwxhs",
+      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ve6x09088i",
+      "Integrity": "SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4gxs3k148c",
+      "Integrity": "VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9b9oa1qrmt",
+      "Integrity": "22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fctod5rc9n",
+      "Integrity": "j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -816,10 +816,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -837,10 +837,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -858,10 +858,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -879,10 +879,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -900,10 +900,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -921,10 +921,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -942,10 +942,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -963,10 +963,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -984,10 +984,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1005,10 +1005,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1026,10 +1026,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1047,10 +1047,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1067,200 +1067,11 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "fwhahm2icz",
-      "Integrity": "H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "dd6z7egasc",
-      "Integrity": "/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "5pze98is44",
-      "Integrity": "OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "mlv21k5csn",
-      "Integrity": "hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ay5nd8zt9x",
-      "Integrity": "4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "9oaff4kq20",
-      "Integrity": "N11IyJpHTgDcSCb3AfX4VrBnpGQeem1NoNzzgcXVyCc=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "pzqfkb6aqo",
-      "Integrity": "m0l81WDPiG7CcG7CDsTuZzvcGvyFmrQY5DLIxx3aRGw=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "b7iojwaux1",
-      "Integrity": "JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
-    },
-    {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "SourceId": "ProjectCompletionReport",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
-      "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "x0q3zqp4vz",
-      "Integrity": "geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
-    },
-    {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1278,10 +1089,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1299,10 +1110,10 @@
     },
     {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "SourceId": "ProjectCompletionReport",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1319,11 +1130,200 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
-      "SourceId": "ProjectCompletionReport",
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "PCRMS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
-      "BasePath": "_content/ProjectCompletionReport",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ay5nd8zt9x",
+      "Integrity": "4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9oaff4kq20",
+      "Integrity": "N11IyJpHTgDcSCb3AfX4VrBnpGQeem1NoNzzgcXVyCc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pzqfkb6aqo",
+      "Integrity": "m0l81WDPiG7CcG7CDsTuZzvcGvyFmrQY5DLIxx3aRGw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b7iojwaux1",
+      "Integrity": "JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x0q3zqp4vz",
+      "Integrity": "geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fwhahm2icz",
+      "Integrity": "H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dd6z7egasc",
+      "Integrity": "/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5pze98is44",
+      "Integrity": "OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mlv21k5csn",
+      "Integrity": "hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
       "RelativePath": "Rotativa/wkhtmltopdf#[.{fingerprint}]?.exe",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -1584,662 +1584,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "204136"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "73kdqttayv"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162720"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bpk8xqwxhs"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162720"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8inm30yfxf"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.mpyigms19s.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "204136"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mpyigms19s"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "203803"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536461"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4gxs3k148c"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536461"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.9b9oa1qrmt.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162825"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9b9oa1qrmt"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162825"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "661035"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fctod5rc9n"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "661035"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.ve6x09088i.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "203803"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ve6x09088i"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
         }
       ]
     },
@@ -4212,6 +3556,662 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "204136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536547"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "73kdqttayv"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536547"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.bpk8xqwxhs.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bpk8xqwxhs"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.mpyigms19s.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "204136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mpyigms19s"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "203803"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536461"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4gxs3k148c"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "536461"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.9b9oa1qrmt.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162825"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9b9oa1qrmt"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162825"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "661035"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fctod5rc9n"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "661035"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.ve6x09088i.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "203803"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ve6x09088i"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
@@ -5278,8 +5278,8 @@
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.fwhahm2icz.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.47otxtyo56.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5288,7 +5288,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "288580"
+          "Value": "19385"
         },
         {
           "Name": "Content-Type",
@@ -5296,7 +5296,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\""
+          "Value": "\"wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=\""
         },
         {
           "Name": "Last-Modified",
@@ -5310,21 +5310,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fwhahm2icz"
+          "Value": "47otxtyo56"
         },
         {
           "Name": "label",
-          "Value": "lib/jquery/dist/jquery.js"
+          "Value": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          "Value": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ="
         }
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5333,7 +5333,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "288580"
+          "Value": "19385"
         },
         {
           "Name": "Content-Type",
@@ -5341,7 +5341,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\""
+          "Value": "\"wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=\""
         },
         {
           "Name": "Last-Modified",
@@ -5355,13 +5355,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          "Value": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ="
         }
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.4v8eqarkd7.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5370,15 +5370,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "137972"
+          "Value": "5824"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "text/javascript"
         },
         {
           "Name": "ETag",
-          "Value": "\"OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I=\""
+          "Value": "\"YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=\""
         },
         {
           "Name": "Last-Modified",
@@ -5392,21 +5392,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5pze98is44"
+          "Value": "4v8eqarkd7"
         },
         {
           "Name": "label",
-          "Value": "lib/jquery/dist/jquery.min.map"
+          "Value": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
+          "Value": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4="
         }
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.min.dd6z7egasc.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5415,7 +5415,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "89501"
+          "Value": "5824"
         },
         {
           "Name": "Content-Type",
@@ -5423,7 +5423,44 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+          "Value": "\"YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=\""
         },
         {
           "Name": "Last-Modified",
@@ -5437,21 +5474,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dd6z7egasc"
+          "Value": "356vix0kms"
         },
         {
           "Name": "label",
-          "Value": "lib/jquery/dist/jquery.min.js"
+          "Value": "lib/jquery-validation-unobtrusive/LICENSE.txt"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
         }
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5460,15 +5497,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "89501"
+          "Value": "1139"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/javascript"
+          "Value": "text/plain"
         },
         {
           "Name": "ETag",
-          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+          "Value": "\"16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=\""
         },
         {
           "Name": "Last-Modified",
@@ -5482,126 +5519,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        }
-      ]
-    },
-    {
-      "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "137972"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
-        }
-      ]
-    },
-    {
-      "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1117"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mlv21k5csn"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/jquery/LICENSE.txt"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="
-        }
-      ]
-    },
-    {
-      "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1117"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="
+          "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
         }
       ]
     },
@@ -6016,8 +5934,8 @@
       ]
     },
     {
-      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.47otxtyo56.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Route": "lib/jquery/dist/jquery.fwhahm2icz.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6026,7 +5944,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19385"
+          "Value": "288580"
         },
         {
           "Name": "Content-Type",
@@ -6034,7 +5952,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=\""
+          "Value": "\"H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\""
         },
         {
           "Name": "Last-Modified",
@@ -6048,21 +5966,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "47otxtyo56"
+          "Value": "fwhahm2icz"
         },
         {
           "Name": "label",
-          "Value": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+          "Value": "lib/jquery/dist/jquery.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ="
+          "Value": "sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         }
       ]
     },
     {
-      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Route": "lib/jquery/dist/jquery.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6071,7 +5989,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19385"
+          "Value": "288580"
         },
         {
           "Name": "Content-Type",
@@ -6079,7 +5997,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=\""
+          "Value": "\"H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\""
         },
         {
           "Name": "Last-Modified",
@@ -6093,13 +6011,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ="
+          "Value": "sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         }
       ]
     },
     {
-      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.4v8eqarkd7.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6108,89 +6026,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5824"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4v8eqarkd7"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4="
-        }
-      ]
-    },
-    {
-      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5824"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4="
-        }
-      ]
-    },
-    {
-      "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1139"
+          "Value": "137972"
         },
         {
           "Name": "Content-Type",
@@ -6198,7 +6034,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=\""
+          "Value": "\"OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I=\""
         },
         {
           "Name": "Last-Modified",
@@ -6212,21 +6048,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "356vix0kms"
+          "Value": "5pze98is44"
         },
         {
           "Name": "label",
-          "Value": "lib/jquery-validation-unobtrusive/LICENSE.txt"
+          "Value": "lib/jquery/dist/jquery.min.map"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+          "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
         }
       ]
     },
     {
-      "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Route": "lib/jquery/dist/jquery.min.dd6z7egasc.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6235,7 +6071,89 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1139"
+          "Value": "89501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dd6z7egasc"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery/dist/jquery.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery/dist/jquery.min.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "89501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery/dist/jquery.min.map",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137972"
         },
         {
           "Name": "Content-Type",
@@ -6243,7 +6161,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=\""
+          "Value": "\"OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I=\""
         },
         {
           "Name": "Last-Modified",
@@ -6257,13 +6175,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+          "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
         }
       ]
     },
     {
-      "Route": "ProjectCompletionReport.bundle.scp.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectCompletionReport.bundle.scp.css",
+      "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6272,93 +6190,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1141"
+          "Value": "1117"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "text/plain"
         },
         {
           "Name": "ETag",
-          "Value": "\"6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI=\""
+          "Value": "\"hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 20 Jan 2025 07:45:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI="
-        }
-      ]
-    },
-    {
-      "Route": "ProjectCompletionReport.styles.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectCompletionReport.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1141"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 20 Jan 2025 07:45:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI="
-        }
-      ]
-    },
-    {
-      "Route": "ProjectCompletionReport.yutvvr6tbp.bundle.scp.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectCompletionReport.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1141"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 20 Jan 2025 07:45:04 GMT"
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6368,21 +6212,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yutvvr6tbp"
+          "Value": "mlv21k5csn"
         },
         {
           "Name": "label",
-          "Value": "ProjectCompletionReport.bundle.scp.css"
+          "Value": "lib/jquery/LICENSE.txt"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI="
+          "Value": "sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="
         }
       ]
     },
     {
-      "Route": "ProjectCompletionReport.yutvvr6tbp.styles.css",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectCompletionReport.styles.css",
+      "Route": "lib/jquery/LICENSE.txt",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6391,7 +6235,44 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1141"
+          "Value": "1117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="
+        }
+      ]
+    },
+    {
+      "Route": "PCRMS.bundle.scp.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PCRMS.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1123"
         },
         {
           "Name": "Content-Type",
@@ -6399,11 +6280,85 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI=\""
+          "Value": "\"AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 20 Jan 2025 07:45:04 GMT"
+          "Value": "Thu, 06 Mar 2025 07:15:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I="
+        }
+      ]
+    },
+    {
+      "Route": "PCRMS.styles.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PCRMS.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 07:15:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I="
+        }
+      ]
+    },
+    {
+      "Route": "PCRMS.wcjc40foxm.bundle.scp.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PCRMS.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 07:15:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6413,15 +6368,60 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yutvvr6tbp"
+          "Value": "wcjc40foxm"
         },
         {
           "Name": "label",
-          "Value": "ProjectCompletionReport.styles.css"
+          "Value": "PCRMS.bundle.scp.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6hMHb8wvZxJNf4XRhxmqQ6aSDyi4S8XdClJxeGiRWdI="
+          "Value": "sha256-AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I="
+        }
+      ]
+    },
+    {
+      "Route": "PCRMS.wcjc40foxm.styles.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PCRMS.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 07:15:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wcjc40foxm"
+        },
+        {
+          "Name": "label",
+          "Value": "PCRMS.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AGEQXMYCwXk2FsOHuC/pdHzYbqXnxH5KmKZeWv1+o+I="
         }
       ]
     },
