@@ -7,6 +7,7 @@ using ProjectCompletionReport.Services;
 
 namespace ProjectCompletionReport.Controllers
 {
+    using System.Security.Claims;
     using ProjectCompletionReport.Models;
     public class CreateProjectController : Controller
     {
@@ -22,6 +23,7 @@ namespace ProjectCompletionReport.Controllers
         }
 
 
+        [Authorize(Roles = "PD")]
         [Route("/SaveProject")]
         [HttpPost]
         public IActionResult SaveProject([FromBody] Project payload)
@@ -30,17 +32,29 @@ namespace ProjectCompletionReport.Controllers
             {
                 if (payload == null)
                 {
-                    throw new ArgumentNullException(); 
+                    throw new ArgumentNullException(nameof(payload), "Project payload cannot be null");
                 }
+
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+                {
+                    return Unauthorized(new { message = "User not authenticated" });
+                }
+                payload.CreatedByUserId = userId;
+
+                // CreatedDate is handled by the database's DEFAULT GETDATE(), no need to set it
+
                 Context.Projects.Add(payload);
                 Context.SaveChanges();
+
+                return Ok(new { message = "success", projectId = payload.ProjectId });
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}, StackTrace: {ex.StackTrace}");
-                return Problem($"Failed to insert: {ex.Message}");
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
             }
-            return Ok(new { message = "success", projectId = payload.ProjectId });
         }
 
 

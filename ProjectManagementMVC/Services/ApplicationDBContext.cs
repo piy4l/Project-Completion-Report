@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PCRMS.Models;
 using ProjectCompletionReport.Models;
 
 namespace ProjectCompletionReport.Services
@@ -43,6 +44,7 @@ namespace ProjectCompletionReport.Services
         public DbSet<_Annex1A_ProcurementOfGood> _Annex1A_ProcurementOfGoods { get; set; }
         public DbSet<_Annex1B_ProcurementOfWork> _Annex1B_ProcurementOfWorks { get; set; }
         public DbSet<_Annex1C_ProcurementOfService> _Annex1C_ProcurementOfServices { get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 }

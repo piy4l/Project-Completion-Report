@@ -18,40 +18,31 @@ namespace ProjectCompletionReport.Controllers
 
         public async Task<IActionResult> Index(int? page, int? pageSize)
         {
-            int currentPageSize = pageSize ?? 10; // Default to 10 if not specified
-            int pageNumber = (page ?? 1); // Default to page 1 if not specified
-
-            // Get total count for accurate pagination
+            int currentPageSize = pageSize ?? 10; 
+            int pageNumber = (page ?? 1); 
+       
             var totalCount = await Context.Projects.CountAsync();
-
-            // Fetch only the required page of data
+          
             var projects = await Context.Projects
                 .OrderBy(p => p.ProjectId)
                 .Skip((pageNumber - 1) * currentPageSize)
                 .Take(currentPageSize)
                 .ToListAsync();
 
-            // Create a paged list with the total count
             var pagedProjects = new StaticPagedList<Project>(projects, pageNumber, currentPageSize, totalCount);
 
-            // Pass pageSize to view
             ViewBag.PageSize = currentPageSize;
 
-            // Check if the request is an AJAX request
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
             {
-                // Return partial view for AJAX requests
                 return PartialView("_ProjectsTable", pagedProjects);
             }
 
-            // Return full view for regular requests
             return View(pagedProjects);
         }
 
-        // GET: Project/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            // ... (unchanged Details action remains as is)
             if (id == null)
             {
                 return NotFound();
@@ -177,7 +168,6 @@ namespace ProjectCompletionReport.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception
                 return StatusCode(500, "An error occurred while retrieving the project details.");
             }
         }

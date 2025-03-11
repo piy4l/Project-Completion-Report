@@ -1,0 +1,199 @@
+﻿@model PCRMS.Models.User
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container mt-5">
+    <h2>My Profile</h2>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    else if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger" role="alert">
+            @Html.ValidationSummary(true, "Please fix the following errors:")
+        </div>
+    }
+
+    @* <!-- Debug Info --> *@
+    @* <div class="mb-3"> *@
+    @*     <small class="form-text text-muted">Debug: Signature Length = @(ViewBag.SignatureLength ?? 0) bytes, Seal Length = @(ViewBag.SealLength ?? 0) bytes</small> *@
+    @* </div> *@
+
+    <form asp-controller="Profile" asp-action="UpdateProfile" method="post" enctype="multipart/form-data" class="card p-4 shadow">
+        <div class="mb-3">
+            <label asp-for="Username" class="form-label">Username</label>
+            <input asp-for="Username" class="form-control" disabled />
+            <small class="form-text text-muted">Username cannot be changed.</small>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Designation" class="form-label">Designation</label>
+            <input asp-for="Designation" class="form-control" />
+            <span asp-validation-for="Designation" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" type="email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Signature</label>
+            <div id="signatureBox" style="width: 300px; height: 80px; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                @if (Model.Signature != null && Model.Signature.Length > 0)
+                {
+                    try
+                    {
+                        <img id="signaturePreview" src="data:image/png;base64,@Convert.ToBase64String(Model.Signature)" alt="Signature" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none';this.nextSibling.style.display='block';" />
+                        <span style="display:none; color:red;">Invalid signature data</span>
+                    }
+                    catch
+                    {
+                        <span style="color:red;">Error rendering signature</span>
+                    }
+                }
+                else
+                {
+                    <span id="signaturePlaceholder" style="color: #888;">No signature uploaded</span>
+                }
+            </div>
+            <input type="file" name="signatureFile" id="signatureFile" class="form-control mt-2" accept="image/png,image/jpeg,image/jpg" data-val="false" />
+            <small class="form-text text-muted">Recommended: 300x80 pixels for best quality (other sizes will be resized). Max 1MB. Optional.</small>
+            <span class="text-danger">@Html.ValidationMessage("signatureFile")</span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Seal</label>
+            <div id="sealBox" style="width: 300px; height: 80px; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                @if (Model.Seal != null && Model.Seal.Length > 0)
+                {
+                    try
+                    {
+                        <img id="sealPreview" src="data:image/png;base64,@Convert.ToBase64String(Model.Seal)" alt="Seal" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none';this.nextSibling.style.display='block';" />
+                        <span style="display:none; color:red;">Invalid seal data</span>
+                    }
+                    catch
+                    {
+                        <span style="color:red;">Error rendering seal</span>
+                    }
+                }
+                else
+                {
+                    <span id="sealPlaceholder" style="color: #888;">No seal uploaded</span>
+                }
+            </div>
+            <input type="file" name="sealFile" id="sealFile" class="form-control mt-2" accept="image/png,image/jpeg,image/jpg" data-val="false" />
+            <small class="form-text text-muted">Recommended: 300x80 pixels for best quality (other sizes will be resized). Max 1MB. Optional.</small>
+            <span class="text-danger">@Html.ValidationMessage("sealFile")</span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">New Password (leave blank to keep current)</label>
+            <input type="password" name="newPassword" class="form-control" minlength="6" data-val="false" />
+            <span class="text-danger">@Html.ValidationMessage("newPassword")</span>
+            <small class="form-text text-muted">Minimum 6 characters if updating</small>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Role" class="form-label">Role</label>
+            <input asp-for="Role" class="form-control" disabled />
+            <small class="form-text text-muted">Role cannot be changed.</small>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CreatedDate" class="form-label">Created Date</label>
+            <input asp-for="CreatedDate" class="form-control" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="IsActive" class="form-label">Status</label>
+            <input asp-for="IsActive" type="checkbox" class="form-check-input" disabled />
+            <small class="form-text text-muted">Status can only be changed by admins.</small>
+        </div>
+
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </div>
+
+        @Html.AntiForgeryToken()
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Preview Signature
+        document.getElementById('signatureFile').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const signatureBox = document.getElementById('signatureBox');
+                    signatureBox.innerHTML = ''; // Clear existing content
+                    const img = document.createElement('img');
+                    img.id = 'signaturePreview';
+                    img.src = event.target.result;
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.onerror = function () {
+                        this.style.display = 'none';
+                        const errorSpan = document.createElement('span');
+                        errorSpan.style.color = 'red';
+                        errorSpan.textContent = 'Invalid signature data';
+                        signatureBox.appendChild(errorSpan);
+                    };
+                    signatureBox.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Preview Seal
+        document.getElementById('sealFile').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const sealBox = document.getElementById('sealBox');
+                    sealBox.innerHTML = ''; // Clear existing content
+                    const img = document.createElement('img');
+                    img.id = 'sealPreview';
+                    img.src = event.target.result;
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.onerror = function () {
+                        this.style.display = 'none';
+                        const errorSpan = document.createElement('span');
+                        errorSpan.style.color = 'red';
+                        errorSpan.textContent = 'Invalid seal data';
+                        sealBox.appendChild(errorSpan);
+                    };
+                    sealBox.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+}

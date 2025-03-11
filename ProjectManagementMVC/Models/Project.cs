@@ -3,8 +3,8 @@
     public class Project
     {
         public int ProjectId { get; set; }
-        public string? Name { get; set; }
-        public int Status { get; set; } // 0 = Finalized, 1 = Draft at PD, 2 = Draft at AH, 3 = Draft at Sec
+        public string Name { get; set; }
+        public string Status { get; set; } // 'Completed', 'DraftSec', 'DraftED', 'DraftPD'
         public string? Budget { get; set; }
         public string? Duration { get; set; }
         public string? AdministrativeMinistryDivision { get; set; }
@@ -17,5 +17,8 @@
         public string? MajorActivities { get; set; }
         public string? ReasonsForRevision { get; set; }
         public string? ReasonsForNoCostTimeExtension { get; set; }
+        public int CreatedByUserId { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public byte[]? Attachment { get; set; }
     }
 }

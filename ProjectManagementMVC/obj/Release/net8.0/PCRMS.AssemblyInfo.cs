@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PCRMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ee496251cc3f795d5e53d4c7310e9a62644f30d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3a3390e7cf06f22da58eb226ad79296bbefc045")]
 [assembly: System.Reflection.AssemblyProductAttribute("PCRMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PCRMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

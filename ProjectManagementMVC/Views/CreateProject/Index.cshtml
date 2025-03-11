@@ -1,4 +1,11 @@
-﻿@{
+﻿@* Created by, *@
+@* Souvik Das  *@
+@* Assistant Programmer, BCC *@
+@* BSc in CSE, BUET *@
+@* PhD Candidate in CS, Texas A&M University *@
+ 
+
+@{
     ViewData["Title"] = "Create Project";
 }
 
@@ -2409,7 +2416,9 @@
             Background: $("#secA_ProjectBackground").val(),
             MajorActivities: $("#secA_MajorActivities").val(),
             ReasonsForRevision: $("#secA_RevisionReason").val(),
-            ReasonsForNoCostTimeExtension: $("#secA_NoCostRevisionReason").val()
+            ReasonsForNoCostTimeExtension: $("#secA_NoCostRevisionReason").val(),
+
+            Status: "DraftED",
         };     
 
         console.log(payload);

@@ -73,8 +73,8 @@
                     <td>@project.Budget</td>
                     <td>@project.Duration</td>
                     <td>
-                        <span class="badge @(project.Status == 0 ? "bg-success" : "bg-danger")">
-                            @(project.Status == 0 ? "Active" : "Inactive")
+                        <span class="badge @(project.Status == "DraftPD" ? "bg-success" : "bg-danger")">
+                            @(project.Status == "DraftPD" ? "Active" : "Inactive")
                         </span>
                     </td>
                     <td>

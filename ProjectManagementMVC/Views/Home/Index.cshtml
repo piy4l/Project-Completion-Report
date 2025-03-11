@@ -4,4 +4,13 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to PCRMS</h1>
+    <hr />
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>Hello, @User.FindFirst("Name")?.Value! Manage your projects from the navigation bar above.</p>
+    }
+    else
+    {
+        <p>Please <a asp-controller="Login" asp-action="Index">login</a> to access project management features.</p>
+    }
 </div>
