@@ -9,11 +9,11 @@ using BCrypt.Net;
 
 namespace ProjectCompletionReport.Controllers
 {
-    [Authorize(Roles = "Admin")] // Restrict to Admin role
+    [Authorize(Roles = "Admin")]
     public class ViewUsersController : Controller
     {
         private readonly ApplicationDBContext _context;
-        private const int PageSize = 5; // Number of users per page
+        private const int DefaultPageSize = 5;
 
         public ViewUsersController(ApplicationDBContext context)
         {
@@ -21,7 +21,7 @@ namespace ProjectCompletionReport.Controllers
         }
 
         [Route("/ViewUsers")]
-        public async Task<IActionResult> Index(string searchString = "", int page = 1)
+        public async Task<IActionResult> Index(string searchString = "", int pageSize = DefaultPageSize, int page = 1)
         {
             var usersQuery = _context.Users.AsQueryable();
 
@@ -34,22 +34,35 @@ namespace ProjectCompletionReport.Controllers
                                                   (u.Email != null && u.Email.ToLower().Contains(searchString)));
             }
 
-            // Get total count for pagination
+            // Ensure pageSize is valid
+            pageSize = pageSize switch
+            {
+                5 => 5,
+                10 => 10,
+                25 => 25,
+                50 => 50,
+                _ => DefaultPageSize
+            };
+
+            // Get total count after filtering
             int totalUsers = await usersQuery.CountAsync();
-            int totalPages = (int)Math.Ceiling(totalUsers / (double)PageSize);
+            int totalPages = totalUsers > 0 ? (int)Math.Ceiling(totalUsers / (double)pageSize) : 0;
 
-            // Ensure page is within bounds
-            page = page < 1 ? 1 : page > totalPages ? totalPages : page;
+            // Adjust page number
+            page = page < 1 ? 1 : totalPages == 0 ? 1 : page > totalPages ? totalPages : page;
 
-            // Apply pagination
-            var users = await usersQuery
-                .OrderBy(u => u.Username)
-                .Skip((page - 1) * PageSize)
-                .Take(PageSize)
-                .ToListAsync();
+            // Fetch paginated results (only if there are results)
+            var users = totalUsers > 0
+                ? await usersQuery
+                    .OrderBy(u => u.Username)
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync()
+                : new List<User>();
 
-            // Pass data to view via ViewBag
+            // Pass data to view
             ViewBag.SearchString = searchString;
+            ViewBag.PageSize = pageSize;
             ViewBag.CurrentPage = page;
             ViewBag.TotalPages = totalPages;
 
@@ -58,6 +71,7 @@ namespace ProjectCompletionReport.Controllers
 
         [HttpPost]
         [Route("/ViewUsers/ToggleActive/{id}")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> ToggleActive(int id)
         {
             var user = await _context.Users.FindAsync(id);

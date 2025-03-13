@@ -5,8 +5,8 @@
 }
 
 <div class="container mt-5">
-    <h2>View Users</h2>
-
+    <h2>Users</h2>
+    <hr />
     @if (TempData["SuccessMessage"] != null)
     {
         <div class="alert alert-success" role="alert">
@@ -29,89 +29,167 @@
     </form>
 
     <!-- Users Table -->
-    <table class="table table-striped table-hover">
-        <thead class="thead-dark">
-            <tr>
-                <th>Username</th>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Created Date</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var user in Model)
-            {
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered custom-table">
+            <thead class="table-dark">
                 <tr>
-                    <td>@user.Username</td>
-                    <td>@user.Name</td>
-                    <td>@user.Designation</td>
-                    <td>@user.Email</td>
-                    <td>@user.Role</td>
-                    <td>@user.CreatedDate.ToString("yyyy-MM-dd")</td>
-                    <td>@(user.IsActive ? "Active" : "Inactive")</td>
-                    <td>
-                        <form asp-action="ToggleActive" asp-route-id="@user.UserId" method="post" class="d-inline">
-                            @Html.AntiForgeryToken()
-                            <button type="submit" class="btn @(user.IsActive ? "btn-warning" : "btn-success")">
-                                @(user.IsActive ? "Deactivate" : "Activate")
+                    <th scope="col">SL No</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Created Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int slNoStart = (ViewBag.CurrentPage - 1) * ViewBag.PageSize + 1; // Calculate starting SL No based on page
+                    int slNo = slNoStart;
+                }
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@slNo</td>
+                        <td>@user.Username</td>
+                        <td>@user.Name</td>
+                        <td>@user.Designation</td>
+                        <td>@user.Email</td>
+                        <td>@user.Role</td>
+                        <td>@user.CreatedDate.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            <span class="badge @(user.IsActive ? "bg-success" : "bg-danger")">
+                                @(user.IsActive ? "Active" : "Inactive")
+                            </span>
+                        </td>
+                        <td>
+                            <form asp-action="ToggleActive" asp-route-id="@user.UserId" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm @(user.IsActive ? "btn-warning" : "btn-success")">
+                                    @(user.IsActive ? "Deactivate" : "Activate")
+                                </button>
+                            </form>
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#passwordModal-@user.UserId">
+                                Update Password
                             </button>
-                        </form>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#passwordModal-@user.UserId">
-                            Update Password
-                        </button>
 
-                        <!-- Password Update Modal -->
-                        <div class="modal fade" id="passwordModal-@user.UserId" tabindex="-1" aria-labelledby="passwordModalLabel-@user.UserId" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="passwordModalLabel-@user.UserId">Update Password for @user.Username</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <form asp-action="UpdatePassword" asp-route-id="@user.UserId" method="post">
-                                        <div class="modal-body">
-                                            @Html.AntiForgeryToken()
-                                            <div class="mb-3">
-                                                <label for="newPassword-@user.UserId" class="form-label">New Password</label>
-                                                <input type="password" class="form-control" id="newPassword-@user.UserId" name="newPassword" required minlength="6" />
+                            <!-- Password Update Modal -->
+                            <div class="modal fade" id="passwordModal-@user.UserId" tabindex="-1" aria-labelledby="passwordModalLabel-@user.UserId" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="passwordModalLabel-@user.UserId">Update Password for @user.Username</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form asp-action="UpdatePassword" asp-route-id="@user.UserId" method="post">
+                                            <div class="modal-body">
+                                                @Html.AntiForgeryToken()
+                                                <div class="mb-3">
+                                                    <label for="`\newPassword-@user.UserId" class="form-label">New Password</label>
+                                                    <input type="password" class="form-control" id="newPassword-@user.UserId" name="newPassword" required minlength="6" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Save</button>
-                                        </div>
-                                    </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Save</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                        </td>
+                    </tr>
+                    
+                    slNo++; // Increment SL No for next row
+                    
+                }
+            </tbody>
+        </table>
+    </div>
 
-    <!-- Pagination -->
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
-                <a class="page-link" href="@Url.Action("Index", new { searchString = ViewBag.SearchString, page = ViewBag.CurrentPage - 1 })">Previous</a>
-            </li>
-            @for (int i = 1; i <= ViewBag.TotalPages; i++)
-            {
-                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
-                    <a class="page-link" href="@Url.Action("Index", new { searchString = ViewBag.SearchString, page = i })">@i</a>
+    <!-- Entries Per Page and Pagination -->
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <!-- Show Entries Per Page (Left) -->
+        <form method="get" asp-route="/ViewUsers" class="d-flex align-items-center">
+            <input type="hidden" name="searchString" value="@ViewBag.SearchString" />
+            <input type="hidden" name="page" value="@ViewBag.CurrentPage" />
+            <label class="me-2" for="pageSize">Show entries:</label>
+            <select name="pageSize" id="pageSize" class="form-select w-auto" onchange="this.form.submit()">
+                @{
+                    int[] pageSizes = { 5, 10, 25, 50 };
+                    foreach (var size in pageSizes)
+                    {
+                        if (ViewBag.PageSize == size)
+                        {
+                            <option value="@size" selected>@size</option>
+                        }
+                        else
+                        {
+                            <option value="@size">@size</option>
+                        }
+                    }
+                }
+            </select>
+        </form>
+
+        <!-- Pagination (Right) -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination mb-0">
+                <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { searchString = ViewBag.SearchString, pageSize = ViewBag.PageSize, page = ViewBag.CurrentPage - 1 })">Previous</a>
                 </li>
-            }
-            <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
-                <a class="page-link" href="@Url.Action("Index", new { searchString = ViewBag.SearchString, page = ViewBag.CurrentPage + 1 })">Next</a>
-            </li>
-        </ul>
-    </nav>
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { searchString = ViewBag.SearchString, pageSize = ViewBag.PageSize, page = i })">@i</a>
+                    </li>
+                }
+                <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { searchString = ViewBag.SearchString, pageSize = ViewBag.PageSize, page = ViewBag.CurrentPage + 1 })">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
+
+<style>
+    .custom-table {
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        overflow: hidden;
+    }
+
+    .custom-table th,
+    .custom-table td {
+        vertical-align: middle;
+        padding: 0.75rem;
+    }
+
+    .custom-table thead th {
+        background-color: #343a40;
+        color: white;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .custom-table tbody tr:hover {
+        background-color: #f8f9fa;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .custom-table .badge {
+        font-size: 0.9rem;
+        padding: 0.35em 0.65em;
+    }
+
+    .custom-table .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+</style>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

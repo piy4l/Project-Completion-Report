@@ -6,7 +6,7 @@
 
 <div class="container mt-5">
     <h2>Create New User</h2>
-
+    <hr />
     @if (TempData["SuccessMessage"] != null)
     {
         <div class="alert alert-success" role="alert">
@@ -14,34 +14,48 @@
         </div>
     }
 
-    <form asp-controller="CreateUser" asp-action="CreateUser" method="post" class="card p-4 shadow">
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    else if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger" role="alert">
+            @Html.ValidationSummary(true, "Please fix the following errors:")
+        </div>
+    }
+
+    <form asp-controller="CreateUser" asp-action="CreateUser" method="post" class="card p-4 shadow" autocomplete="off">
         <div class="mb-3">
             <label asp-for="Username" class="form-label">Username</label>
-            <input asp-for="Username" class="form-control" required />
+            <input asp-for="Username" class="form-control" required autocomplete="username" />
             <span asp-validation-for="Username" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="Name" class="form-label">Name</label>
-            <input asp-for="Name" class="form-control" />
+            <input asp-for="Name" class="form-control" autocomplete="name" />
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="Designation" class="form-label">Designation</label>
-            <input asp-for="Designation" class="form-control" />
+            <input asp-for="Designation" class="form-control" autocomplete="organization-title" />
             <span asp-validation-for="Designation" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input asp-for="PasswordHash" type="password" class="form-control" required />
+            <label asp-for="PasswordHash" class="form-label">Password</label>
+            <input asp-for="PasswordHash" type="password" class="form-control" minlength="6" required autocomplete="new-password" />
             <span asp-validation-for="PasswordHash" class="text-danger"></span>
+            <small class="form-text text-muted">Minimum 6 characters</small>
         </div>
 
         <div class="mb-3">
             <label asp-for="Email" class="form-label">Email</label>
-            <input asp-for="Email" type="email" class="form-control" />
+            <input asp-for="Email" type="email" class="form-control" autocomplete="email" />
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
 
@@ -67,4 +81,11 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Clear username and password fields on page load
+            document.getElementById('Username').value = '';
+            document.getElementById('PasswordHash').value = '';
+        });
+    </script>
 }

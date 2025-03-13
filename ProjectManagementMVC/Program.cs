@@ -23,6 +23,7 @@ try
 {
     Log.Information("Starting web application");
 
+    // Add services to the container
     builder.Services.AddControllersWithViews(options =>
     {
         options.Filters.Add(new Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter());
@@ -50,6 +51,24 @@ try
 
     var app = builder.Build();
 
+    // Apply database migrations on startup [comment-in before publishing]
+    //using (var scope = app.Services.CreateScope())
+    //{
+    //    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDBContext>();
+    //    try
+    //    {
+    //        Log.Information("Applying database migrations...");
+    //        dbContext.Database.Migrate(); // Applies all pending migrations
+    //        Log.Information("Database migrations applied successfully.");
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Log.Error(ex, "Failed to apply database migrations.");
+    //        throw; // Re-throw to ensure startup fails if migrations fail
+    //    }
+    //}
+
+    // Configure the HTTP request pipeline
     if (!app.Environment.IsDevelopment())
     {
         app.UseExceptionHandler("/Home/Error");
