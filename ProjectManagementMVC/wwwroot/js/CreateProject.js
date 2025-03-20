@@ -1,4 +1,4 @@
-function PcrForm() {
+﻿function PcrForm() {
     this.baseUrl;
 
     this.initialize = function (_baseUrl) {
@@ -700,9 +700,18 @@ function PcrForm() {
             `;
     };
 
-    this.saveProjectInternal = function (url, successMessage, status) {
 
+
+
+
+
+
+
+
+
+    this.saveProjectInternal = function (url, successMessage, status) {
         var payload = {
+            ProjectId: $("#projectId").val() || 0, // Ensure ProjectId is included
             Name: $("#secA_ProjectName").val(),
             AdministrativeMinistryDivision: $("#secA_MinistryDivision").val(),
             ExecutingAgency: $("#secA_Agency").val(),
@@ -714,18 +723,17 @@ function PcrForm() {
             MajorActivities: $("#secA_MajorActivities").val(),
             ReasonsForRevision: $("#secA_RevisionReason").val(),
             ReasonsForNoCostTimeExtension: $("#secA_NoCostRevisionReason").val(),
-            Status: status
+            Status: status // Use the passed status: DraftPD, DraftED, DraftSec, Complete
         };
 
-        console.log("Frontend: ");
-        console.log(payload);
+        console.log("Frontend Payload: ", payload);
 
         // Set dates dynamically based on signatures
-        if (url === "/ForwardToED" && $("#pdSignInput")[0].files[0])
+        if (url === "/ForwardToED" && $("#pdSignInput")[0]?.files[0])
             $("#_36DatePD").val(new Date().toISOString().split("T")[0]);
-        if (url === "/ForwardToSecretary" && $("#ahSignInput")[0].files[0])
+        if (url === "/ForwardToSecretary" && $("#ahSignInput")[0]?.files[0])
             $("#_36DateAH").val(new Date().toISOString().split("T")[0]);
-        if (url === "/MarkAsComplete" && $("#secSignInput")[0].files[0])
+        if (url === "/MarkAsComplete" && $("#secSignInput")[0]?.files[0])
             $("#_36DateSec").val(new Date().toISOString().split("T")[0]);
 
         $.ajax({
@@ -736,10 +744,10 @@ function PcrForm() {
             dataType: "json",
             success: function (response) {
                 console.log(successMessage + ":", response);
-                const projectId = response.projectId || $("#projectId").val(); // Assume projectId input if available
+                const projectId = response.projectId || $("#projectId").val();
                 saveAdditionalData(projectId);
                 alert(successMessage + " Project ID: " + projectId);
-                if (url !== "/SaveAsDraft") location.reload(); // Reload except for draft
+                if (url !== "/SaveAsDraft") location.reload();
             },
             error: function (error) {
                 console.error("Error:", error.responseText);
@@ -748,30 +756,46 @@ function PcrForm() {
         });
     };
 
+    // Adjusted methods with new statuses
     this.saveAsDraft = function () {
-        this.saveProjectInternal("/SaveAsDraft", "Draft saved", "DraftED");
+        this.saveProjectInternal("/SaveAsDraft", "Draft saved", "DraftPD"); // PD keeps it as draft
     };
 
     this.forwardToED = function () {
-        this.saveProjectInternal("/ForwardToED", "Forwarded to ED", "ForwardedToED");
+        this.saveProjectInternal("/ForwardToED", "Forwarded to ED", "DraftED"); // PD forwards to ED
     };
 
     this.forwardToSecretary = function () {
-        this.saveProjectInternal("/ForwardToSecretary", "Forwarded to Secretary", "ForwardedToSecretary");
+        this.saveProjectInternal("/ForwardToSecretary", "Forwarded to Secretary", "DraftSec"); // ED forwards to Sec
     };
 
     this.sendBackToPD = function () {
-        this.saveProjectInternal("/SendBackToPD", "Sent back to PD", "SentBackToPD");
+        this.saveProjectInternal("/SendBackToPD", "Sent back to PD", "DraftPD"); // ED sends back to PD
     };
 
     this.markAsComplete = function () {
-        this.saveProjectInternal("/MarkAsComplete", "Marked as Complete", "Completed");
+        this.saveProjectInternal("/MarkAsComplete", "Marked as Complete", "Complete"); // Sec marks as complete
     };
 
     this.sendBackToED = function () {
-        this.saveProjectInternal("/SendBackToED", "Sent back to ED", "SentBackToED");
+        this.saveProjectInternal("/SendBackToED", "Sent back to ED", "DraftED"); // Sec sends back to ED
     };
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Instantiate pcrForm
@@ -817,8 +841,6 @@ function saveAdditionalData(projectId) {
     saveProcurementServicesData(projectId);
     savePostProjectRemarkData(projectId);
 }
-
-
 
 function saveLocationData(projectId) {
 

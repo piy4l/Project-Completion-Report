@@ -16,6 +16,7 @@
         <tbody>
             @{
                 int slNo = (Model.PageNumber - 1) * Model.PageSize + 1;
+                var isDraftsView = ViewData["IsDraftsView"] as bool? ?? false; // Check if this is the drafts view
             }
             @foreach (var project in Model)
             {
@@ -25,22 +26,42 @@
                     <td>@project.Budget</td>
                     <td>@project.Duration</td>
                     <td>
-                        <span class="badge @(project.Status == "DraftPD" ? "bg-success" : "bg-danger")">
-                            @(project.Status == "DraftPD" ? "Active" : "Inactive")
-                        </span>
+                        @if (project.Status == "DraftPD")
+                        {
+                            <span class="badge bg-warning">Draft (at PD)</span>
+                        }
+                        else if (project.Status == "DraftED")
+                        {
+                            <span class="badge bg-warning">Draft (at ED)</span>
+                        }
+                        else if (project.Status == "DraftSec")
+                        {
+                            <span class="badge bg-warning">Draft (at Secretary)</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success">Completed</span>
+                        }
                     </td>
                     <td>
-                        <button type="button" class="btn btn-sm btn-primary details-button" data-id="@project.ProjectId">
-                            Details
-                        </button>
+                        @if (isDraftsView)
+                        {
+                            <button type="button" class="btn btn-sm btn-primary edit-button" data-id="@project.ProjectId">
+                                Edit
+                            </button>
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-sm btn-primary details-button" data-id="@project.ProjectId">
+                                Details
+                            </button>
+                        }
                         <button type="button" class="btn btn-sm btn-danger delete-icon" data-id="@project.ProjectId">
                             Delete
                         </button>
                     </td>
                 </tr>
-                
-                    slNo++;
-                
+                slNo++;
             }
         </tbody>
     </table>

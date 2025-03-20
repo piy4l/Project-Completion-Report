@@ -29,9 +29,15 @@
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="CreateProject" asp-action="Index">Create Project</a>
-                            </li>
+                            @if (User.IsInRole("PD"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="CreateProject" asp-action="Index">Create Project</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="ViewProject" asp-action="Drafts">My Drafts</a>
+                                </li>
+                            }                          
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="ViewProject" asp-action="Index">All Projects</a>
                             </li>

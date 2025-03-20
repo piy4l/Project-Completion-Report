@@ -18,7 +18,7 @@
         public string? ReasonsForRevision { get; set; }
         public string? ReasonsForNoCostTimeExtension { get; set; }
         public int CreatedByUserId { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
         public byte[]? Attachment { get; set; }
     }
 }

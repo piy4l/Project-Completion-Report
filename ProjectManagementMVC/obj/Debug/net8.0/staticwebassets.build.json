@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y+Apcg4zdR0+9J0aG/OIP6QeB9mj+Opka930Gq8845w=",
+  "Hash": "bUYvlhwHdPDvKmi3zeZEGzQ5P+paSQl/r6qwEV/1KOo=",
   "Source": "PCRMS",
   "BasePath": "_content/PCRMS",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PCRMS.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\CreateProject.css",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "css/CreateProject#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v3ehq0g4an",
+      "Integrity": "VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CreateProject.css"
+    },
+    {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\site.css",
       "SourceId": "PCRMS",
       "SourceType": "Discovered",
@@ -101,6 +122,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "js/CreateProject#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nj4l26nifi",
+      "Integrity": "vesbY++GpPHAWnIbPEZ2RP1/UeS2p49e4X4ZzkYnuOk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CreateProject.js"
+    },
+    {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\site.js",
       "SourceId": "PCRMS",
       "SourceType": "Discovered",
@@ -115,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+      "Fingerprint": "lkla6qhjhf",
+      "Integrity": "SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -1342,6 +1384,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/CreateProject.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\CreateProject.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 06:24:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps="
+        }
+      ]
+    },
+    {
+      "Route": "css/CreateProject.v3ehq0g4an.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\CreateProject.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 06:24:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v3ehq0g4an"
+        },
+        {
+          "Name": "label",
+          "Value": "css/CreateProject.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1506,6 +1630,88 @@
       ]
     },
     {
+      "Route": "js/CreateProject.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116078"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vesbY++GpPHAWnIbPEZ2RP1/UeS2p49e4X4ZzkYnuOk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 07:26:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vesbY++GpPHAWnIbPEZ2RP1/UeS2p49e4X4ZzkYnuOk="
+        }
+      ]
+    },
+    {
+      "Route": "js/CreateProject.nj4l26nifi.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116078"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vesbY++GpPHAWnIbPEZ2RP1/UeS2p49e4X4ZzkYnuOk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 07:26:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nj4l26nifi"
+        },
+        {
+          "Name": "label",
+          "Value": "js/CreateProject.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vesbY++GpPHAWnIbPEZ2RP1/UeS2p49e4X4ZzkYnuOk="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -1516,7 +1722,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "229"
         },
         {
           "Name": "Content-Type",
@@ -1524,11 +1730,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+          "Value": "Sun, 16 Mar 2025 05:42:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1538,12 +1744,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw="
         }
       ]
     },
     {
-      "Route": "js/site.xtxxf3hu2r.js",
+      "Route": "js/site.lkla6qhjhf.js",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1553,7 +1759,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "229"
         },
         {
           "Name": "Content-Type",
@@ -1561,11 +1767,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+          "Value": "Sun, 16 Mar 2025 05:42:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1575,7 +1781,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
+          "Value": "lkla6qhjhf"
         },
         {
           "Name": "label",
@@ -1583,7 +1789,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw="
         }
       ]
     },
