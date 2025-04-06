@@ -125,7 +125,7 @@
             $(".edit-button").off("click").on("click", function (e) {
                 e.stopPropagation();
                 var projectId = $(this).data("id");
-                editProject(projectId);
+                actionProject(projectId);
             });
 
             $(".details-button").off("click").on("click", function (e) {
@@ -169,8 +169,8 @@
             loadTable(url);
         }
 
-        function editProject(projectId) {
-            window.location.href = "/CreateProject/Index/" + projectId; // Redirect to edit page
+        function actionProject(projectId) {
+            window.location.href = "/ViewProject/Action/" + projectId; // Redirect to action page
         }
 
         function viewDetails(projectId) {

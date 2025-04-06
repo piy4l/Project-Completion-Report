@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\PCRMS.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\Project-Completion-Report\\ProjectManagementMVC\\PCRMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\PCRMS.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\Project-Completion-Report\\ProjectManagementMVC\\PCRMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\PCRMS.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Project-Completion-Report\\ProjectManagementMVC\\PCRMS.csproj",
         "projectName": "PCRMS",
-        "projectPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\PCRMS.csproj",
-        "packagesPath": "C:\\Users\\souvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\Project-Completion-Report\\ProjectManagementMVC\\PCRMS.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\Project-Completion-Report\\ProjectManagementMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\souvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

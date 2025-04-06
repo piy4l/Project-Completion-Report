@@ -106,7 +106,7 @@ namespace ProjectCompletionReport.Controllers
         }
 
         // Details action (unchanged)
-        public async Task<IActionResult> DetailsPDF(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -157,6 +157,7 @@ namespace ProjectCompletionReport.Controllers
                 {
                     return NotFound();
                 }
+                // return View(projectModel);
 
                 var pdf = new ViewAsPdf("Details", projectModel)
                 {
@@ -173,79 +174,6 @@ namespace ProjectCompletionReport.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, "An error occurred while retrieving the project details.");
-            }
-        }
-
-
-        [Authorize(Roles = "PD")] // Restrict to Project Director role for editing drafts
-        public async Task<IActionResult> DetailsDraft(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            try
-            {
-                // Fetch the project and related data
-                var projectModel = await _context.Projects
-                    .Where(p => p.ProjectId == id)
-                    .Select(p => new ProjectModel
-                    {
-                        Project = p,
-                        _06LocationOfTheProjects = _context._06LocationOfTheProjects.Where(l => l.ProjectId == p.ProjectId).ToList(),
-                        _07EstimatedCostPeriodApprovals = _context._07EstimatedCostPeriodApprovals.Where(c => c.ProjectId == p.ProjectId).ToList(),
-                        _12_1aStatusOfLoanGrantForeignFinancings = _context._12_1aStatusOfLoanGrantForeignFinancings.Where(f => f.ProjectId == p.ProjectId).ToList(),
-                        _12_1bStatusOfLoanGrantGOBs = _context._12_1bStatusOfLoanGrantGOBs.Where(g => g.ProjectId == p.ProjectId).ToList(),
-                        _12_1cStatusOfLoanGrantSelfFinanceEquities = _context._12_1cStatusOfLoanGrantSelfFinanceEquities.Where(s => s.ProjectId == p.ProjectId).ToList(),
-                        _12_2UtilizationOfProjectAids = _context._12_2UtilizationOfProjectAids.Where(u => u.ProjectId == p.ProjectId).ToList(),
-                        _12_3ReimbursableProjectAids = _context._12_3ReimbursableProjectAids.Where(r => r.ProjectId == p.ProjectId).ToList(),
-                        _13ImplementationPeriods = _context._13ImplementationPeriods.Where(i => i.ProjectId == p.ProjectId).ToList(),
-                        _14CostOfTheProjects = _context._14CostOfTheProjects.Where(c => c.ProjectId == p.ProjectId).ToList(),
-                        _15InfoProjectDirectors = _context._15InfoProjectDirectors.Where(d => d.ProjectId == p.ProjectId).ToList(),
-                        _16_1PersonnelOfPIUs = _context._16_1PersonnelOfPIUs.Where(p => p.ProjectId == p.ProjectId).ToList(),
-                        _16_2PersonnelRequiredAfterCompletions = _context._16_2PersonnelRequiredAfterCompletions.Where(p => p.ProjectId == p.ProjectId).ToList(),
-                        _16Personnels = _context._16Personnels.Where(p => p.ProjectId == p.ProjectId).ToList(),
-                        _17TrainingForeignLocals = _context._17TrainingForeignLocals.Where(t => t.ProjectId == p.ProjectId).ToList(),
-                        _18ComponentWiseProgresses = _context._18ComponentWiseProgresses.Where(c => c.ProjectId == p.ProjectId).ToList(),
-                        _17_18Totals = _context._17_18Totals.Where(t => t.ProjectId == p.ProjectId).ToList(),
-                        _19ProcurementOfTransports = _context._19ProcurementOfTransports.Where(p => p.ProjectId == p.ProjectId).ToList(),
-                        _20ProjectConsultants = _context._20ProjectConsultants.Where(p => p.ProjectId == p.ProjectId).ToList(),
-                        _21InfrastructureErectionInstallations = _context._21InfrastructureErectionInstallations.Where(i => i.ProjectId == p.ProjectId).ToList(),
-                        _22_1InfoOnPackages = _context._22_1InfoOnPackages.Where(i => i.ProjectId == p.ProjectId).ToList(),
-                        _23OriginalAndRevisedProvisionTargets = _context._23OriginalAndRevisedProvisionTargets.Where(o => o.ProjectId == p.ProjectId).ToList(),
-                        _24RevisedADPAllocationAndProgresses = _context._24RevisedADPAllocationAndProgresses.Where(r => r.ProjectId == p.ProjectId).ToList(),
-                        _25ObjectiveAchievements = _context._25ObjectiveAchievements.Where(o => o.ProjectId == p.ProjectId).ToList(),
-                        _26AnnualOutputs = _context._26AnnualOutputs.Where(a => a.ProjectId == p.ProjectId).ToList(),
-                        _27CostBenefits = _context._27CostBenefits.Where(c => c.ProjectId == p.ProjectId).ToList(),
-                        _29Monitorings = _context._29Monitorings.Where(m => m.ProjectId == p.ProjectId).ToList(),
-                        _30_1InternalAudits = _context._30_1InternalAudits.Where(i => i.ProjectId == p.ProjectId).ToList(),
-                        _30_2ExternalAudits = _context._30_2ExternalAudits.Where(e => e.ProjectId == p.ProjectId).ToList(),
-                        _30Auditings = _context._30Auditings.Where(a => a.ProjectId == p.ProjectId).ToList(),
-                        _G_PostProjectRemark = _context._G_PostProjectRemarks.Where(r => r.ProjectId == p.ProjectId).FirstOrDefault()
-                    })
-                    .FirstOrDefaultAsync();
-
-                if (projectModel == null)
-                {
-                    return NotFound();
-                }
-
-                // Check if the project is a draft and editable by the current user
-                if (projectModel.Project.Status != "DraftPD" && projectModel.Project.Status != "SentBackToPD")
-                {
-                    return Forbid(); // Only allow editing drafts in specific states
-                }
-
-                // Pass the remark to ViewData (consistent with Index action)
-                ViewData["Remark"] = projectModel._G_PostProjectRemark ?? new _G_PostProjectRemark { ProjectId = projectModel.Project.ProjectId };
-
-                // Return the CreateProject/Index view with the Project model
-                return View("~/Views/CreateProject/Index.cshtml", projectModel.Project);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"An error occurred while retrieving the project for editing: {ex.Message}");
             }
         }
 
@@ -271,5 +199,12 @@ namespace ProjectCompletionReport.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Action(int? id)
+        {
+            return View("Action", id);
+        }
+
     }
 }

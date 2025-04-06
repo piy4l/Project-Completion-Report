@@ -1714,48 +1714,13 @@
         <footer class="border-top footer text-muted">
             <div class="w3-bottom">
                 <div class="button-container">
-                    @if (isPd && (Model.Status == "DraftPD" || Model.Status == "SentBackToPD"))
-                    {
-                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
-                                title="Save as Draft"
-                                onclick="pcrForm.saveAsDraft()">
-                            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save as Draft
-                        </button>
-                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
-                                title="Submit"
-                                onclick="pcrForm.forwardToED()">
-                            <i class="fa fa-floppy-o" aria-hidden="true"></i> Forward to ED
-                        </button>
-                    }
-                    @if (isEd && Model.Status == "DraftED")
-                    {
-                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
-                                title="Submit"
-                                onclick="pcrForm.forwardToSecretary()">
-                            <i class="fa fa-floppy-o" aria-hidden="true"></i> Forward to Secretary
-                        </button>
-                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
-                                title="Send Back"
-                                onclick="pcrForm.sendBackToPD()">
-                            <i class="fa fa-floppy-o" aria-hidden="true"></i> Send Back to PD
-                    </button>
-                }
-                @if (isSec && Model.Status == "DraftSec")
-                {
                     <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
-                            title="Submit"
-                            onclick="pcrForm.markAsComplete()">
-                        <i class="fa fa-floppy-o" aria-hidden="true"></i> Mark as Complete
-                    </button>
-                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
-                            title="Send Back"
-                            onclick="pcrForm.sendBackToED()">
-                        <i class="fa fa-floppy-o" aria-hidden="true"></i> Send Back to ED
-                    </button>
-                }
+                            title="Save as Draft"
+                            onclick="pcrForm.saveAsDraft()">
+                        <i class="fa fa-floppy-o" aria-hidden="true"></i> Save as Draft
+                    </button>                     
+                </div>
             </div>
-        </div>
-    </footer>
-
+        </footer>
     </body>
 </html>

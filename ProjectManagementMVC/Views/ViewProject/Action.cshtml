@@ -1,0 +1,158 @@
+﻿@* Index.cshtml *@
+@{
+    ViewData["Title"] = "Project Actions";
+}
+@model int?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <!-- W3.CSS for styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom styles for enhanced design */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+            .header h1 {
+                color: #007a7c;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .custom-button {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+            .custom-button i {
+                margin-right: 8px;
+            }
+
+        .view-details {
+            background: #007a7c;
+        }
+
+            .view-details:hover {
+                background: #005f60;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 122, 124, 0.4);
+            }
+
+        .send-to-sec {
+            background: #0288d1;
+        }
+
+            .send-to-sec:hover {
+                background: #026aa7;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
+            }
+
+        .send-back-to-pd {
+            background: #d81b60;
+        }
+
+            .send-back-to-pd:hover {
+                background: #b21750;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(216, 27, 96, 0.4);
+            }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="w3-theme-l5">
+    <div class="container w3-animate-opacity">
+        <!-- Header -->
+        <div class="header">
+            <h1>Project Actions</h1>
+        </div>
+        <!-- Hidden Input for Project ID -->
+        <input type="hidden" id="projectId" value="@Model" />
+        <!-- Button Group -->
+        <div class="button-group">
+            <button class="custom-button view-details" onclick="viewDetails()">
+                <i class="fas fa-eye"></i> View Details
+            </button>
+            <button class="custom-button send-to-sec" onclick="sendToSec()">
+                <i class="fas fa-paper-plane"></i> Send to Sec
+            </button>
+            <button class="custom-button send-back-to-pd" onclick="sendBackToPD()">
+                <i class="fas fa-undo"></i> Send Back to PD
+            </button>
+        </div>
+
+        
+    </div>
+
+    <!-- JavaScript for button actions (placeholder) -->
+    <script>
+        function viewDetails() {
+            const projectId = document.getElementById("projectId").value;
+            if (projectId) {
+                // Redirect to the existing details page with the project ID in new tab
+				window.open(`/ViewProject/Details/${projectId}`, "_blank");
+            } else {
+                alert("No project ID specified!");
+            }
+        }
+        function sendToSec() {
+            alert("Sending project to Secretary...");
+            // Add your logic here, e.g., AJAX call to update status
+            // $.post('/Project/SendToSec', { projectId: 1 });
+        }
+
+        function sendBackToPD() {
+            alert("Sending project back to Project Director...");
+            // Add your logic here, e.g., AJAX call to update status
+            // $.post('/Project/SendBackToPD', { projectId: 1 });
+        }
+    </script>
+</body>
+</html>

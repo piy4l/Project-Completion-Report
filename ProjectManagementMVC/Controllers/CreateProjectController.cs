@@ -40,6 +40,8 @@ namespace ProjectCompletionReport.Controllers
             return View("Index", project);
         }
 
+
+
         [Authorize(Roles = "PD")]
         [HttpPost]
         [Route("/SaveProject")]
@@ -74,6 +76,9 @@ namespace ProjectCompletionReport.Controllers
                 return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
             }
         }
+
+
+
 
         [Authorize(Roles = "PD")]
         [HttpPost]
@@ -110,6 +115,16 @@ namespace ProjectCompletionReport.Controllers
                 return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
             }
         }
+
+
+
+
+
+
+
+
+
+
 
         [Authorize(Roles = "PD")]
         [HttpPost]
@@ -370,6 +385,11 @@ namespace ProjectCompletionReport.Controllers
             target._35_19 = source._35_19;
             target._28ReasonsForShortFall = source._28ReasonsForShortFall;
         }
+
+
+
+
+
 
 
         [Authorize(Roles = "PD")]
