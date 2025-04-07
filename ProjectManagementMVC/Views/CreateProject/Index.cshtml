@@ -1538,7 +1538,7 @@
 
                     <br />
                 <!-- Annexure Section -->
-                <button onclick="pcrForm.unHideSubMenu('SecAnnexure')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">Annexure</span> ANNEXURE <small class="w3-right">Click to Open/Close</small></button>
+                <button onclick="pcrForm.unHideSubMenu('SecAnnexure')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">Annex</span> ANNEXURE <small class="w3-right">Click to Open/Close</small></button>
                 <div id="SecAnnexure" class="w3-card w3-round w3-white w3-padding-small w3-hide">
                     <h4 class="w3-center">
                         <b>
@@ -1703,24 +1703,41 @@
                         </table>
                         <small>* Please mention Dates for Plan and Actual<br>* Deviation in days (difference between plan and actual)<br>* Plan as per procurement plan described in project document</small>
                     </div>
+
+
                 </div>
 
                 <br />
+
+                <!-- Atachment Section -->
+                <button onclick="pcrForm.unHideSubMenu('SecAttachment')" class="w3-button w3-block w3-theme-l1 w3-left-align"><span class="w3-border w3-padding-small">Attach</span> ATTACHMENT <small class="w3-right">Click to Open/Close</small></button>
+                <div id="SecAttachment" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                    <h4 class="w3-center">
+                        <p><b>Add Attachment (PDF file only)</b>              <input type="file" id="attachment" accept=".pdf"></p>
+                    </h4>
                 </div>
-            </div>
+
+
+
+
+                <div class="w3-bottom">
+                    <div class="button-container">
+                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
+                                title="Save as Draft"
+                                onclick="pcrForm.saveAsDraft()">
+                            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save as Draft
+                        </button>
+                    </div>
+                </div>
+                </div>
+
+            
         </div>
 
         <!-- Buttons Section -->
         <footer class="border-top footer text-muted">
-            <div class="w3-bottom">
-                <div class="button-container">
-                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right"
-                            title="Save as Draft"
-                            onclick="pcrForm.saveAsDraft()">
-                        <i class="fa fa-floppy-o" aria-hidden="true"></i> Save as Draft
-                    </button>                     
-                </div>
-            </div>
+            
         </footer>
     </body>
 </html>
+

@@ -127,6 +127,12 @@
                 viewDetails(projectId);
             });
 
+            $(".attachment-button").off("click").on("click", function (e) {
+                e.stopPropagation();
+                var projectId = $(this).data("id");
+                viewAttachment(projectId);
+            });
+
             $(".delete-icon").off("click").on("click", function (e) {
                 e.stopPropagation();
                 var projectId = $(this).data("id");
@@ -164,6 +170,10 @@
 
         function viewDetails(projectId) {
             window.open("/ViewProject/Details/" + projectId, "_blank");
+        }
+
+        function viewAttachment(projectId) {
+            window.open("/ViewProject/Attachment/" + projectId, "_blank");
         }
 
         function deleteProject(projectId) {

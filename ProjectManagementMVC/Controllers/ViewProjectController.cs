@@ -5,6 +5,7 @@ using X.PagedList;
 using Rotativa.AspNetCore;
 using ProjectCompletionReport.Services;
 using Microsoft.AspNetCore.Authorization;
+using System.Net.Mail;
 
 namespace ProjectCompletionReport.Controllers
 {
@@ -170,6 +171,50 @@ namespace ProjectCompletionReport.Controllers
                 var result = new FileContentResult(pdfBytes, "application/pdf");
                 Response.Headers["Content-Disposition"] = "inline";
                 return result;
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while retrieving the project details.");
+            }
+        }
+
+
+        public async Task<IActionResult> Attachment(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                var projectModel = await _context.Projects
+                    .Where(p => p.ProjectId == id)
+                    .Select(p => new ProjectModel
+                    {
+                        Project = p,
+                        
+                    })
+                    .FirstOrDefaultAsync();
+
+                if (projectModel == null)
+                {
+                    return NotFound();
+                }
+                var attachment = projectModel.Project.Attachment;
+
+                // Since we don't have ContentType, we'll try to detect it or use a default
+                const string contentType = "application/pdf";
+                string fileName = $"attachment_{id}.dat"; // Default filename
+
+                // If it's a PDF, adjust the filename
+                if (contentType == "application/pdf")
+                {
+                    fileName = $"attachment_{id}.pdf";
+                }
+
+                return File(attachment, contentType, fileName);
+
             }
             catch (Exception ex)
             {

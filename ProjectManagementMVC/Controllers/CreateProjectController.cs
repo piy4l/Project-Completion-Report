@@ -1004,86 +1004,168 @@ namespace ProjectCompletionReport.Controllers
         [Authorize(Roles = "PD")]
         [Route("/SavePostProjectRemark")]
         [HttpPost]
-        public async Task<ActionResult> SavePostProjectRemark([FromForm] _G_PostProjectRemark payload)
+        [Authorize(Roles = "PD")]
+        [HttpPost]
+        [Route("/SaveAsDraft")]
+        public async Task<IActionResult> SaveAsDraft(
+            [FromForm] int ProjectId,
+            [FromForm] string Name,
+            [FromForm] string AdministrativeMinistryDivision,
+            [FromForm] string ExecutingAgency,
+            [FromForm] string PlanningCommissionSectorDivision,
+            [FromForm] string Type,
+            [FromForm] string OverallObjective,
+            [FromForm] string SpecificObjectives,
+            [FromForm] string Background,
+            [FromForm] string MajorActivities,
+            [FromForm] string ReasonsForRevision,
+            [FromForm] string ReasonsForNoCostTimeExtension,
+            [FromForm] string Status,
+            [FromForm] IFormFile Attachment,
+            [FromForm] string _36DatePD,
+            [FromForm] string _36DateAH,
+            [FromForm] string _36DateSec,
+            [FromForm] IFormFile _36SignPD,
+            [FromForm] IFormFile _36SignAH,
+            [FromForm] IFormFile _36SignSec)
         {
             try
             {
-                // Handle file uploads
-                if (Request.Form.Files.Count > 0)
+                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+                var project = ProjectId == 0
+                    ? new Project { CreatedByUserId = userId, Status = "DraftPD", CreatedDate = DateTime.Now }
+                    : Context.Projects.Find(ProjectId);
+
+                if (project == null) return NotFound();
+
+                // Update project fields
+                project.Name = Name;
+                project.AdministrativeMinistryDivision = AdministrativeMinistryDivision;
+                project.ExecutingAgency = ExecutingAgency;
+                project.PlanningCommissionSectorDivision = PlanningCommissionSectorDivision;
+                project.Type = Type;
+                project.OverallObjective = OverallObjective;
+                project.SpecificObjectives = SpecificObjectives;
+                project.Background = Background;
+                project.MajorActivities = MajorActivities;
+                project.ReasonsForRevision = ReasonsForRevision;
+                project.ReasonsForNoCostTimeExtension = ReasonsForNoCostTimeExtension;
+                project.Status = "DraftPD"; // Force DraftPD for this endpoint
+
+                // Handle attachment
+                if (Attachment != null)
                 {
-                    var signPDFile = Request.Form.Files["_36SignPD"];
-                    if (signPDFile != null && signPDFile.Length > 0)
-                    {
-                        using (var ms = new MemoryStream())
-                        {
-                            await signPDFile.CopyToAsync(ms);
-                            payload._36SignPD = ms.ToArray();
-                        }
-                    }
+                    if (Attachment.ContentType != "application/pdf")
+                        return BadRequest("Only PDF files are allowed");
+                    if (Attachment.Length > 20 * 1024 * 1024) // 20MB limit
+                        return BadRequest("File size must be less than 20MB");
 
-                    var sealPDFile = Request.Form.Files["_36SealPD"];
-                    if (sealPDFile != null && sealPDFile.Length > 0)
+                    using (var ms = new MemoryStream())
                     {
-                        using (var ms = new MemoryStream())
-                        {
-                            await sealPDFile.CopyToAsync(ms);
-                            payload._36SealPD = ms.ToArray();
-                        }
-                    }
-
-                    var signAHFile = Request.Form.Files["_36SignAH"];
-                    if (signAHFile != null && signAHFile.Length > 0)
-                    {
-                        using (var ms = new MemoryStream())
-                        {
-                            await signAHFile.CopyToAsync(ms);
-                            payload._36SignAH = ms.ToArray();
-                        }
-                    }
-
-                    var sealAHFile = Request.Form.Files["_36SealAH"];
-                    if (sealAHFile != null && sealAHFile.Length > 0)
-                    {
-                        using (var ms = new MemoryStream())
-                        {
-                            await sealAHFile.CopyToAsync(ms);
-                            payload._36SealAH = ms.ToArray();
-                        }
-                    }
-
-                    var signSecFile = Request.Form.Files["_36SignSec"];
-                    if (signSecFile != null && signSecFile.Length > 0)
-                    {
-                        using (var ms = new MemoryStream())
-                        {
-                            await signSecFile.CopyToAsync(ms);
-                            payload._36SignSec = ms.ToArray();
-                        }
-                    }
-
-                    var sealSecFile = Request.Form.Files["_36SealSec"];
-                    if (sealSecFile != null && sealSecFile.Length > 0)
-                    {
-                        using (var ms = new MemoryStream())
-                        {
-                            await sealSecFile.CopyToAsync(ms);
-                            payload._36SealSec = ms.ToArray();
-                        }
+                        await Attachment.CopyToAsync(ms);
+                        project.Attachment = ms.ToArray();
                     }
                 }
 
-                Context._G_PostProjectRemarks.Add(payload);
-                await Context.SaveChangesAsync(); // Use async for better performance
+                if (ProjectId == 0)
+                {
+                    Context.Projects.Add(project);
+                }
+                else
+                {
+                    Context.Projects.Update(project);
+                }
+                await Context.SaveChangesAsync();
 
-                return Ok(new { message = "success" });
+                return Ok(new { message = "Draft saved", projectId = project.ProjectId });
             }
             catch (Exception ex)
             {
-                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                var innerException = ex.InnerException?.Message ?? "No inner exception";
                 Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
                 return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
             }
         }
+        //public async Task<ActionResult> SavePostProjectRemark([FromForm] _G_PostProjectRemark payload)
+        //{
+        //    try
+        //    {
+        //        // Handle file uploads
+        //        if (Request.Form.Files.Count > 0)
+        //        {
+        //            var signPDFile = Request.Form.Files["_36SignPD"];
+        //            if (signPDFile != null && signPDFile.Length > 0)
+        //            {
+        //                using (var ms = new MemoryStream())
+        //                {
+        //                    await signPDFile.CopyToAsync(ms);
+        //                    payload._36SignPD = ms.ToArray();
+        //                }
+        //            }
+
+        //            var sealPDFile = Request.Form.Files["_36SealPD"];
+        //            if (sealPDFile != null && sealPDFile.Length > 0)
+        //            {
+        //                using (var ms = new MemoryStream())
+        //                {
+        //                    await sealPDFile.CopyToAsync(ms);
+        //                    payload._36SealPD = ms.ToArray();
+        //                }
+        //            }
+
+        //            var signAHFile = Request.Form.Files["_36SignAH"];
+        //            if (signAHFile != null && signAHFile.Length > 0)
+        //            {
+        //                using (var ms = new MemoryStream())
+        //                {
+        //                    await signAHFile.CopyToAsync(ms);
+        //                    payload._36SignAH = ms.ToArray();
+        //                }
+        //            }
+
+        //            var sealAHFile = Request.Form.Files["_36SealAH"];
+        //            if (sealAHFile != null && sealAHFile.Length > 0)
+        //            {
+        //                using (var ms = new MemoryStream())
+        //                {
+        //                    await sealAHFile.CopyToAsync(ms);
+        //                    payload._36SealAH = ms.ToArray();
+        //                }
+        //            }
+
+        //            var signSecFile = Request.Form.Files["_36SignSec"];
+        //            if (signSecFile != null && signSecFile.Length > 0)
+        //            {
+        //                using (var ms = new MemoryStream())
+        //                {
+        //                    await signSecFile.CopyToAsync(ms);
+        //                    payload._36SignSec = ms.ToArray();
+        //                }
+        //            }
+
+        //            var sealSecFile = Request.Form.Files["_36SealSec"];
+        //            if (sealSecFile != null && sealSecFile.Length > 0)
+        //            {
+        //                using (var ms = new MemoryStream())
+        //                {
+        //                    await sealSecFile.CopyToAsync(ms);
+        //                    payload._36SealSec = ms.ToArray();
+        //                }
+        //            }
+        //        }
+
+        //        Context._G_PostProjectRemarks.Add(payload);
+        //        await Context.SaveChangesAsync(); // Use async for better performance
+
+        //        return Ok(new { message = "success" });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+        //        Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+        //        return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+        //    }
+        //}
 
 
         [Authorize(Roles = "PD")]
