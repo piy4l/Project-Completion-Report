@@ -60,10 +60,10 @@
         public string? _36DatePD { get; set; }
         public byte[]? _36SignPD { get; set; }
         public byte[]? _36SealPD { get; set; }
-        public string? _36RemarksAH { get; set; }
-        public string? _36DateAH { get; set; }
-        public byte[]? _36SignAH { get; set; }
-        public byte[]? _36SealAH { get; set; }
+        public string? _36RemarksED { get; set; }
+        public string? _36DateED { get; set; }
+        public byte[]? _36SignED { get; set; }
+        public byte[]? _36SealED { get; set; }
         public string? _36RemarksSec { get; set; }
         public string? _36DateSec { get; set; }
         public byte[]? _36SignSec { get; set; }

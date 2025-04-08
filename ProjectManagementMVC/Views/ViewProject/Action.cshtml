@@ -1,4 +1,4 @@
-﻿@* Index.cshtml *@
+﻿@* Action.cshtml *@
 @{
     ViewData["Title"] = "Project Actions";
 }
@@ -9,13 +9,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
-    <!-- W3.CSS for styling -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Custom styles for enhanced design */
         body {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -79,79 +76,288 @@
                 box-shadow: 0 5px 15px rgba(0, 122, 124, 0.4);
             }
 
-        .send-to-sec {
+        .send-to-ed, .send-to-sec {
             background: #0288d1;
         }
 
-            .send-to-sec:hover {
+            .send-to-ed:hover, .send-to-sec:hover {
                 background: #026aa7;
                 transform: translateY(-3px);
                 box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
             }
 
-        .send-back-to-pd {
+        .send-back-to-pd, .send-back-to-ed {
             background: #d81b60;
         }
 
-            .send-back-to-pd:hover {
+            .send-back-to-pd:hover, .send-back-to-ed:hover {
                 background: #b21750;
                 transform: translateY(-3px);
                 box-shadow: 0 5px 15px rgba(216, 27, 96, 0.4);
             }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #666;
-            font-size: 12px;
+        .edit, .mark-complete, .load-button {
+            background: #388e3c;
+        }
+
+            .edit:hover, .mark-complete:hover, .load-button:hover {
+                background: #2e7d32;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(56, 142, 60, 0.4);
+            }
+
+        .form-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            position: relative;
+        }
+
+            .form-section label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .form-section textarea, .form-section input[type="file"] {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+        .preview-container {
+            margin-bottom: 15px;
+        }
+
+            .preview-container img {
+                max-width: 200px;
+                max-height: 200px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+        .submit-button-container {
+            text-align: right;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body class="w3-theme-l5">
     <div class="container w3-animate-opacity">
-        <!-- Header -->
         <div class="header">
             <h1>Project Actions</h1>
         </div>
-        <!-- Hidden Input for Project ID -->
         <input type="hidden" id="projectId" value="@Model" />
-        <!-- Button Group -->
+        <input type="hidden" id="currentRole" value="@User.FindFirst("http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value" />
+
         <div class="button-group">
             <button class="custom-button view-details" onclick="viewDetails()">
                 <i class="fas fa-eye"></i> View Details
             </button>
-            <button class="custom-button send-to-sec" onclick="sendToSec()">
-                <i class="fas fa-paper-plane"></i> Send to Sec
-            </button>
-            <button class="custom-button send-back-to-pd" onclick="sendBackToPD()">
-                <i class="fas fa-undo"></i> Send Back to PD
-            </button>
+
+            @if (User.IsInRole("PD"))
+            {
+                <button class="custom-button edit" onclick="editProject()">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+                <button class="custom-button send-to-ed" onclick="showForwardForm('up', '/ForwardToED', 'DraftED', this)">
+                    <i class="fas fa-paper-plane"></i> Send to ED
+                </button>
+            }
+            @if (User.IsInRole("ED"))
+            {
+                <button class="custom-button send-back-to-pd" onclick="showForwardForm('down', '/SendBackToPD', 'DraftPD', this)">
+                    <i class="fas fa-undo"></i> Send back to PD
+                </button>
+                <button class="custom-button send-to-sec" onclick="showForwardForm('up', '/ForwardToSecretary', 'DraftSec', this)">
+                    <i class="fas fa-paper-plane"></i> Send to Secretary
+                </button>
+            }
+            @if (User.IsInRole("Sec"))
+            {
+                <button class="custom-button send-back-to-ed" onclick="showForwardForm('down', '/SendBackToED', 'DraftED', this)">
+                    <i class="fas fa-undo"></i> Send back to ED
+                </button>
+                <button class="custom-button mark-complete" onclick="showForwardForm('up', '/MarkAsComplete', 'Completed', this)">
+                    <i class="fas fa-check"></i> Mark as Complete
+                </button>
+            }
         </div>
 
-        
+        <div id="forwardForm" class="form-section w3-hide">
+            <label for="remarks">Remarks:</label>
+            <textarea id="remarks" rows="4" placeholder="Enter your remarks here..."></textarea>
+
+            <label for="signature">Signature (PDF/Image):</label>
+            <div class="preview-container" id="signaturePreview"></div>
+            <button type="button" class="custom-button load-button" onclick="loadSignature()">
+                <i class="fas fa-download"></i> Load Signature
+            </button>
+            <input type="file" id="signature" accept=".pdf,image/*" style="display: none;">
+            </br> </br>
+            <label for="seal">Seal (PDF/Image):</label>
+            <div class="preview-container" id="sealPreview"></div>
+            <button type="button" class="custom-button load-button" onclick="loadSeal()">
+                <i class="fas fa-download"></i> Load Seal
+            </button>
+            <input type="file" id="seal" accept=".pdf,image/*" style="display: none;">
+
+            <div class="submit-button-container">
+                <button id="submitButton" class="custom-button send-to-sec" onclick="submitForward()">Submit</button>
+            </div>
+        </div>
     </div>
 
-    <!-- JavaScript for button actions (placeholder) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function viewDetails() {
-            const projectId = document.getElementById("projectId").value;
+            const projectId = $("#projectId").val();
             if (projectId) {
-                // Redirect to the existing details page with the project ID in new tab
-				window.open(`/ViewProject/Details/${projectId}`, "_blank");
+                window.open(`/ViewProject/Details/${projectId}`, "_blank");
             } else {
                 alert("No project ID specified!");
             }
         }
-        function sendToSec() {
-            alert("Sending project to Secretary...");
-            // Add your logic here, e.g., AJAX call to update status
-            // $.post('/Project/SendToSec', { projectId: 1 });
+
+        function editProject() {
+            const projectId = $("#projectId").val();
+            if (projectId) {
+                window.location.href = `/CreateProject?projectId=${projectId}`;
+            } else {
+                alert("No project ID specified!");
+            }
         }
 
-        function sendBackToPD() {
-            alert("Sending project back to Project Director...");
-            // Add your logic here, e.g., AJAX call to update status
-            // $.post('/Project/SendBackToPD', { projectId: 1 });
+        function showForwardForm(direction, url, nextStatus, button) {
+            const form = $("#forwardForm");
+            form.removeClass("w3-hide");
+            form.data("direction", direction);
+            form.data("url", url);
+            form.data("nextStatus", nextStatus);
+            $("#remarks").val("");
+            $("#signaturePreview").empty();
+            $("#sealPreview").empty();
+            $("#signature").val("");
+            $("#seal").val("");
+
+            // Update submit button text based on the clicked button's text
+            const buttonText = $(button).text().trim(); // Get text from the clicked button (e.g., "Send to ED")
+            $("#submitButton").text(buttonText); // Set the submit button text
+        }
+
+        function loadSignature() {
+            $.ajax({
+                url: "/User/GetSignature",
+                type: "GET",
+                xhrFields: { responseType: "blob" },
+                success: function (data) {
+                    const url = URL.createObjectURL(data);
+                    $("#signaturePreview").html(`<img src="${url}" alt="Signature Preview">`);
+                    fetch(url)
+                        .then(res => res.blob())
+                        .then(blob => {
+                            const file = new File([blob], "signature.png", { type: blob.type });
+                            const dataTransfer = new DataTransfer();
+                            dataTransfer.items.add(file);
+                            $("#signature")[0].files = dataTransfer.files;
+                        });
+                },
+                error: function (error) {
+                    console.error("Error loading signature:", error);
+                    alert("Failed to load signature from profile.");
+                }
+            });
+        }
+
+        function loadSeal() {
+            $.ajax({
+                url: "/User/GetSeal",
+                type: "GET",
+                xhrFields: { responseType: "blob" },
+                success: function (data) {
+                    const url = URL.createObjectURL(data);
+                    $("#sealPreview").html(`<img src="${url}" alt="Seal Preview">`);
+                    fetch(url)
+                        .then(res => res.blob())
+                        .then(blob => {
+                            const file = new File([blob], "seal.png", { type: blob.type });
+                            const dataTransfer = new DataTransfer();
+                            dataTransfer.items.add(file);
+                            $("#seal")[0].files = dataTransfer.files;
+                        });
+                },
+                error: function (error) {
+                    console.error("Error loading seal:", error);
+                    alert("Failed to load seal from profile.");
+                }
+            });
+        }
+
+        function submitForward() {
+            const projectId = $("#projectId").val();
+            const currentRole = $("#currentRole").val();
+            const direction = $("#forwardForm").data("direction");
+            const url = $("#forwardForm").data("url");
+            const nextStatus = $("#forwardForm").data("nextStatus");
+            const remarks = $("#remarks").val();
+            const signature = $("#signature")[0].files[0];
+            const seal = $("#seal")[0].files[0];
+
+            if (!projectId) {
+                alert("No project ID specified!");
+                return;
+            }
+
+            let remarksField, signField, sealField, dateField;
+            const currentDate = new Date().toISOString().split("T")[0];
+
+            if (currentRole === "PD") {
+                remarksField = "_36RemarksPD";
+                signField = "_36SignPD";
+                sealField = "_36SealPD";
+                dateField = "_36DatePD";
+            } else if (currentRole === "ED") {
+                remarksField = "_36RemarksED";
+                signField = "_36SignED";
+                sealField = "_36SealED";
+                dateField = "_36DateED";
+            } else if (currentRole === "Sec") {
+                remarksField = "_36RemarksSec";
+                signField = "_36SignSec";
+                sealField = "_36SealSec";
+                dateField = "_36DateSec";
+            }
+
+            if (direction === "up" && url !== "/MarkAsComplete" && (!remarks || !signature || !seal)) {
+                alert("Remarks, Signature, and Seal are required when sending upwards!");
+                return;
+            }
+
+            var formData = new FormData();
+            formData.append("ProjectId", projectId);
+            formData.append("Status", nextStatus);
+            formData.append(remarksField, remarks || "");
+            formData.append(dateField, currentDate);
+            if (signature) formData.append(signField, signature);
+            if (seal) formData.append(sealField, seal);
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    console.log("Success:", response);
+                    alert("Action completed successfully! Project ID: " + response.projectId);
+                    $("#forwardForm").addClass("w3-hide");
+                    location.reload();
+                },
+                error: function (error) {
+                    console.error("Error:", error.responseText);
+                    alert("Error: " + error.responseText);
+                }
+            });
         }
     </script>
 </body>

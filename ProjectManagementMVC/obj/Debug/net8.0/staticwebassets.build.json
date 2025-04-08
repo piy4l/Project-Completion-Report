@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ucIUCT4tsJ2gZtOHYLPHd72QsfP42/CtRDlCZ2Fxdg8=",
+  "Hash": "GHOE1dA/PuzLlR3xOO553Haz/Qg6Myhdp3efwRW4e5c=",
   "Source": "PCRMS",
   "BasePath": "_content/PCRMS",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1jr7tlxcz3",
-      "Integrity": "HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ=",
+      "Fingerprint": "mnu6brm4e2",
+      "Integrity": "TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\CreateProject.js"
@@ -1630,51 +1630,6 @@
       ]
     },
     {
-      "Route": "js/CreateProject.1jr7tlxcz3.js",
-      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "121576"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 10:04:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1jr7tlxcz3"
-        },
-        {
-          "Name": "label",
-          "Value": "js/CreateProject.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ="
-        }
-      ]
-    },
-    {
       "Route": "js/CreateProject.js",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
       "Selectors": [],
@@ -1685,7 +1640,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "121576"
+          "Value": "114104"
         },
         {
           "Name": "Content-Type",
@@ -1693,11 +1648,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ=\""
+          "Value": "\"TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 10:04:36 GMT"
+          "Value": "Tue, 08 Apr 2025 07:46:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1707,7 +1662,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ="
+          "Value": "sha256-TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw="
+        }
+      ]
+    },
+    {
+      "Route": "js/CreateProject.mnu6brm4e2.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "114104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 07:46:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mnu6brm4e2"
+        },
+        {
+          "Name": "label",
+          "Value": "js/CreateProject.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw="
         }
       ]
     },

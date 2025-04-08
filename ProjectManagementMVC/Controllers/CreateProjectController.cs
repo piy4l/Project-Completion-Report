@@ -78,320 +78,6 @@ namespace ProjectCompletionReport.Controllers
         }
 
 
-
-
-        [Authorize(Roles = "PD")]
-        [HttpPost]
-        [Route("/SaveAsDraft")]
-        public async Task<IActionResult> SaveAsDraft([FromBody] Project payload) // Changed to [FromBody]
-        {
-            try
-            {
-                if (payload == null) throw new ArgumentNullException(nameof(payload), "Project payload cannot be null");
-
-                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-                var project = payload.ProjectId == 0 ? new Project { CreatedByUserId = userId, Status = "DraftPD" } : Context.Projects.Find(payload.ProjectId);
-                if (project == null) return NotFound();
-
-                UpdateProjectFields(project, payload);
-                project.Status = "DraftPD"; // PD saves as draft
-
-                if (payload.ProjectId == 0)
-                {
-                    Context.Projects.Add(project);
-                }
-                else
-                {
-                    Context.Projects.Update(project);
-                }
-                await Context.SaveChangesAsync();
-
-                return Ok(new { message = "Draft saved", projectId = project.ProjectId });
-            }
-            catch (Exception ex)
-            {
-                var innerException = ex.InnerException?.Message ?? "No inner exception";
-                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
-                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
-        [Authorize(Roles = "PD")]
-        [HttpPost]
-        [Route("/ForwardToED")]
-        public async Task<IActionResult> ForwardToED([FromForm] Project payload, [FromForm] _G_PostProjectRemark remarkPayload, IFormFile _36SignPD, IFormFile _36SealPD)
-        {
-            try
-            {
-                var project = Context.Projects.Find(payload.ProjectId);
-                if (project == null) return NotFound();
-
-                if (_36SignPD == null || _36SealPD == null) return BadRequest("PD signature and seal are required");
-
-                UpdateProjectFields(project, payload);
-                project.Status = "DraftED"; // Forward to ED
-
-                var remark = Context._G_PostProjectRemarks.FirstOrDefault(r => r.ProjectId == project.ProjectId) ?? new _G_PostProjectRemark { ProjectId = project.ProjectId };
-                UpdateRemarkFields(remark, remarkPayload);
-                remark._36SignPD = FileToByteArray(_36SignPD);
-                remark._36SealPD = FileToByteArray(_36SealPD);
-                remark._36RemarksPD = remarkPayload._36RemarksPD;
-                remark._36DatePD = DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
-
-                Context.Projects.Update(project);
-                if (remark.Id == 0) Context._G_PostProjectRemarks.Add(remark);
-                else Context._G_PostProjectRemarks.Update(remark);
-                await Context.SaveChangesAsync();
-
-                return Ok(new { message = "Forwarded to ED", projectId = project.ProjectId });
-            }
-            catch (Exception ex)
-            {
-                var innerException = ex.InnerException?.Message ?? "No inner exception";
-                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
-                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
-            }
-        }
-
-        [Authorize(Roles = "ED")]
-        [HttpPost]
-        [Route("/ForwardToSecretary")]
-        public async Task<IActionResult> ForwardToSecretary([FromForm] _G_PostProjectRemark remarkPayload, IFormFile _36SignAH, IFormFile _36SealAH)
-        {
-            try
-            {
-                var project = Context.Projects.Find(remarkPayload.ProjectId);
-                if (project == null || project.Status != "DraftED") return NotFound();
-
-                if (_36SignAH == null || _36SealAH == null) return BadRequest("ED signature and seal are required");
-
-                project.Status = "DraftSec"; // Forward to Sec
-
-                var remark = Context._G_PostProjectRemarks.FirstOrDefault(r => r.ProjectId == project.ProjectId) ?? new _G_PostProjectRemark { ProjectId = project.ProjectId };
-                UpdateRemarkFields(remark, remarkPayload);
-                remark._36SignAH = FileToByteArray(_36SignAH);
-                remark._36SealAH = FileToByteArray(_36SealAH);
-                remark._36RemarksAH = remarkPayload._36RemarksAH;
-                remark._36DateAH = DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
-
-                Context.Projects.Update(project);
-                if (remark.Id == 0) Context._G_PostProjectRemarks.Add(remark);
-                else Context._G_PostProjectRemarks.Update(remark);
-                await Context.SaveChangesAsync();
-
-                return Ok(new { message = "Forwarded to Secretary", projectId = project.ProjectId });
-            }
-            catch (Exception ex)
-            {
-                var innerException = ex.InnerException?.Message ?? "No inner exception";
-                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
-                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
-            }
-        }
-
-        [Authorize(Roles = "ED")]
-        [HttpPost]
-        [Route("/SendBackToPD")]
-        public async Task<IActionResult> SendBackToPD([FromForm] _G_PostProjectRemark remarkPayload)
-        {
-            try
-            {
-                var project = Context.Projects.Find(remarkPayload.ProjectId);
-                if (project == null || project.Status != "DraftED") return NotFound();
-
-                project.Status = "DraftPD"; // Send back to PD
-
-                var remark = Context._G_PostProjectRemarks.FirstOrDefault(r => r.ProjectId == project.ProjectId) ?? new _G_PostProjectRemark { ProjectId = project.ProjectId };
-                UpdateRemarkFields(remark, remarkPayload);
-                remark._36RemarksAH = remarkPayload._36RemarksAH;
-                remark._36DateAH = DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
-
-                Context.Projects.Update(project);
-                if (remark.Id == 0) Context._G_PostProjectRemarks.Add(remark);
-                else Context._G_PostProjectRemarks.Update(remark);
-                await Context.SaveChangesAsync();
-
-                return Ok(new { message = "Sent back to PD", projectId = project.ProjectId });
-            }
-            catch (Exception ex)
-            {
-                var innerException = ex.InnerException?.Message ?? "No inner exception";
-                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
-                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
-            }
-        }
-
-        [Authorize(Roles = "Sec")]
-        [HttpPost]
-        [Route("/MarkAsComplete")]
-        public async Task<IActionResult> MarkAsComplete([FromForm] _G_PostProjectRemark remarkPayload, IFormFile _36SignSec, IFormFile _36SealSec)
-        {
-            try
-            {
-                var project = Context.Projects.Find(remarkPayload.ProjectId);
-                if (project == null || project.Status != "DraftSec") return NotFound();
-
-                if (_36SignSec == null || _36SealSec == null) return BadRequest("Secretary signature and seal are required");
-
-                project.Status = "Complete"; // Mark as complete
-
-                var remark = Context._G_PostProjectRemarks.FirstOrDefault(r => r.ProjectId == project.ProjectId) ?? new _G_PostProjectRemark { ProjectId = project.ProjectId };
-                UpdateRemarkFields(remark, remarkPayload);
-                remark._36SignSec = FileToByteArray(_36SignSec);
-                remark._36SealSec = FileToByteArray(_36SealSec);
-                remark._36RemarksSec = remarkPayload._36RemarksSec;
-                remark._36DateSec = DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
-
-                Context.Projects.Update(project);
-                if (remark.Id == 0) Context._G_PostProjectRemarks.Add(remark);
-                else Context._G_PostProjectRemarks.Update(remark);
-                await Context.SaveChangesAsync();
-
-                return Ok(new { message = "Marked as Complete", projectId = project.ProjectId });
-            }
-            catch (Exception ex)
-            {
-                var innerException = ex.InnerException?.Message ?? "No inner exception";
-                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
-                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
-            }
-        }
-
-        [Authorize(Roles = "Sec")]
-        [HttpPost]
-        [Route("/SendBackToED")]
-        public async Task<IActionResult> SendBackToED([FromForm] _G_PostProjectRemark remarkPayload)
-        {
-            try
-            {
-                var project = Context.Projects.Find(remarkPayload.ProjectId);
-                if (project == null || project.Status != "DraftSec") return NotFound();
-
-                project.Status = "DraftED"; // Send back to ED
-
-                var remark = Context._G_PostProjectRemarks.FirstOrDefault(r => r.ProjectId == project.ProjectId) ?? new _G_PostProjectRemark { ProjectId = project.ProjectId };
-                UpdateRemarkFields(remark, remarkPayload);
-                remark._36RemarksSec = remarkPayload._36RemarksSec;
-                remark._36DateSec = DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
-
-                Context.Projects.Update(project);
-                if (remark.Id == 0) Context._G_PostProjectRemarks.Add(remark);
-                else Context._G_PostProjectRemarks.Update(remark);
-                await Context.SaveChangesAsync();
-
-                return Ok(new { message = "Sent back to ED", projectId = project.ProjectId });
-            }
-            catch (Exception ex)
-            {
-                var innerException = ex.InnerException?.Message ?? "No inner exception";
-                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
-                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
-            }
-        }
-
-
-
-
-
-
-        private byte[] FileToByteArray(IFormFile file)
-        {
-            using var ms = new MemoryStream();
-            file.CopyTo(ms);
-            return ms.ToArray();
-        }
-
-        private void UpdateProjectFields(Project target, Project source)
-        {
-            target.Name = source.Name;
-            target.Budget = source.Budget;
-            target.Duration = source.Duration;
-            target.AdministrativeMinistryDivision = source.AdministrativeMinistryDivision;
-            target.ExecutingAgency = source.ExecutingAgency;
-            target.PlanningCommissionSectorDivision = source.PlanningCommissionSectorDivision;
-            target.Type = source.Type;
-            target.OverallObjective = source.OverallObjective;
-            target.SpecificObjectives = source.SpecificObjectives;
-            target.Background = source.Background;
-            target.MajorActivities = source.MajorActivities;
-            target.ReasonsForRevision = source.ReasonsForRevision;
-            target.ReasonsForNoCostTimeExtension = source.ReasonsForNoCostTimeExtension;
-            target.Attachment = source.Attachment;
-        }
-
-        private void UpdateRemarkFields(_G_PostProjectRemark target, _G_PostProjectRemark source)
-        {
-            target.Background = source.Background;
-            target.JustificationAdequacy = source.JustificationAdequacy;
-            target.Objectives = source.Objectives;
-            target.ProjectRevisionWithReasons = source.ProjectRevisionWithReasons;
-            target.Concept = source.Concept;
-            target.Design = source.Design;
-            target.Location = source.Location;
-            target.Timing = source.Timing;
-            target.ProjectIdentification = source.ProjectIdentification;
-            target.ProjectPreparation = source.ProjectPreparation;
-            target.Appraisal = source.Appraisal;
-            target.CreditNegotiation = source.CreditNegotiation;
-            target.CreditAgreement = source.CreditAgreement;
-            target.CreditEffectiveness = source.CreditEffectiveness;
-            target.LoanDisbursement = source.LoanDisbursement;
-            target.LoanConditions = source.LoanConditions;
-            target.ProjectApproval = source.ProjectApproval;
-            target.OthersSpecify = source.OthersSpecify;
-            target._34_1 = source._34_1;
-            target._34_2 = source._34_2;
-            target._34_3 = source._34_3;
-            target._34_4 = source._34_4;
-            target._34_5 = source._34_5;
-            target._34_6 = source._34_6;
-            target._34_7 = source._34_7;
-            target._34_8 = source._34_8;
-            target._34_9 = source._34_9;
-            target._34_10 = source._34_10;
-            target._34_11 = source._34_11;
-            target._34_12 = source._34_12;
-            target._34_13 = source._34_13;
-            target._34_14 = source._34_14;
-            target._34_15 = source._34_15;
-            target._35_1 = source._35_1;
-            target._35_2 = source._35_2;
-            target._35_3 = source._35_3;
-            target._35_4 = source._35_4;
-            target._35_5 = source._35_5;
-            target._35_6 = source._35_6;
-            target._35_7 = source._35_7;
-            target._35_8 = source._35_8;
-            target._35_9 = source._35_9;
-            target._35_10 = source._35_10;
-            target._35_11 = source._35_11;
-            target._35_12 = source._35_12;
-            target._35_13 = source._35_13;
-            target._35_14 = source._35_14;
-            target._35_15 = source._35_15;
-            target._35_16 = source._35_16;
-            target._35_17 = source._35_17;
-            target._35_18 = source._35_18;
-            target._35_19 = source._35_19;
-            target._28ReasonsForShortFall = source._28ReasonsForShortFall;
-        }
-
-
-
-
-
-
-
         [Authorize(Roles = "PD")]
         [Route("/SaveLocationOfTheProject")]
         [HttpPost]
@@ -1001,9 +687,7 @@ namespace ProjectCompletionReport.Controllers
         }
 
 
-        [Authorize(Roles = "PD")]
-        [Route("/SavePostProjectRemark")]
-        [HttpPost]
+        
         [Authorize(Roles = "PD")]
         [HttpPost]
         [Route("/SaveAsDraft")]
@@ -1086,86 +770,91 @@ namespace ProjectCompletionReport.Controllers
                 return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
             }
         }
-        //public async Task<ActionResult> SavePostProjectRemark([FromForm] _G_PostProjectRemark payload)
-        //{
-        //    try
-        //    {
-        //        // Handle file uploads
-        //        if (Request.Form.Files.Count > 0)
-        //        {
-        //            var signPDFile = Request.Form.Files["_36SignPD"];
-        //            if (signPDFile != null && signPDFile.Length > 0)
-        //            {
-        //                using (var ms = new MemoryStream())
-        //                {
-        //                    await signPDFile.CopyToAsync(ms);
-        //                    payload._36SignPD = ms.ToArray();
-        //                }
-        //            }
 
-        //            var sealPDFile = Request.Form.Files["_36SealPD"];
-        //            if (sealPDFile != null && sealPDFile.Length > 0)
-        //            {
-        //                using (var ms = new MemoryStream())
-        //                {
-        //                    await sealPDFile.CopyToAsync(ms);
-        //                    payload._36SealPD = ms.ToArray();
-        //                }
-        //            }
 
-        //            var signAHFile = Request.Form.Files["_36SignAH"];
-        //            if (signAHFile != null && signAHFile.Length > 0)
-        //            {
-        //                using (var ms = new MemoryStream())
-        //                {
-        //                    await signAHFile.CopyToAsync(ms);
-        //                    payload._36SignAH = ms.ToArray();
-        //                }
-        //            }
+        [Authorize(Roles = "PD")]
+        [Route("/SavePostProjectRemark")]
+        [HttpPost]
+        public async Task<ActionResult> SavePostProjectRemark([FromForm] _G_PostProjectRemark payload)
+        {
+            try
+            {
+                // Handle file uploads
+                if (Request.Form.Files.Count > 0)
+                {
+                    var signPDFile = Request.Form.Files["_36SignPD"];
+                    if (signPDFile != null && signPDFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await signPDFile.CopyToAsync(ms);
+                            payload._36SignPD = ms.ToArray();
+                        }
+                    }
 
-        //            var sealAHFile = Request.Form.Files["_36SealAH"];
-        //            if (sealAHFile != null && sealAHFile.Length > 0)
-        //            {
-        //                using (var ms = new MemoryStream())
-        //                {
-        //                    await sealAHFile.CopyToAsync(ms);
-        //                    payload._36SealAH = ms.ToArray();
-        //                }
-        //            }
+                    var sealPDFile = Request.Form.Files["_36SealPD"];
+                    if (sealPDFile != null && sealPDFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await sealPDFile.CopyToAsync(ms);
+                            payload._36SealPD = ms.ToArray();
+                        }
+                    }
 
-        //            var signSecFile = Request.Form.Files["_36SignSec"];
-        //            if (signSecFile != null && signSecFile.Length > 0)
-        //            {
-        //                using (var ms = new MemoryStream())
-        //                {
-        //                    await signSecFile.CopyToAsync(ms);
-        //                    payload._36SignSec = ms.ToArray();
-        //                }
-        //            }
+                    var signAHFile = Request.Form.Files["_36SignAH"];
+                    if (signAHFile != null && signAHFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await signAHFile.CopyToAsync(ms);
+                            payload._36SignED = ms.ToArray();
+                        }
+                    }
 
-        //            var sealSecFile = Request.Form.Files["_36SealSec"];
-        //            if (sealSecFile != null && sealSecFile.Length > 0)
-        //            {
-        //                using (var ms = new MemoryStream())
-        //                {
-        //                    await sealSecFile.CopyToAsync(ms);
-        //                    payload._36SealSec = ms.ToArray();
-        //                }
-        //            }
-        //        }
+                    var sealAHFile = Request.Form.Files["_36SealAH"];
+                    if (sealAHFile != null && sealAHFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await sealAHFile.CopyToAsync(ms);
+                            payload._36SealED = ms.ToArray();
+                        }
+                    }
 
-        //        Context._G_PostProjectRemarks.Add(payload);
-        //        await Context.SaveChangesAsync(); // Use async for better performance
+                    var signSecFile = Request.Form.Files["_36SignSec"];
+                    if (signSecFile != null && signSecFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await signSecFile.CopyToAsync(ms);
+                            payload._36SignSec = ms.ToArray();
+                        }
+                    }
 
-        //        return Ok(new { message = "success" });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
-        //        Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
-        //        return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
-        //    }
-        //}
+                    var sealSecFile = Request.Form.Files["_36SealSec"];
+                    if (sealSecFile != null && sealSecFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            await sealSecFile.CopyToAsync(ms);
+                            payload._36SealSec = ms.ToArray();
+                        }
+                    }
+                }
+
+                Context._G_PostProjectRemarks.Add(payload);
+                await Context.SaveChangesAsync(); // Use async for better performance
+
+                return Ok(new { message = "success" });
+            }
+            catch (Exception ex)
+            {
+                var innerException = ex.InnerException != null ? ex.InnerException.Message : "No inner exception";
+                Console.WriteLine($"Error: {ex.Message}, Inner Exception: {innerException}, StackTrace: {ex.StackTrace}");
+                return Problem($"Failed to insert: {ex.Message} | Inner Exception: {innerException}");
+            }
+        }
 
 
         [Authorize(Roles = "PD")]

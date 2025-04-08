@@ -413,51 +413,6 @@
       ]
     },
     {
-      "Route": "js/CreateProject.1jr7tlxcz3.js",
-      "AssetFile": "js/CreateProject.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "121576"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 10:04:36 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1jr7tlxcz3"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ="
-        },
-        {
-          "Name": "label",
-          "Value": "js/CreateProject.js"
-        }
-      ]
-    },
-    {
       "Route": "js/CreateProject.js",
       "AssetFile": "js/CreateProject.js",
       "Selectors": [],
@@ -472,7 +427,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "121576"
+          "Value": "114104"
         },
         {
           "Name": "Content-Type",
@@ -480,17 +435,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ=\""
+          "Value": "\"TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 10:04:36 GMT"
+          "Value": "Tue, 08 Apr 2025 07:46:13 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HUhXvXPytc836XWbTZMJbTObZJREcgnHVGuenANasGQ="
+          "Value": "sha256-TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw="
+        }
+      ]
+    },
+    {
+      "Route": "js/CreateProject.mnu6brm4e2.js",
+      "AssetFile": "js/CreateProject.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "114104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 07:46:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mnu6brm4e2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw="
+        },
+        {
+          "Name": "label",
+          "Value": "js/CreateProject.js"
         }
       ]
     },

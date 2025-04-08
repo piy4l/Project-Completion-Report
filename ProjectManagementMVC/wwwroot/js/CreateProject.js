@@ -706,75 +706,6 @@
 
 
 
-
-
-
-    //this.saveProjectInternal = function (url, successMessage, status) {
-    //    var payload = {
-    //        ProjectId: $("#projectId").val() || 0, // Ensure ProjectId is included
-    //        Name: $("#secA_ProjectName").val(),
-    //        AdministrativeMinistryDivision: $("#secA_MinistryDivision").val(),
-    //        ExecutingAgency: $("#secA_Agency").val(),
-    //        PlanningCommissionSectorDivision: $("#secA_PlanningSector").val(),
-    //        Type: $("#secA_ProjectType").val(),
-    //        OverallObjective: $("#secA_OverallObjective").val(),
-    //        SpecificObjectives: $("#secA_SpecificObjectives").val(),
-    //        Background: $("#secA_ProjectBackground").val(),
-    //        MajorActivities: $("#secA_MajorActivities").val(),
-    //        ReasonsForRevision: $("#secA_RevisionReason").val(),
-    //        ReasonsForNoCostTimeExtension: $("#secA_NoCostRevisionReason").val(),
-    //        Status: status // Use the passed status: DraftPD, DraftED, DraftSec, Complete
-    //    };
-
-
-    //    console.log("Frontendssss Payload: ", payload);
-
-    //    // Add PDF attachment if selected
-    //    const attachmentInput = $("#attachment")[0];
-    //    if (attachmentInput && attachmentInput.files.length > 0) {
-    //        const file = attachmentInput.files[0];
-    //        // Optional: Client-side validation
-    //        if (file.type !== "application/pdf") {
-    //            alert("Please select a PDF file only");
-    //            return;
-    //        }
-    //        if (file.size > 20 * 1024 * 1024) { // 5MB limit example
-    //            alert("File size must be less than 20MB");
-    //            return;
-    //        }
-    //        formData.append("Attachment", file);
-    //    }
-
-    //    console.log("Frontendssss Payload: ", payload);
-
-    //    // Set dates dynamically based on signatures
-    //    if (url === "/ForwardToED" && $("#pdSignInput")[0]?.files[0])
-    //        $("#_36DatePD").val(new Date().toISOString().split("T")[0]);
-    //    if (url === "/ForwardToSecretary" && $("#ahSignInput")[0]?.files[0])
-    //        $("#_36DateAH").val(new Date().toISOString().split("T")[0]);
-    //    if (url === "/MarkAsComplete" && $("#secSignInput")[0]?.files[0])
-    //        $("#_36DateSec").val(new Date().toISOString().split("T")[0]);
-
-    //    $.ajax({
-    //        type: "POST",
-    //        url: url,
-    //        data: JSON.stringify(payload),
-    //        contentType: "application/json; charset=utf-8",
-    //        dataType: "json",
-    //        success: function (response) {
-    //            console.log(successMessage + ":", response);
-    //            const projectId = response.projectId || $("#projectId").val();
-    //            saveAdditionalData(projectId);
-    //            alert(successMessage + " Project ID: " + projectId);
-    //            if (url !== "/SaveAsDraft") location.reload();
-    //        },
-    //        error: function (error) {
-    //            console.error("Error:", error.responseText);
-    //            alert("Error: " + error.responseText);
-    //        }
-    //    });
-    //};
-
     this.saveProjectInternal = function (url, successMessage, status) {
         var formData = new FormData();
 
@@ -813,46 +744,6 @@
             console.log("No attachment file selected");
         }
 
-        // Add signature-related fields and files
-        formData.append("_36DatePD", $("#_36DatePD").val() || "");
-        formData.append("_36DateAH", $("#_36DateAH").val() || "");
-        formData.append("_36DateSec", $("#_36DateSec").val() || "");
-
-        const signPDInput = $("#pdSignInput")[0];
-        const signPDFile = signPDInput && signPDInput.files[0];
-        if (signPDFile) {
-            console.log("SignPD File:", signPDFile.name, signPDFile.size);
-            formData.append("_36SignPD", signPDFile);
-            if (url === "/ForwardToED") {
-                formData.set("_36DatePD", new Date().toISOString().split("T")[0]);
-            }
-        } else {
-            console.log("No SignPD file selected");
-        }
-
-        const signAHInput = $("#ahSignInput")[0];
-        const signAHFile = signAHInput && signAHInput.files[0];
-        if (signAHFile) {
-            console.log("SignAH File:", signAHFile.name, signAHFile.size);
-            formData.append("_36SignAH", signAHFile);
-            if (url === "/ForwardToSecretary") {
-                formData.set("_36DateAH", new Date().toISOString().split("T")[0]);
-            }
-        } else {
-            console.log("No SignAH file selected");
-        }
-
-        const signSecInput = $("#secSignInput")[0];
-        const signSecFile = signSecInput && signSecInput.files[0];
-        if (signSecFile) {
-            console.log("SignSec File:", signSecFile.name, signSecFile.size);
-            formData.append("_36SignSec", signSecFile);
-            if (url === "/MarkAsComplete") {
-                formData.set("_36DateSec", new Date().toISOString().split("T")[0]);
-            }
-        } else {
-            console.log("No SignSec file selected");
-        }
 
         console.log("FormData prepared for " + url + ":", formData);
 
@@ -2199,69 +2090,6 @@ function savePostProjectRemarkData(projectId) {
     formData.append("_35_18", $("#_35_18").val() || "");
     formData.append("_35_19", $("#_35_19").val() || "");
     formData.append("_28ReasonsForShortFall", $("#_28ReasonsForShortFall").val() || "");
-
-    // Add remarks and dates from PD, AH, and Secretary sections
-    formData.append("_36RemarksPD", $("#_36RemarksPD").val() || "");
-    formData.append("_36DatePD", $("#_36DatePD").val() || "");
-    formData.append("_36RemarksAH", $("#_36RemarksAH").val() || "");
-    formData.append("_36DateAH", $("#_36DateAH").val() || "");
-    formData.append("_36RemarksSec", $("#_36RemarksSec").val() || "");
-    formData.append("_36DateSec", $("#_36DateSec").val() || "");
-
-    // Add signature and seal files with logging
-    const signPDInput = $("#pdSignInput")[0];
-    const signPDFile = signPDInput && signPDInput.files[0];
-    if (signPDFile) {
-        console.log("SignPD File:", signPDFile.name, signPDFile.size);
-        formData.append("_36SignPD", signPDFile);
-    } else {
-        console.log("No SignPD file selected");
-    }
-
-    const sealPDInput = $("#pdSealInput")[0];
-    const sealPDFile = sealPDInput && sealPDInput.files[0];
-    if (sealPDFile) {
-        console.log("SealPD File:", sealPDFile.name, sealPDFile.size);
-        formData.append("_36SealPD", sealPDFile);
-    } else {
-        console.log("No SealPD file selected");
-    }
-
-    const signAHInput = $("#ahSignInput")[0];
-    const signAHFile = signAHInput && signAHInput.files[0];
-    if (signAHFile) {
-        console.log("SignAH File:", signAHFile.name, signAHFile.size);
-        formData.append("_36SignAH", signAHFile);
-    } else {
-        console.log("No SignAH file selected");
-    }
-
-    const sealAHInput = $("#ahSealInput")[0];
-    const sealAHFile = sealAHInput && sealAHInput.files[0];
-    if (sealAHFile) {
-        console.log("SealAH File:", sealAHFile.name, sealAHFile.size);
-        formData.append("_36SealAH", sealAHFile);
-    } else {
-        console.log("No SealAH file selected");
-    }
-
-    const signSecInput = $("#secSignInput")[0];
-    const signSecFile = signSecInput && signSecInput.files[0];
-    if (signSecFile) {
-        console.log("SignSec File:", signSecFile.name, signSecFile.size);
-        formData.append("_36SignSec", signSecFile);
-    } else {
-        console.log("No SignSec file selected");
-    }
-
-    const sealSecInput = $("#secSealInput")[0];
-    const sealSecFile = sealSecInput && sealSecInput.files[0];
-    if (sealSecFile) {
-        console.log("SealSec File:", sealSecFile.name, sealSecFile.size);
-        formData.append("_36SealSec", sealSecFile);
-    } else {
-        console.log("No SealSec file selected");
-    }
 
     console.log("FormData prepared:", formData);
 

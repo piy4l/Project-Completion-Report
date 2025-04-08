@@ -3,9 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using ProjectCompletionReport.Models;
 using X.PagedList;
 using Rotativa.AspNetCore;
-using ProjectCompletionReport.Services;
 using Microsoft.AspNetCore.Authorization;
-using System.Net.Mail;
+using System.Security.Claims;
+using System.Linq;
+using ProjectCompletionReport.Services;
 
 namespace ProjectCompletionReport.Controllers
 {
@@ -19,12 +20,21 @@ namespace ProjectCompletionReport.Controllers
         }
 
         // Index action for all projects
+        [HttpGet]
         public async Task<IActionResult> Index(string searchString = "", int? page = null, int? pageSize = null)
         {
             int currentPageSize = pageSize ?? 10;
             int pageNumber = page ?? 1;
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
 
             var projectsQuery = _context.Projects.AsQueryable();
+
+            // Filter based on role
+            if (User.IsInRole("PD"))
+            {
+                projectsQuery = projectsQuery.Where(p => p.CreatedByUserId == userId); // Only PD's projects
+            }
+            // ED and Sec see all projects, no additional filter
 
             // Apply search filter if provided
             if (!string.IsNullOrEmpty(searchString))
@@ -40,10 +50,10 @@ namespace ProjectCompletionReport.Controllers
             // Adjust page number
             pageNumber = pageNumber < 1 ? 1 : totalPages == 0 ? 1 : pageNumber > totalPages ? totalPages : pageNumber;
 
-            // Fetch paginated results (only if there are results)
+            // Fetch paginated results, ordered by CreatedDate descending
             var projects = totalCount > 0
                 ? await projectsQuery
-                    .OrderBy(p => p.ProjectId)
+                    .OrderByDescending(p => p.CreatedDate) // Sort by creation date, latest first
                     .Skip((pageNumber - 1) * currentPageSize)
                     .Take(currentPageSize)
                     .ToListAsync()
@@ -68,25 +78,44 @@ namespace ProjectCompletionReport.Controllers
         {
             int currentPageSize = pageSize ?? 10;
             int pageNumber = page ?? 1;
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
 
             var draftsQuery = _context.Projects
                 .Where(p => p.Status == "DraftPD" || p.Status == "DraftED" || p.Status == "DraftSec")
                 .AsQueryable();
 
+            // Filter based on role
+            if (User.IsInRole("PD"))
+            {
+                draftsQuery = draftsQuery.Where(p => p.Status == "DraftPD" && p.CreatedByUserId == userId);
+            }
+            else if (User.IsInRole("ED"))
+            {
+                draftsQuery = draftsQuery.Where(p => p.Status == "DraftED");
+            }
+            else if (User.IsInRole("Sec"))
+            {
+                draftsQuery = draftsQuery.Where(p => p.Status == "DraftSec");
+            }
+
+            // Apply search filter if provided
             if (!string.IsNullOrEmpty(searchString))
             {
                 searchString = searchString.ToLower();
                 draftsQuery = draftsQuery.Where(p => p.Name.ToLower().Contains(searchString));
             }
 
+            // Get total count after filtering
             var totalCount = await draftsQuery.CountAsync();
             int totalPages = totalCount > 0 ? (int)Math.Ceiling(totalCount / (double)currentPageSize) : 0;
 
+            // Adjust page number
             pageNumber = pageNumber < 1 ? 1 : totalPages == 0 ? 1 : pageNumber > totalPages ? totalPages : pageNumber;
 
+            // Fetch paginated results, ordered by CreatedDate descending
             var drafts = totalCount > 0
                 ? await draftsQuery
-                    .OrderBy(p => p.ProjectId)
+                    .OrderByDescending(p => p.CreatedDate) // Sort by creation date, latest first
                     .Skip((pageNumber - 1) * currentPageSize)
                     .Take(currentPageSize)
                     .ToListAsync()
@@ -96,7 +125,7 @@ namespace ProjectCompletionReport.Controllers
 
             ViewBag.PageSize = currentPageSize;
             ViewBag.SearchString = searchString;
-            ViewData["IsDraftsView"] = true; // Set flag for drafts view
+            ViewData["IsDraftsView"] = true;
 
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
             {
@@ -106,6 +135,8 @@ namespace ProjectCompletionReport.Controllers
             return View("Drafts", pagedDrafts);
         }
 
+        // Other actions (Details, Attachment, Delete, Action, ForwardToED, etc.) remain unchanged
+        // ...
         // Details action (unchanged)
         public async Task<IActionResult> Details(int? id)
         {
@@ -193,7 +224,7 @@ namespace ProjectCompletionReport.Controllers
                     .Select(p => new ProjectModel
                     {
                         Project = p,
-                        
+
                     })
                     .FirstOrDefaultAsync();
 
@@ -251,5 +282,156 @@ namespace ProjectCompletionReport.Controllers
             return View("Action", id);
         }
 
+
+
+        [Authorize(Roles = "PD")]
+        [HttpPost]
+        [Route("/ForwardToED")]
+        public async Task<IActionResult> ForwardToED(
+            [FromForm] int ProjectId,
+            [FromForm] string Status,
+            [FromForm] string _36RemarksPD,
+            [FromForm] string _36DatePD,
+            [FromForm] IFormFile _36SignPD,
+            [FromForm] IFormFile _36SealPD)
+        {
+            return await ProcessForward(ProjectId, Status, "_36RemarksPD", "_36SignPD", "_36SealPD", "_36DatePD", _36RemarksPD, _36SignPD, _36SealPD, _36DatePD);
+        }
+
+        [Authorize(Roles = "ED")]
+        [HttpPost]
+        [Route("/ForwardToSecretary")]
+        public async Task<IActionResult> ForwardToSecretary(
+            [FromForm] int ProjectId,
+            [FromForm] string Status,
+            [FromForm] string _36RemarksED,
+            [FromForm] string _36DateED,
+            [FromForm] IFormFile _36SignED,
+            [FromForm] IFormFile _36SealED)
+        {
+            return await ProcessForward(ProjectId, Status, "_36RemarksED", "_36SignED", "_36SealED", "_36DateED", _36RemarksED, _36SignED, _36SealED, _36DateED);
+        }
+
+        [Authorize(Roles = "Sec")]
+        [HttpPost]
+        [Route("/SendBackToED")]
+        public async Task<IActionResult> SendBackToED(
+            [FromForm] int ProjectId,
+            [FromForm] string Status,
+            [FromForm] string _36RemarksSec,
+            [FromForm] string _36DateSec,
+            [FromForm] IFormFile _36SignSec,
+            [FromForm] IFormFile _36SealSec)
+        {
+            return await ProcessForward(ProjectId, Status, "_36RemarksSec", "_36SignSec", "_36SealSec", "_36DateSec", _36RemarksSec, _36SignSec, _36SealSec, _36DateSec);
+        }
+
+        [Authorize(Roles = "ED")]
+        [HttpPost]
+        [Route("/SendBackToPD")]
+        public async Task<IActionResult> SendBackToPD(
+            [FromForm] int ProjectId,
+            [FromForm] string Status,
+            [FromForm] string _36RemarksED,
+            [FromForm] string _36DateED,
+            [FromForm] IFormFile _36SignED,
+            [FromForm] IFormFile _36SealED)
+        {
+            return await ProcessForward(ProjectId, Status, "_36RemarksED", "_36SignED", "_36SealED", "_36DateED", _36RemarksED, _36SignED, _36SealED, _36DateED);
+        }
+
+        [Authorize(Roles = "Sec")]
+        [HttpPost]
+        [Route("/MarkAsComplete")]
+        public async Task<IActionResult> MarkAsComplete(
+            [FromForm] int ProjectId,
+            [FromForm] string Status,
+            [FromForm] string _36RemarksSec,
+            [FromForm] string _36DateSec,
+            [FromForm] IFormFile _36SignSec,
+            [FromForm] IFormFile _36SealSec)
+        {
+            return await ProcessForward(ProjectId, Status, "_36RemarksSec", "_36SignSec", "_36SealSec", "_36DateSec", _36RemarksSec, _36SignSec, _36SealSec, _36DateSec);
+        }
+
+        private async Task<IActionResult> ProcessForward(
+            int projectId,
+            string status,
+            string remarksField,
+            string signField,
+            string sealField,
+            string dateField,
+            string remarks,
+            IFormFile signature,
+            IFormFile seal,
+            string date)
+        {
+            try
+            {
+                var project = _context.Projects.Find(projectId);
+                if (project == null) return NotFound();
+
+                var remark = _context._G_PostProjectRemarks.FirstOrDefault(r => r.ProjectId == projectId) ?? new _G_PostProjectRemark { ProjectId = projectId };
+
+                project.Status = status;
+
+                typeof(_G_PostProjectRemark).GetProperty(remarksField)?.SetValue(remark, remarks);
+                typeof(_G_PostProjectRemark).GetProperty(dateField)?.SetValue(remark, date);
+
+                if (signature != null)
+                {
+                    using (var ms = new MemoryStream())
+                    {
+                        await signature.CopyToAsync(ms);
+                        typeof(_G_PostProjectRemark).GetProperty(signField)?.SetValue(remark, ms.ToArray());
+                    }
+                }
+                if (seal != null)
+                {
+                    using (var ms = new MemoryStream())
+                    {
+                        await seal.CopyToAsync(ms);
+                        typeof(_G_PostProjectRemark).GetProperty(sealField)?.SetValue(remark, ms.ToArray());
+                    }
+                }
+
+                if (remark.Id == 0)
+                    _context._G_PostProjectRemarks.Add(remark);
+                else
+                    _context._G_PostProjectRemarks.Update(remark);
+
+                _context.Projects.Update(project);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { projectId = project.ProjectId });
+            }
+            catch (Exception ex)
+            {
+                return Problem($"Error: {ex.Message}");
+            }
+        }
+
+        [HttpGet]
+        [Route("/User/GetSignature")]
+        public IActionResult GetSignature()
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
+            if (user?.Signature == null) return NotFound("Signature not found in profile.");
+            return File(user.Signature, "image/png", "signature.png");
+        }
+
+        [HttpGet]
+        [Route("/User/GetSeal")]
+        public IActionResult GetSeal()
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
+            if (user?.Seal == null) return NotFound("Seal not found in profile.");
+            return File(user.Seal, "image/png", "seal.png");
+        }
+
+        // Other actions (Details, Attachment, Delete, Action) remain unchanged
+        // ...
     }
 }
