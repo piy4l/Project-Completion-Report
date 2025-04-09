@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\viewproject\\_projectstable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\viewproject\\_projectstable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\viewproject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\viewproject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\controllers\\viewprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\controllers\\viewprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\viewproject\\action.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\viewproject\\action.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,32 +39,12 @@
       "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\controllers\\createprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\controllers\\viewprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\controllers\\viewprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\viewproject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\viewproject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\viewproject\\drafts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\viewproject\\drafts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\viewproject\\_projectstable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\viewproject\\_projectstable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -62,37 +70,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABQAAAAAAAAAAAArwCcAAAB8AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "ProjectManagementMVC\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T09:04:39.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewProjectController.cs",
-              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
-              "RelativeDocumentMoniker": "ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
-              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
-              "RelativeToolTip": "ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAmwBoBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:28:11.589Z",
+              "WhenOpened": "2025-04-09T09:03:59.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ProjectManagementMVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T09:01:09.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CreateProjectController.cs",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\CreateProjectController.cs",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Controllers\\CreateProjectController.cs",
@@ -100,25 +107,23 @@
               "RelativeToolTip": "ProjectManagementMVC\\Controllers\\CreateProjectController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAqwC4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T08:19:12.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T08:19:12.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Action.cshtml",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
               "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
               "RelativeToolTip": "ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
-              "ViewState": "AgIAAEYBAAAAAAAAAAAqwGsBAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAEoBAAAAAAAAAAAkwGsBAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T07:59:10.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T07:59:10.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Details.cshtml",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\ViewProject\\Details.cshtml",
@@ -126,12 +131,11 @@
               "RelativeToolTip": "ProjectManagementMVC\\Views\\ViewProject\\Details.cshtml",
               "ViewState": "AgIAADIFAAAAAAAAAAAawC4FAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T07:55:11.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T07:55:11.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Drafts.cshtml",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Drafts.cshtml",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\ViewProject\\Drafts.cshtml",
@@ -139,64 +143,47 @@
               "RelativeToolTip": "ProjectManagementMVC\\Views\\ViewProject\\Drafts.cshtml",
               "ViewState": "AgIAALcAAAAAAAAAAAAkwNgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T07:54:20.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T07:54:20.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Models\\Project.cs",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Models\\Project.cs",
               "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Models\\Project.cs",
               "RelativeToolTip": "ProjectManagementMVC\\Models\\Project.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAzwBQAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBQAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T03:41:09.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T03:41:09.024Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "_ProjectsTable.cshtml",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\_ProjectsTable.cshtml",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\ViewProject\\_ProjectsTable.cshtml",
               "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\_ProjectsTable.cshtml",
               "RelativeToolTip": "ProjectManagementMVC\\Views\\ViewProject\\_ProjectsTable.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAgwDQAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T09:06:58.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T09:06:58.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Index.cshtml",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\ViewProject\\Index.cshtml",
               "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Index.cshtml",
               "RelativeToolTip": "ProjectManagementMVC\\Views\\ViewProject\\Index.cshtml",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAkwMcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAArwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T09:08:38.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T09:08:38.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\appsettings.json",
-              "RelativeDocumentMoniker": "ProjectManagementMVC\\appsettings.json",
-              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\appsettings.json",
-              "RelativeToolTip": "ProjectManagementMVC\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T07:52:04.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Models\\User.cs",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Models\\User.cs",
@@ -204,12 +191,47 @@
               "RelativeToolTip": "ProjectManagementMVC\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:37:39.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T08:37:39.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
+              "Title": "ViewProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
+              "RelativeToolTip": "ProjectManagementMVC\\Controllers\\ViewProjectController.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAkwCQBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T08:28:11.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProjectManagementMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAArwCcAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T09:04:39.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\appsettings.json",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\appsettings.json",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\appsettings.json",
+              "RelativeToolTip": "ProjectManagementMVC\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T07:52:04.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "CreateProject.js",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
@@ -217,12 +239,11 @@
               "RelativeToolTip": "ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
               "ViewState": "AgIAALMCAAAAAAAAAAAAAMICAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-07T06:15:19.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T06:15:19.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\CreateProject\\Index.cshtml",
               "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\CreateProject\\Index.cshtml",
@@ -230,8 +251,7 @@
               "RelativeToolTip": "ProjectManagementMVC\\Views\\CreateProject\\Index.cshtml",
               "ViewState": "AgIAAGoFAAAAAAAAAAAAAH4FAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T03:41:47.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T03:41:47.138Z"
             }
           ]
         }

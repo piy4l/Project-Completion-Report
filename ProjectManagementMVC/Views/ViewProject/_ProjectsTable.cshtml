@@ -16,7 +16,7 @@
         <tbody>
             @{
                 int slNo = (Model.PageNumber - 1) * Model.PageSize + 1;
-                var isDraftsView = ViewData["IsDraftsView"] as bool? ?? false; // Check if this is the drafts view
+                var isDraftsView = ViewData["IsDraftsView"] as bool? ?? false;
             }
             @foreach (var project in Model)
             {
@@ -46,21 +46,31 @@
                     <td>
                         @if (isDraftsView)
                         {
-                            <button type="button" class="btn btn-sm btn-primary action-button" data-id="@project.ProjectId">
+                            <button type="button" class="btn btn-sm btn-info action-button" data-id="@project.ProjectId">
                                 Action
                             </button>
                         }
-                        
+
                         <button type="button" class="btn btn-sm btn-primary details-button" data-id="@project.ProjectId">
                             Details
                         </button>
-                        
+
                         <button type="button" class="btn btn-sm btn-secondary attachment-button" data-id="@project.ProjectId">
                             View Attachment
                         </button>
-                        <button type="button" class="btn btn-sm btn-danger delete-icon" data-id="@project.ProjectId">
-                            Delete
-                        </button>
+
+                        @if (isDraftsView && (User.IsInRole("Admin") || User.IsInRole("PD")))
+                        {
+                            <button type="button" class="btn btn-sm btn-danger delete-icon" data-id="@project.ProjectId">
+                                Delete
+                            </button>
+                        }
+                        else if (!isDraftsView && User.IsInRole("Admin"))
+                        {
+                            <button type="button" class="btn btn-sm btn-danger delete-icon" data-id="@project.ProjectId">
+                                Delete
+                            </button>
+                        }
                     </td>
                 </tr>
                 slNo++;

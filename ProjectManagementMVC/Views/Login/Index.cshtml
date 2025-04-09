@@ -20,11 +20,30 @@
             box-shadow: none;
             border-color: #0d6efd;
         }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .logo-container img {
+                width: 120px; /* Fixed width for rectangle */
+                height: 80px; /* Fixed height for rectangle */
+                object-fit: contain; /* Ensures image fits within dimensions without distortion */
+                
+                border-radius: 4px; /* Optional: Slight rounding for aesthetics */
+            }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="login-container card p-4 shadow">
+            <div class="logo-container">
+                <img src="~/images/BCC_Logo.png" alt="BCC_Logo" />
+                <img src="~/images/ICTD_Logo.png" alt="ICTD_Logo" />
+            </div>
             <h2 class="text-center mb-4">Login</h2>
             @if (ViewBag.ErrorMessage != null)
             {

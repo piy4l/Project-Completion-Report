@@ -255,6 +255,7 @@ namespace ProjectCompletionReport.Controllers
 
 
         [HttpPost]
+        [Authorize] // Ensure user is authenticated
         public async Task<IActionResult> Delete(int id)
         {
             try
@@ -265,7 +266,22 @@ namespace ProjectCompletionReport.Controllers
                     return Json(new { success = false, message = "Project not found" });
                 }
 
-                // Optional: Restrict deletion to DraftPD status or specific roles if needed
+                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+                var isAdmin = User.IsInRole("Admin");
+                var isPD = User.IsInRole("PD");
+
+                // Authorization logic
+                if (!isAdmin && !(isPD && project.CreatedByUserId == userId))
+                {
+                    return Json(new { success = false, message = "Unauthorized: You do not have permission to delete this project" });
+                }
+
+                // Optional: Restrict deletion to draft status if needed
+                if (project.Status != "DraftPD" && project.Status != "DraftED" && project.Status != "DraftSec")
+                {
+                    return Json(new { success = false, message = "Only draft projects can be deleted" });
+                }
+
                 _context.Projects.Remove(project);
                 await _context.SaveChangesAsync();
                 return Json(new { success = true, message = "Project deleted successfully" });
@@ -279,6 +295,26 @@ namespace ProjectCompletionReport.Controllers
         [HttpGet]
         public async Task<IActionResult> Action(int? id)
         {
+            if (!id.HasValue)
+            {
+                return NotFound();
+            }
+
+            var project = await _context.Projects.FirstOrDefaultAsync(p => p.ProjectId == id.Value);
+            if (project == null)
+            {
+                return NotFound();
+            }
+
+            var currentRole = User.FindFirst(ClaimTypes.Role)?.Value;
+            if ((currentRole == "PD" && project.Status != "DraftPD") ||
+                (currentRole == "ED" && project.Status != "DraftED") ||
+                (currentRole == "Sec" && project.Status != "DraftSec"))
+            {
+                return RedirectToAction("Drafts"); // Redirect if project isn’t in user’s draft status
+            }
+
+            ViewData["ProjectName"] = project.Name;
             return View("Action", id);
         }
 

@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\BCC_Logo.png",
+      "PackagePath": "staticwebassets\\images\\BCC_Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\ICTD_Logo.png",
+      "PackagePath": "staticwebassets\\images\\ICTD_Logo.png"
+    },
+    {
       "Id": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
       "PackagePath": "staticwebassets\\js\\CreateProject.js"
     },

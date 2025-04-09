@@ -1,0 +1,19 @@
+﻿.tbl_bordered {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tbl_bordered th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.tbl_bordered td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+

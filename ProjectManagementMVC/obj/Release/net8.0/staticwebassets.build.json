@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mvK51D/MuTj+JLEhzfr49I3DWgU3GJidSK59kQMB4ds=",
+  "Hash": "0yGdDagh21iz3GyOjuVmvJ4PSYQC62iEA6OMfUJsL2Y=",
   "Source": "PCRMS",
   "BasePath": "_content/PCRMS",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\PCRMS.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\CreateProject.css",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "css/CreateProject#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v3ehq0g4an",
+      "Integrity": "VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CreateProject.css"
+    },
+    {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\site.css",
       "SourceId": "PCRMS",
       "SourceType": "Discovered",
@@ -101,6 +122,69 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\BCC_Logo.png",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "images/BCC_Logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j7e4nt04hc",
+      "Integrity": "7yvPCMad5x8/0CrOk3OUloGMReBkvWD5mg7hlKDSptE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\BCC_Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\ICTD_Logo.png",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "images/ICTD_Logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2uehqxg6ge",
+      "Integrity": "WmOk1ODGbId34NioBCa0O9Pv14+W/z0A73ZWNEbsl4g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ICTD_Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+      "SourceId": "PCRMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\",
+      "BasePath": "_content/PCRMS",
+      "RelativePath": "js/CreateProject#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mnu6brm4e2",
+      "Integrity": "TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CreateProject.js"
+    },
+    {
       "Identity": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\site.js",
       "SourceId": "PCRMS",
       "SourceType": "Discovered",
@@ -115,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+      "Fingerprint": "lkla6qhjhf",
+      "Integrity": "SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -1342,6 +1426,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/CreateProject.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\CreateProject.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 06:24:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps="
+        }
+      ]
+    },
+    {
+      "Route": "css/CreateProject.v3ehq0g4an.css",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\CreateProject.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 06:24:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v3ehq0g4an"
+        },
+        {
+          "Name": "label",
+          "Value": "css/CreateProject.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VUTJi7oW0Tazn0Jt3Oltuy1tGZol6jiLwS/6P6K9Pps="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1506,6 +1672,252 @@
       ]
     },
     {
+      "Route": "images/BCC_Logo.j7e4nt04hc.png",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\BCC_Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127517"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7yvPCMad5x8/0CrOk3OUloGMReBkvWD5mg7hlKDSptE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 09:05:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j7e4nt04hc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/BCC_Logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7yvPCMad5x8/0CrOk3OUloGMReBkvWD5mg7hlKDSptE="
+        }
+      ]
+    },
+    {
+      "Route": "images/BCC_Logo.png",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\BCC_Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127517"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7yvPCMad5x8/0CrOk3OUloGMReBkvWD5mg7hlKDSptE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 09:05:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7yvPCMad5x8/0CrOk3OUloGMReBkvWD5mg7hlKDSptE="
+        }
+      ]
+    },
+    {
+      "Route": "images/ICTD_Logo.2uehqxg6ge.png",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\ICTD_Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WmOk1ODGbId34NioBCa0O9Pv14+W/z0A73ZWNEbsl4g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 09:06:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2uehqxg6ge"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ICTD_Logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WmOk1ODGbId34NioBCa0O9Pv14+W/z0A73ZWNEbsl4g="
+        }
+      ]
+    },
+    {
+      "Route": "images/ICTD_Logo.png",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\images\\ICTD_Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WmOk1ODGbId34NioBCa0O9Pv14+W/z0A73ZWNEbsl4g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 09:06:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WmOk1ODGbId34NioBCa0O9Pv14+W/z0A73ZWNEbsl4g="
+        }
+      ]
+    },
+    {
+      "Route": "js/CreateProject.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "114104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 07:46:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw="
+        }
+      ]
+    },
+    {
+      "Route": "js/CreateProject.mnu6brm4e2.js",
+      "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "114104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 07:46:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mnu6brm4e2"
+        },
+        {
+          "Name": "label",
+          "Value": "js/CreateProject.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TogHdIaiYK2UjuNuYYOu8Yk10mjQyfclkQeGiYHANcw="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -1516,7 +1928,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "229"
         },
         {
           "Name": "Content-Type",
@@ -1524,11 +1936,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+          "Value": "Sun, 16 Mar 2025 05:42:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1538,12 +1950,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw="
         }
       ]
     },
     {
-      "Route": "js/site.xtxxf3hu2r.js",
+      "Route": "js/site.lkla6qhjhf.js",
       "AssetFile": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1553,7 +1965,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "229"
         },
         {
           "Name": "Content-Type",
@@ -1561,11 +1973,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 19 Jan 2025 08:39:50 GMT"
+          "Value": "Sun, 16 Mar 2025 05:42:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1575,7 +1987,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
+          "Value": "lkla6qhjhf"
         },
         {
           "Name": "label",
@@ -1583,7 +1995,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw="
         }
       ]
     },

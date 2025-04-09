@@ -145,7 +145,7 @@
 <body class="w3-theme-l5">
     <div class="container w3-animate-opacity">
         <div class="header">
-            <h1>Project Actions</h1>
+            <h1>Project Actions - @(ViewData["ProjectName"] ?? "Unknown Project")</h1>
         </div>
         <input type="hidden" id="projectId" value="@Model" />
         <input type="hidden" id="currentRole" value="@User.FindFirst("http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value" />
@@ -241,8 +241,8 @@
             $("#seal").val("");
 
             // Update submit button text based on the clicked button's text
-            const buttonText = $(button).text().trim(); // Get text from the clicked button (e.g., "Send to ED")
-            $("#submitButton").text(buttonText); // Set the submit button text
+            const buttonText = $(button).text().trim();
+            $("#submitButton").text(buttonText);
         }
 
         function loadSignature() {
@@ -351,7 +351,7 @@
                     console.log("Success:", response);
                     alert("Action completed successfully! Project ID: " + response.projectId);
                     $("#forwardForm").addClass("w3-hide");
-                    location.reload();
+                    window.location.href = "/ViewProject/Drafts"; // Redirect to Drafts page
                 },
                 error: function (error) {
                     console.error("Error:", error.responseText);
