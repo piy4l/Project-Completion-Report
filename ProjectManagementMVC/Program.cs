@@ -1,3 +1,9 @@
+//Author:
+//Souvik Das
+//Assistant Programmer, BCC
+//BSc in CSE, BUET
+//PhD Student, Department of CSCE, Texas A&M University 
+
 using Microsoft.EntityFrameworkCore;
 using ProjectCompletionReport.Services;
 using Rotativa.AspNetCore;

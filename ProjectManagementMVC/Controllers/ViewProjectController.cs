@@ -1,4 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//Author:
+//Souvik Das
+//Assistant Programmer, BCC
+//BSc in CSE, BUET
+//PhD Student, Department of CSCE, Texas A&M University 
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectCompletionReport.Models;
 using X.PagedList;

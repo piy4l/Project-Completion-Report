@@ -773,25 +773,7 @@
         this.saveProjectInternal("/SaveAsDraft", "Draft saved", "DraftPD"); // PD keeps it as draft
     };
 
-    this.forwardToED = function () {
-        this.saveProjectInternal("/ForwardToED", "Forwarded to ED", "DraftED"); // PD forwards to ED
-    };
-
-    this.forwardToSecretary = function () {
-        this.saveProjectInternal("/ForwardToSecretary", "Forwarded to Secretary", "DraftSec"); // ED forwards to Sec
-    };
-
-    this.sendBackToPD = function () {
-        this.saveProjectInternal("/SendBackToPD", "Sent back to PD", "DraftPD"); // ED sends back to PD
-    };
-
-    this.markAsComplete = function () {
-        this.saveProjectInternal("/MarkAsComplete", "Marked as Complete", "Complete"); // Sec marks as complete
-    };
-
-    this.sendBackToED = function () {
-        this.saveProjectInternal("/SendBackToED", "Sent back to ED", "DraftED"); // Sec sends back to ED
-    };
+    
 }
 
 
