@@ -159,12 +159,6 @@ C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets\msbuild.PCRMS.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets\msbuild.PCRMS.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets\msbuild.build.PCRMS.props
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PCRMS.props
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PCRMS.props
-C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\PCRMS.csproj.Up2Date
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\PCRMS.dll
 C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\refint\PCRMS.dll
@@ -390,3 +384,4 @@ C:\Users\User\Source\Repos\Project-Completion-Report\ProjectManagementMVC\obj\De
 C:\Users\User\Source\Repos\Project-Completion-Report\ProjectManagementMVC\obj\Debug\net8.0\PCRMS.pdb
 C:\Users\User\Source\Repos\Project-Completion-Report\ProjectManagementMVC\obj\Debug\net8.0\PCRMS.genruntimeconfig.cache
 C:\Users\User\Source\Repos\Project-Completion-Report\ProjectManagementMVC\obj\Debug\net8.0\ref\PCRMS.dll
+C:\Users\souvi\source\repos\ProjectManagementMVC\ProjectManagementMVC\obj\Debug\net8.0\staticwebassets.build.json.cache

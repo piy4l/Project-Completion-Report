@@ -228,7 +228,8 @@
         function editProject() {
             const projectId = $("#projectId").val();
             if (projectId) {
-                window.location.href = `/CreateProject?projectId=${projectId}`;
+                // window.location.href = `/Draft/Index/${projectId}`;
+                window.open(`/ViewProject/Details/${projectId}`, "_blank");
             } else {
                 alert("No project ID specified!");
             }

@@ -7,13 +7,14 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/js/CreateProject.js" defer></script>
 @{
-    ViewData["Title"] = Model.ProjectId == 0 ? "Create Project" : "Edit Project";
+    ViewData["Title"] = "Create Project";
     var isPd = User.IsInRole("PD");
     var isEd = User.IsInRole("ED");
     var isSec = User.IsInRole("Sec");
     var isEditable = isPd && (Model.Status == "DraftPD" || Model.Status == "SentBackToPD");
     var remark = ViewData["Remark"] as _G_PostProjectRemark ?? new _G_PostProjectRemark();
 }
+
 <html>
     <head>
         <title>PROJECT COMPLETION REPORT (PCR)</title>

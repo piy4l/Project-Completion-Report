@@ -1,12 +1,103 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\viewproject\\action.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\viewproject\\action.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\wwwroot\\js\\draft.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\wwwroot\\js\\draft.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\draft\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\draft\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\views\\createproject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\views\\createproject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|c:\\users\\souvi\\source\\repos\\projectmanagementmvc\\projectmanagementmvc\\wwwroot\\js\\createproject.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D67553AB-5EF5-4920-9C45-FE92992F9FE6}|ProjectManagementMVC\\PCRMS.csproj|solutionrelative:projectmanagementmvc\\wwwroot\\js\\createproject.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Action.cshtml",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
+              "RelativeToolTip": "ProjectManagementMVC\\Views\\ViewProject\\Action.cshtml",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAAN4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-02T08:44:45.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateProject.js",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+              "RelativeToolTip": "ProjectManagementMVC\\wwwroot\\js\\CreateProject.js",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-01T08:57:00.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\CreateProject\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\CreateProject\\Index.cshtml",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\CreateProject\\Index.cshtml",
+              "RelativeToolTip": "ProjectManagementMVC\\Views\\CreateProject\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T10:16:15.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Draft\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\Views\\Draft\\Index.cshtml",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\Views\\Draft\\Index.cshtml",
+              "RelativeToolTip": "ProjectManagementMVC\\Views\\Draft\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T10:13:27.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Draft.js",
+              "DocumentMoniker": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\Draft.js",
+              "RelativeDocumentMoniker": "ProjectManagementMVC\\wwwroot\\js\\Draft.js",
+              "ToolTip": "C:\\Users\\souvi\\source\\repos\\ProjectManagementMVC\\ProjectManagementMVC\\wwwroot\\js\\Draft.js",
+              "RelativeToolTip": "ProjectManagementMVC\\wwwroot\\js\\Draft.js",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-22T04:11:10.809Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

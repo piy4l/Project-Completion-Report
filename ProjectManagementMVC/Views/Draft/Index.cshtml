@@ -1,0 +1,518 @@
+﻿@model ProjectCompletionReport.Models.ProjectModel
+@{
+    ViewData["Title"] = "Edit Draft Project";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="~/js/Draft.js" asp-append-version="true"></script>
+    <style>
+        .tbl_bordered {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            .tbl_bordered td, .tbl_bordered th {
+                border: 1px solid black;
+                padding: 8px;
+            }
+
+        .w3-theme-l1 {
+            background-color: #f0f0f0;
+        }
+
+        .w3-theme {
+            background-color: #007bff;
+        }
+
+        .w3-text-white {
+            color: white;
+        }
+
+        .w3-padding-small {
+            padding: 8px;
+        }
+
+        .w3-margin-right {
+            margin-right: 8px;
+        }
+
+        .w3-button {
+            cursor: pointer;
+        }
+
+        .w3-hide {
+            display: none;
+        }
+
+        .w3-card {
+            margin-bottom: 16px;
+        }
+
+        .w3-input {
+            width: 100%;
+        }
+
+        .w3-border {
+            border: 1px solid #ccc;
+        }
+
+        .w3-round-large {
+            border-radius: 8px;
+        }
+
+        .w3-center {
+            text-align: center;
+        }
+
+        .w3-responsive {
+            overflow-x: auto;
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-container">
+        <h2>Edit Draft Project</h2>
+        <form id="pcrForm" enctype="multipart/form-data">
+
+            <!-- Section A: Project Identification -->
+            <button onclick="pcrForm.unHideSubMenu('SecA')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                <span class="w3-border w3-padding-small">A</span> PROJECT IDENTIFICATION <small class="w3-right">Click to Open/Close</small>
+            </button>
+            <div id="SecA" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                <h4 class="w3-center"><b>A. <u>PROJECT IDENTIFICATION</u></b></h4>
+                <div class="w3-responsive">
+                    <b>1. Name of the Project:</b>
+                    <input type="text" id="name" name="Project.Name" class="w3-input w3-border w3-round-large" value="@Model.Project.Name" />
+                    <br />
+                    <b>2. Name of the Administrative Ministry/Division:</b>
+                    <input type="text" id="administrativeMinistryDivision" name="Project.AdministrativeMinistryDivision" class="w3-input w3-border w3-round-large" value="@Model.Project.AdministrativeMinistryDivision" />
+                    <br />
+                    <b>3. Name of the Executing Agency:</b>
+                    <input type="text" id="executingAgency" name="Project.ExecutingAgency" class="w3-input w3-border w3-round-large" value="@Model.Project.ExecutingAgency" />
+                    <br />
+                    <b>4. Planning Commission Sector/Division:</b>
+                    <input type="text" id="planningCommissionSectorDivision" name="Project.PlanningCommissionSectorDivision" class="w3-input w3-border w3-round-large" value="@Model.Project.PlanningCommissionSectorDivision" />
+                    <br />
+                    <b>5. Type of Project:</b>
+                    <select id="type" name="Project.Type" class="w3-input w3-border w3-round-large">
+                        <option value="" disabled="@(string.IsNullOrEmpty(Model.Project.Type) ? "disabled" : null)" selected="@(string.IsNullOrEmpty(Model.Project.Type) ? "selected" : null)">Select Type</option>
+                        <option value="Investment" selected="@(Model.Project.Type == "Investment" ? "selected" : null)">Investment</option>
+                        <option value="Technical Assistance" selected="@(Model.Project.Type == "Technical Assistance" ? "selected" : null)">Technical Assistance</option>
+                    </select>
+                    <br />
+                    <b>6. Location of the Project:</b>
+                    <table id="secA_LocationTable" class="tbl_bordered w3-centered">
+                        <tr>
+                            <td colspan="4"><b>6. Location of the Project</b></td>
+                            <td colspan="2">
+                                <button onclick="pcrForm.secA_LocationTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus"></i> Add</button>
+                                <button onclick="pcrForm.removeTableLastRow('secA_LocationTable', 2);" type="button" class="w3-button w3-theme"><i class="fa fa-minus"></i> Remove Last</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Division</td>
+                            <td>District</td>
+                            <td>Upazila</td>
+                            <td>Union/Ward</td>
+                            <td>Village/Mahalla</td>
+                            <td>Remarks</td>
+                        </tr>
+                        @if (Model._06LocationOfTheProjects != null && Model._06LocationOfTheProjects.Any())
+                        {
+                            for (var i = 0; i < Model._06LocationOfTheProjects.Count; i++)
+                            {
+                                <tr>
+                                    <td><input type="text" name="_06LocationOfTheProjects[@i].Division" value="@Model._06LocationOfTheProjects[i].Division" class="w3-input" /></td>
+                                    <td><input type="text" name="_06LocationOfTheProjects[@i].District" value="@Model._06LocationOfTheProjects[i].District" class="w3-input" /></td>
+                                    <td><input type="text" name="_06LocationOfTheProjects[@i].Upazila" value="@Model._06LocationOfTheProjects[i].CityCorpMunicipalityUpazila" class="w3-input" /></td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                    <br />
+                    <b>7. Estimated Cost, Implementation Period and Approval:</b>
+                    <table id="secA_EstimatedCostTable" class="tbl_bordered w3-centered">
+                        <tr>
+                            <td colspan="7"><b>7. Estimated Cost, Implementation Period and Approval</b></td>
+                            <td colspan="3">
+                                <button onclick="pcrForm.secA_EstimatedCostTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus"></i> Add</button>
+                                <button onclick="pcrForm.removeTableLastRow('secA_EstimatedCostTable', 2);" type="button" class="w3-button w3-theme"><i class="fa fa-minus"></i> Remove Last</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Original/Revised</td>
+                            <td colspan="2">Estimated Cost (Lac Taka)</td>
+                            <td colspan="2">Implementation Period</td>
+                            <td rowspan="2">Date of Approval</td>
+                            <td rowspan="2">Approving Authority</td>
+                            <td rowspan="2">Date of Commencement</td>
+                            <td rowspan="2">Date of Completion</td>
+                            <td rowspan="2">Remarks</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>GOB</td>
+                            <td>Original</td>
+                            <td>Revised</td>
+                        </tr>
+                        @if (Model._07EstimatedCostPeriodApprovals != null && Model._07EstimatedCostPeriodApprovals.Any())
+                        {
+                            for (var i = 0; i < Model._07EstimatedCostPeriodApprovals.Count; i++)
+                            {
+                                <tr>
+                                    <td><input type="text" name="_07EstimatedCostPeriodApprovals[@i].Subject" value="@Model._07EstimatedCostPeriodApprovals[i].Subject" class="w3-input" /></td>
+                                    <td><input type="number" name="_07EstimatedCostPeriodApprovals[@i].Total" value="@Model._07EstimatedCostPeriodApprovals[i].Total" class="w3-input" /></td>
+                                    <td><input type="number" name="_07EstimatedCostPeriodApprovals[@i].GOB" value="@Model._07EstimatedCostPeriodApprovals[i].GOB" class="w3-input" /></td>
+                                    <td><input type="text" name="_07EstimatedCostPeriodApprovals[@i].PA" value="@Model._07EstimatedCostPeriodApprovals[i].PA" class="w3-input" /></td>
+                                    <td><input type="text" name="_07EstimatedCostPeriodApprovals[@i].SelfFinance" value="@Model._07EstimatedCostPeriodApprovals[i].SelfFinance" class="w3-input" /></td>
+                                    <td><input type="date" name="_07EstimatedCostPeriodApprovals[@i].ImplementationPeriod" value="@(Model._07EstimatedCostPeriodApprovals[i].ImplementationPeriod)" class="w3-input" /></td>
+                                    <td><input type="text" name="_07EstimatedCostPeriodApprovals[@i].DateOfApproval" value="@Model._07EstimatedCostPeriodApprovals[i].DateOfApproval" class="w3-input" /></td>
+                                    <td><input type="date" name="_07EstimatedCostPeriodApprovals[@i].ApprovedBy" value="@(Model._07EstimatedCostPeriodApprovals[i].ApprovedBy)" class="w3-input" /></td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                    <br />
+                    <b>8. Overall Objective of the Project:</b>
+                    <textarea id="overallObjective" name="Project.OverallObjective" class="w3-input w3-border w3-round-large">@Model.Project.OverallObjective</textarea>
+                    <br />
+                    <b>9. Specific Objectives:</b>
+                    <textarea id="specificObjectives" name="Project.SpecificObjectives" class="w3-input w3-border w3-round-large">@Model.Project.SpecificObjectives</textarea>
+                    <br />
+                    <b>10. Background of the Project:</b>
+                    <textarea id="background" name="Project.Background" class="w3-input w3-border w3-round-large">@Model.Project.Background</textarea>
+                    <br />
+                    <b>11. Major Activities of the Project:</b>
+                    <textarea id="majorActivities" name="Project.MajorActivities" class="w3-input w3-border w3-round-large">@Model.Project.MajorActivities</textarea>
+                    <br />
+                    <b>12. Reasons for Revision:</b>
+                    <textarea id="reasonsForRevision" name="Project.ReasonsForRevision" class="w3-input w3-border w3-round-large">@Model.Project.ReasonsForRevision</textarea>
+                    <br />
+                    <b>13. Reasons for No-Cost/Time Extension:</b>
+                    <textarea id="reasonsForNoCostTimeExtension" name="Project.ReasonsForNoCostTimeExtension" class="w3-input w3-border w3-round-large">@Model.Project.ReasonsForNoCostTimeExtension</textarea>
+                </div>
+            </div>
+            <br />
+
+            <!-- Section B: Implementation -->
+            <button onclick="pcrForm.unHideSubMenu('SecB')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                <span class="w3-border w3-padding-small">B</span> IMPLEMENTATION <small class="w3-right">Click to Open/Close</small>
+            </button>
+            <div id="SecB" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                <h4 class="w3-center"><b>B. <u>IMPLEMENTATION</u></b></h4>
+                <div class="w3-responsive">
+                    <b>13. Implementation Period:</b>
+                    <table id="secB_ImplPeriodTable" class="tbl_bordered w3-centered">
+                        <tr>
+                            <td colspan="5"><b>13. Implementation Period</b></td>
+                            <td colspan="2">
+                                <button onclick="pcrForm.secB_ImplPeriodTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus"></i> Add</button>
+                                <button onclick="pcrForm.removeTableLastRow('secB_ImplPeriodTable', 2);" type="button" class="w3-button w3-theme"><i class="fa fa-minus"></i> Remove Last</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Original/Revised</td>
+                            <td>Commencement Date</td>
+                            <td>Completion Date</td>
+                            <td>Reasons for Revision</td>
+                            <td>Authority for Revision</td>
+                            <td>Time Over-run (Month)</td>
+                            <td>Cost Over-run (Lac Taka)</td>
+                        </tr>
+                        @if (Model._13ImplementationPeriods != null && Model._13ImplementationPeriods.Any())
+                        {
+                            for (var i = 0; i < Model._13ImplementationPeriods.Count; i++)
+                            {
+                                <tr>
+                                    <td><input type="text" name="_13ImplementationPeriods[@i].Original" value="@Model._13ImplementationPeriods[i].Original" class="w3-input" /></td>
+                                    <td><input type="date" name="_13ImplementationPeriods[@i].LatestRevised" value="@(Model._13ImplementationPeriods[i].LatestRevised)" class="w3-input" /></td>
+                                    <td><input type="date" name="_13ImplementationPeriods[@i].ActualImplementation" value="@(Model._13ImplementationPeriods[i].ActualImplementation)" class="w3-input" /></td>
+                                    <td><input type="text" name="_13ImplementationPeriods[@i].TimeOverRun" value="@Model._13ImplementationPeriods[i].TimeOverRun" class="w3-input" /></td>
+                                    <td><input type="text" name="_13ImplementationPeriods[@i].Remarks" value="@Model._13ImplementationPeriods[i].Remarks" class="w3-input" /></td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </div>
+            </div>
+            <br />
+
+            <!-- Section C: Cost of the Project -->
+            <button onclick="pcrForm.unHideSubMenu('SecC')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                <span class="w3-border w3-padding-small">C</span> COST OF THE PROJECT <small class="w3-right">Click to Open/Close</small>
+            </button>
+            <div id="SecC" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                <h4 class="w3-center"><b>C. <u>COST OF THE PROJECT</u></b></h4>
+                <div class="w3-responsive">
+                    <b>14. Cost of the Project:</b>
+                    <table id="secC_CostOfTheProjectTable" class="tbl_bordered w3-centered">
+                        <tr>
+                            <td colspan="3"><b>14. Cost of the Project</b></td>
+                            <td colspan="2">
+                                <button onclick="pcrForm.secC_CostOfTheProjectTable_Add();" type="button" class="w3-button w3-theme"><i class="fa fa-plus"></i> Add</button>
+                                <button onclick="pcrForm.removeTableLastRow('secC_CostOfTheProjectTable', 2);" type="button" class="w3-button w3-theme"><i class="fa fa-minus"></i> Remove Last</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Component</td>
+                            <td>Original Cost</td>
+                            <td>Revised Cost</td>
+                            <td>Actual Cost</td>
+                            <td>Remarks</td>
+                        </tr>
+                        @if (Model._14CostOfTheProjects != null && Model._14CostOfTheProjects.Any())
+                        {
+                            for (var i = 0; i < Model._14CostOfTheProjects.Count; i++)
+                            {
+                                <tr>
+                                    <td><input type="text" name="_14CostOfTheProjects[@i].Description" value="@Model._14CostOfTheProjects[i].Description" class="w3-input" /></td>
+                                    <td><input type="number" name="_14CostOfTheProjects[@i].OriginalEstimatedCost" value="@Model._14CostOfTheProjects[i].OriginalEstimatedCost" class="w3-input" /></td>
+                                    <td><input type="number" name="_14CostOfTheProjects[@i].LatestRevisedEstimatedCost" value="@Model._14CostOfTheProjects[i].LatestRevisedEstimatedCost" class="w3-input" /></td>
+                                    <td><input type="number" name="_14CostOfTheProjects[@i].ActualExpenditure" value="@Model._14CostOfTheProjects[i].ActualExpenditure" class="w3-input" /></td>
+                                    <td><input type="text" name="_14CostOfTheProjects[@i].CostOverRun" value="@Model._14CostOfTheProjects[i].CostOverRun" class="w3-input" /></td>
+                                    <td><input type="text" name="_14CostOfTheProjects[@i].Remarks" value="@Model._14CostOfTheProjects[i].Remarks" class="w3-input" /></td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </div>
+            </div>
+            <br />
+
+
+
+
+            <!-- Section G: Post-Project Remarks -->
+            <button onclick="pcrForm.unHideSubMenu('SecG')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                <span class="w3-border w3-padding-small">G</span> POST-PROJECT REMARKS <small class="w3-right">Click to Open/Close</small>
+            </button>
+            <div id="SecG" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                <h4 class="w3-center"><b>G. <u>POST-PROJECT REMARKS</u></b></h4>
+                <div class="w3-responsive">
+                    <b>31. General Observations/Remarks on the Project</b><br />
+                    <b>31.1 Background</b>
+                    <textarea id="background" name="_G_PostProjectRemark.Background" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.Background</textarea>
+                    <br />
+                    <b>31.2 Justification/Adequacy</b>
+                    <textarea id="justificationAdequacy" name="_G_PostProjectRemark.JustificationAdequacy" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.JustificationAdequacy</textarea>
+                    <br />
+                    <b>31.3 Objectives</b>
+                    <textarea id="objectives" name="_G_PostProjectRemark.Objectives" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.Objectives</textarea>
+                    <br />
+                    <b>31.4 Project revision with reasons</b>
+                    <textarea id="projectRevisionWithReasons" name="_G_PostProjectRemark.ProjectRevisionWithReasons" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.ProjectRevisionWithReasons</textarea>
+                    <br />
+                    <b>32. Rationale of the project</b><br />
+                    <b>32.1 Concept</b>
+                    <textarea id="concept" name="_G_PostProjectRemark.Concept" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.Concept</textarea>
+                    <br />
+                    <b>32.2 Design</b>
+                    <textarea id="design" name="_G_PostProjectRemark.Design" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.Design</textarea>
+                    <br />
+                    <b>32.3 Location</b>
+                    <textarea id="location" name="_G_PostProjectRemark.Location" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.Location</textarea>
+                    <br />
+                    <b>32.4 Timing</b>
+                    <textarea id="timing" name="_G_PostProjectRemark.Timing" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.Timing</textarea>
+                    <br />
+                    <b>33. Brief description on planning and financing</b><br />
+                    <b>33.1 Project Identification</b>
+                    <textarea id="projectIdentification" name="_G_PostProjectRemark.ProjectIdentification" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.ProjectIdentification</textarea>
+                    <br />
+                    <b>33.2 Project Preparation</b>
+                    <textarea id="projectPreparation" name="_G_PostProjectRemark.ProjectPreparation" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.ProjectPreparation</textarea>
+                    <br />
+                    <b>33.3 Appraisal</b>
+                    <textarea id="appraisal" name="_G_PostProjectRemark.Appraisal" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.Appraisal</textarea>
+                    <br />
+                    <b>33.4 Credit Negotiation</b>
+                    <textarea id="creditNegotiation" name="_G_PostProjectRemark.CreditNegotiation" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.CreditNegotiation</textarea>
+                    <br />
+                    <b>33.5 Credit Agreement</b>
+                    <textarea id="creditAgreement" name="_G_PostProjectRemark.CreditAgreement" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.CreditAgreement</textarea>
+                    <br />
+                    <b>33.6 Credit Effectiveness</b>
+                    <textarea id="creditEffectiveness" name="_G_PostProjectRemark.CreditEffectiveness" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.CreditEffectiveness</textarea>
+                    <br />
+                    <b>33.7 Loan Disbursement</b>
+                    <textarea id="loanDisbursement" name="_G_PostProjectRemark.LoanDisbursement" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.LoanDisbursement</textarea>
+                    <br />
+                    <b>33.8 Loan Conditions</b>
+                    <textarea id="loanConditions" name="_G_PostProjectRemark.LoanConditions" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.LoanConditions</textarea>
+                    <br />
+                    <b>33.9 Project Approval</b>
+                    <textarea id="projectApproval" name="_G_PostProjectRemark.ProjectApproval" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.ProjectApproval</textarea>
+                    <br />
+                    <b>33.10 Others (specify)</b>
+                    <textarea id="othersSpecify" name="_G_PostProjectRemark.OthersSpecify" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?.OthersSpecify</textarea>
+                    <br />
+                    <b>34. Analysis of the post-implementation situation</b><br />
+                    <b>34.1 Beneficiaries' knowledge</b>
+                    <textarea id="_34_1" name="_G_PostProjectRemark._34_1" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_1</textarea>
+                    <br />
+                    <b>34.2 Programme for use of facilities</b>
+                    <textarea id="_34_2" name="_G_PostProjectRemark._34_2" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_2</textarea>
+                    <br />
+                    <b>34.3 O & M Program</b>
+                    <textarea id="_34_3" name="_G_PostProjectRemark._34_3" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_3</textarea>
+                    <br />
+                    <b>34.4 Impact of the project</b>
+                    <textarea id="_34_4" name="_G_PostProjectRemark._34_4" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_4</textarea>
+                    <br />
+                    <b>34.5 Transfer of Technology</b>
+                    <textarea id="_34_5" name="_G_PostProjectRemark._34_5" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_5</textarea>
+                    <br />
+                    <b>34.6 Employment generation</b>
+                    <textarea id="_34_6" name="_G_PostProjectRemark._34_6" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_6</textarea>
+                    <br />
+                    <b>34.7 Self-employment</b>
+                    <textarea id="_34_7" name="_G_PostProjectRemark._34_7" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_7</textarea>
+                    <br />
+                    <b>34.8 Women-employment</b>
+                    <textarea id="_34_8" name="_G_PostProjectRemark._34_8" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_8</textarea>
+                    <br />
+                    <b>34.9 Women’s participation</b>
+                    <textarea id="_34_9" name="_G_PostProjectRemark._34_9" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_9</textarea>
+                    <br />
+                    <b>34.10 Socio-Economic activity</b>
+                    <textarea id="_34_10" name="_G_PostProjectRemark._34_10" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_10</textarea>
+                    <br />
+                    <b>34.11 Impact on environment</b>
+                    <textarea id="_34_11" name="_G_PostProjectRemark._34_11" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_11</textarea>
+                    <br />
+                    <b>34.12 Sustainability</b>
+                    <textarea id="_34_12" name="_G_PostProjectRemark._34_12" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_12</textarea>
+                    <br />
+                    <b>34.13 Poverty alleviation</b>
+                    <textarea id="_34_13" name="_G_PostProjectRemark._34_13" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_13</textarea>
+                    <br />
+                    <b>34.14 Opinion of representatives</b>
+                    <textarea id="_34_14" name="_G_PostProjectRemark._34_14" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_14</textarea>
+                    <br />
+                    <b>34.15 Micro-credit programs</b>
+                    <textarea id="_34_15" name="_G_PostProjectRemark._34_15" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._34_15</textarea>
+                    <br />
+                    <b>35. Problems encountered during Implementation</b><br />
+                    <b>35.1 Project management</b>
+                    <textarea id="_35_1" name="_G_PostProjectRemark._35_1" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_1</textarea>
+                    <br />
+                    <b>35.2 Project Director</b>
+                    <textarea id="_35_2" name="_G_PostProjectRemark._35_2" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_2</textarea>
+                    <br />
+                    <b>35.3 Land Acquisition</b>
+                    <textarea id="_35_3" name="_G_PostProjectRemark._35_3" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_3</textarea>
+                    <br />
+                    <b>35.4 Procurement</b>
+                    <textarea id="_35_4" name="_G_PostProjectRemark._35_4" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_4</textarea>
+                    <br />
+                    <b>35.5 Consultancy</b>
+                    <textarea id="_35_5" name="_G_PostProjectRemark._35_5" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_5</textarea>
+                    <br />
+                    <b>35.6 Contractor</b>
+                    <textarea id="_35_6" name="_G_PostProjectRemark._35_6" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_6</textarea>
+                    <br />
+                    <b>35.7 Manpower</b>
+                    <textarea id="_35_7" name="_G_PostProjectRemark._35_7" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_7</textarea>
+                    <br />
+                    <b>35.8 Law & Order</b>
+                    <textarea id="_35_8" name="_G_PostProjectRemark._35_8" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_8</textarea>
+                    <br />
+                    <b>35.9 Natural calamity</b>
+                    <textarea id="_35_9" name="_G_PostProjectRemark._35_9" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_9</textarea>
+                    <br />
+                    <b>35.10 Project financing</b>
+                    <textarea id="_35_10" name="_G_PostProjectRemark._35_10" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_10</textarea>
+                    <br />
+                    <b>35.11 Allocation and release</b>
+                    <textarea id="_35_11" name="_G_PostProjectRemark._35_11" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_11</textarea>
+                    <br />
+                    <b>35.12 Design formulation/approval</b>
+                    <textarea id="_35_12" name="_G_PostProjectRemark._35_12" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_12</textarea>
+                    <br />
+                    <b>35.13 Project aid disbursement</b>
+                    <textarea id="_35_13" name="_G_PostProjectRemark._35_13" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_13</textarea>
+                    <br />
+                    <b>35.14 Mission of development partners</b>
+                    <textarea id="_35_14" name="_G_PostProjectRemark._35_14" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_14</textarea>
+                    <br />
+                    <b>35.15 Time & Cost Over-run</b>
+                    <textarea id="_35_15" name="_G_PostProjectRemark._35_15" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_15</textarea>
+                    <br />
+                    <b>35.16 Project Monitoring</b>
+                    <textarea id="_35_16" name="_G_PostProjectRemark._35_16" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_16</textarea>
+                    <br />
+                    <b>35.17 Delay in Decision</b>
+                    <textarea id="_35_17" name="_G_PostProjectRemark._35_17" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_17</textarea>
+                    <br />
+                    <b>35.18 Transport, Training</b>
+                    <textarea id="_35_18" name="_G_PostProjectRemark._35_18" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_18</textarea>
+                    <br />
+                    <b>35.19 Approval and Others</b>
+                    <textarea id="_35_19" name="_G_PostProjectRemark._35_19" class="w3-input w3-border w3-round-large">@Model._G_PostProjectRemark?._35_19</textarea>
+                </div>
+            </div>
+            <br />
+
+            <!-- Attachment Section -->
+            <button onclick="pcrForm.unHideSubMenu('SecAttachment')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                <span class="w3-border w3-padding-small">Attach</span> ATTACHMENT <small class="w3-right">Click to Open/Close</small>
+            </button>
+            <div id="SecAttachment" class="w3-card w3-round w3-white w3-padding-small w3-hide">
+                <h4 class="w3-center">
+                    <p><b>Add Attachment (PDF file only, 20mb max)</b> <input type="file" id="attachment" name="Attachment" accept=".pdf"></p>
+                </h4>
+            </div>
+            <br />
+
+            <!-- Workflow Buttons -->
+            <div class="w3-bottom">
+                <div class="button-container">
+                    <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right" title="Save as Draft" onclick="pcrForm.saveAsDraft()">
+                        <i class="fa fa-floppy-o"></i> Save as Draft
+                    </button>
+                    @if (User.IsInRole("PD") && (Model.Project.Status == "DraftPD" || Model.Project.Status == "SentBackToPD"))
+                    {
+                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right" title="Forward to ED" onclick="pcrForm.forwardToED(@Model.Project.ProjectId)">
+                            <i class="fa fa-share"></i> Forward to ED
+                        </button>
+                    }
+                    @if (User.IsInRole("ED") && Model.Project.Status == "DraftED")
+                    {
+                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right" title="Forward to Sec" onclick="pcrForm.forwardToSec(@Model.Project.ProjectId)">
+                            <i class="fa fa-share"></i> Forward to Sec
+                        </button>
+                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right" title="Send Back to PD" onclick="pcrForm.sendBackToPD(@Model.Project.ProjectId)">
+                            <i class="fa fa-undo"></i> Send Back to PD
+                        </button>
+                    }
+                    @if (User.IsInRole("Sec") && Model.Project.Status == "DraftSec")
+                    {
+                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right" title="Send Back to PD" onclick="pcrForm.sendBackToPD(@Model.Project.ProjectId)">
+                            <i class="fa fa-undo"></i> Send Back to PD
+                        </button>
+                        <button class="w3-button w3-theme w3-round w3-text-white w3-padding-small w3-margin-right" title="Mark as Complete" onclick="pcrForm.markAsComplete(@Model.Project.ProjectId)">
+                            <i class="fa fa-check"></i> Mark as Complete
+                        </button>
+                    }
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="border-top footer text-muted"></footer>
+</body>
+</html>
